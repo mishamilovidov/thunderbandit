@@ -5,7 +5,7 @@ stages:
 
 build:
   stage: Build
-  image: parvursus/thunderbandit
+  image: registry.gitlab.com/parvursus/thunderbandit
   only:
     - master
   cache:
@@ -29,7 +29,7 @@ build:
 
 deploy:
   stage: Deploy
-  image: parvursus/thunderbandit
+  image: registry.gitlab.com/parvursus/thunderbandit
   only:
     - master
   # get artifact
