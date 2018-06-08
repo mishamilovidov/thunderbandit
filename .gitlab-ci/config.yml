@@ -1,0 +1,41 @@
+stages:
+  - Build
+  # - Test
+  - Deploy
+
+build:
+  stage: Build
+  image: node:8.11.2-jessie
+  only:
+    - master
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+    - node_modules/
+  before_script:
+    - npm install
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build/*
+      - node_modules/*
+      - public/*
+      - src/*
+      - .firebaserc
+      - firebase.json
+      - package.json
+      - package-lock.json
+
+deploy:
+  stage: Deploy
+  image: node:8.11.2-jessie
+  only:
+    - master
+  # get artifact
+  script:
+    - npm install firebase-tools
+    - ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+  dependencies:
+    - build
+  when: manual
