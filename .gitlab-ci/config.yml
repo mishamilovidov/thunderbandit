@@ -32,8 +32,7 @@ deploy-prod:
   image: registry.gitlab.com/parvursus/thunderbandit
   only:
     - master
-  when:
-    - manual
+  when: manual
   environment:
     name: production
     url: https://thunderbandit.com
