@@ -1,10 +1,11 @@
 stages:
-  - Build
+  - build
   # - Test
-  - Deploy
+  - deploy
 
 build:
-  stage: Build
+  stage: build
+  name: Build App
   image: registry.gitlab.com/parvursus/thunderbandit
   only:
     - master
@@ -27,15 +28,19 @@ build:
       - package.json
       - package-lock.json
 
-deploy:
-  stage: Deploy
+deploy_prod:
+  stage: deploy
+  name: Deploy - Production
   image: registry.gitlab.com/parvursus/thunderbandit
   only:
     - master
-  # get artifact
+  when:
+    - manual
+  environment:
+    name: production
+    url: https://thunderbandit.com
+  dependencies:
+    - build
   script:
     - npm install firebase-tools
     - ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
-  dependencies:
-    - build
-  when: manual
