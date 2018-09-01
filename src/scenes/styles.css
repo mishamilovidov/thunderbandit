@@ -1,0 +1,28 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Raleway', sans-serif; */
+  color: #2F3D4D;
+  background-color: #f52921;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+.fade-appear {
+  opacity: 0.01;
+}
+
+.fade-appear-active {
+  opacity: 1;
+  transition: .5s ease-in all;
+}

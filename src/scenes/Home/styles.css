@@ -1,0 +1,98 @@
+.Home {
+  margin-top: 13vh;
+  max-height: 100vh;
+}
+
+.Home .video {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.Home .albumArt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  margin: 25px auto 0px auto;
+}
+
+.Home .albumArt img {
+  height: 200px;
+}
+
+@media (max-width: 1200px) {
+  .Home .video {
+    width: 60%;
+  }
+
+  .Home .albumArt {
+    width: 70%;
+  }
+
+  .Home .albumArt img {
+    height: 175px;
+  }
+}
+
+@media (max-width: 1035px) {
+  .Home .albumArt img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .Home .video {
+    width: 70%;
+  }
+
+  .Home .albumArt {
+    width: 80%;
+  }
+}
+
+@media (max-width: 771px) {
+  .Home .albumArt img {
+    height: 125px;
+  }
+}
+
+@media (max-width: 640px) {
+  .Home .albumArt img {
+    height: 100px;
+  }
+
+  .Home .albumArt img {
+    height: 100%;
+    width: 25%;
+  }
+}
+
+@media (max-width: 576px) {
+  .Home .video {
+    width: 100%;
+  }
+
+  .Home .albumArt {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .Home .video {
+    width: 100%;
+  }
+
+  .Home .albumArt {
+    width: 100%;
+  }
+}
+
+@media (max-width: 376px) {
+  .Home .video {
+    width: 100%;
+  }
+
+  .Home .albumArt {
+    width: 100%;
+  }
+}
