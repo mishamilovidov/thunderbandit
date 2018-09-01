@@ -32,7 +32,9 @@ deploy-prod:
   image: node:8
   only:
     - master
-  when: manual
+  when: on_success
+  dependencies:
+    - build
   environment:
     name: production
     url: https://thunderbandit.com
