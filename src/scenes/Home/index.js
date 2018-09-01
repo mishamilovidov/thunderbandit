@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Loader from 'react-loader-spinner'
-import ReactPlayer from 'react-player'
+import YouTubePlayer from 'react-player/lib/players/YouTube'
 import { soundCloudAccountUrl } from '../../services/soundcloud';
 import albumArt from './album-art.png';
 import './styles.css';
@@ -28,35 +27,22 @@ class Home extends Component {
       <div className="Home">
         <div className="video">
           <a href={soundCloudAccountUrl}>
-            {
-              this.state.loadingVideo
-              ?
-              <div className="loader">
-                <Loader
-                   type="Oval"
-                   color="#ffffff"
-                   height="50"
-                   width="50"
-                />
-              </div>
-              :
-              ""
-            }
-            <ReactPlayer
-              ref={this.ref}
-              playing
-              onStart={() => this.onVideoStart()}
-              url={`/video.mp4`}
-              loop={true}
-              controls={false}
-              width='100%'
-              config={{
-                youtube: {
-                  playerVars: { showinfo: 0 }
-                }
-              }}
-              />
-            </a>
+            <div className="overlay"></div>
+          </a>
+          <YouTubePlayer
+            ref={this.ref}
+            playing
+            onStart={() => this.onVideoStart()}
+            url={`https://youtu.be/0UhxA5Uv-7w`}
+            loop={true}
+            controls={false}
+            width='100%'
+            config={{
+              youtube: {
+                playerVars: { showinfo: 0 }
+              }
+            }}
+            />
         </div>
         <div className="albumArt">
           <img src={albumArt} alt="Thunder Bandit Album Art" />
