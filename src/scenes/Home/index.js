@@ -15,7 +15,7 @@ class Home extends Component {
   }
 
   onVideoStart() {
-    this.player.seekTo(parseFloat(Math.random()));
+    // this.player.seekTo(parseFloat(Math.random()));
     this.setState({
       loadingVideo: false,
       overlayStyle: { display: "block" }
