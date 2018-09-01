@@ -10,12 +10,16 @@ class Home extends Component {
 
     this.state = {
       loadingVideo: true,
+      overlayStyle: { display: "none" }
     }
   }
 
   onVideoStart() {
     this.player.seekTo(parseFloat(Math.random()));
-    this.setState({ loadingVideo: false });
+    this.setState({
+      loadingVideo: false,
+      overlayStyle: { display: "block" }
+    });
   }
 
   ref = player => {
@@ -27,11 +31,11 @@ class Home extends Component {
       <div className="Home">
         <div className="video">
           <a href={soundCloudAccountUrl}>
-            <div className="overlay"></div>
+            <div className="overlay" style={this.state.overlayStyle}></div>
           </a>
           <YouTubePlayer
             ref={this.ref}
-            playing
+            playing={true}
             onStart={() => this.onVideoStart()}
             url={`https://youtu.be/0UhxA5Uv-7w`}
             loop={true}
