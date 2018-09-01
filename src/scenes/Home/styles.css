@@ -6,6 +6,22 @@
 .Home .video {
   width: 40%;
   margin: 0 auto;
+  position: relative;
+}
+
+.Home .video > a {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.Home .video .loader {
+  margin-top: 13vh;
+  position: absolute;
+}
+
+.Home .video > div {
+  height: 360px;
 }
 
 .Home .albumArt {
@@ -54,6 +70,10 @@
   .Home .albumArt img {
     height: 125px;
   }
+
+  .Home .video a > div {
+    height: 300px !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -85,6 +105,14 @@
   .Home .albumArt {
     width: 100%;
   }
+
+  .Home .video .loader {
+    margin-top: 8vh;
+  }
+
+  .Home .video a > div {
+    height: 250px !important;
+  }
 }
 
 @media (max-width: 376px) {
@@ -94,5 +122,9 @@
 
   .Home .albumArt {
     width: 100%;
+  }
+
+  .Home .video a > div {
+    height: 200px !important;
   }
 }

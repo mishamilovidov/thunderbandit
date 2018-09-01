@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
+import Loader from 'react-loader-spinner'
 import ReactPlayer from 'react-player'
-import { mainVideoUrl } from '../../services/firebase';
 import { soundCloudAccountUrl } from '../../services/soundcloud';
 import albumArt from './album-art.png';
 import './styles.css';
 
 class Home extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      loadingVideo: true,
+    }
+  }
+
+  onVideoStart() {
+    this.player.seekTo(parseFloat(Math.random()));
+    this.setState({ loadingVideo: false });
+  }
+
   ref = player => {
     this.player = player
   }
@@ -15,17 +28,35 @@ class Home extends Component {
       <div className="Home">
         <div className="video">
           <a href={soundCloudAccountUrl}>
+            {
+              this.state.loadingVideo
+              ?
+              <div className="loader">
+                <Loader
+                   type="Oval"
+                   color="#ffffff"
+                   height="50"
+                   width="50"
+                />
+              </div>
+              :
+              ""
+            }
             <ReactPlayer
               ref={this.ref}
               playing
-              onStart={() => this.player.seekTo(parseFloat(Math.random()))}
-              url={mainVideoUrl}
+              onStart={() => this.onVideoStart()}
+              url={`/video.mp4`}
               loop={true}
               controls={false}
               width='100%'
-              height='100%'
+              config={{
+                youtube: {
+                  playerVars: { showinfo: 0 }
+                }
+              }}
               />
-          </a>
+            </a>
         </div>
         <div className="albumArt">
           <img src={albumArt} alt="Thunder Bandit Album Art" />
