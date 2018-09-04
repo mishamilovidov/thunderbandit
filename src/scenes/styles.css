@@ -3,9 +3,9 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Lato', sans-serif;
   color: #2F3D4D;
-  background-color: #f52921;
+  background-color: #21181D;
 }
 
 a,
@@ -13,9 +13,20 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    color: inherit;
-    text-decoration: inherit;
-    font-weight: inherit;
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+
+.fade-slide-up-appear {
+  opacity: 0.01;
+  transform: translate(0px,20px);
+}
+
+.fade-slide-up-appear-active {
+  opacity: 1;
+  transform: translate(0px,0px);
+  transition: .5s ease-in all;
 }
 
 .fade-appear {

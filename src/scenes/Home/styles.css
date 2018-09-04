@@ -1,133 +1,97 @@
-.Home {
-  margin-top: 13vh;
-  max-height: 100vh;
-}
-
-.Home .video {
-  width: 40%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.Home .video .overlay {
-  z-index:9999;
+.Home .layer {
+  background-color: rgba(237, 72, 69, 1);
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0);
-  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  margin-top: 60px;
+}
+
+.Home .image {
+  /* background-image: url('https://via.placeholder.com/320x180/ed4845/ed4845'); */
+  background-image: url('god-is-love.png');
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+.Home .image img {
+  width: 100%;
+}
+
+.Home .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin-top: 60px;
+  text-align: righ20
+}
+
+.Home .text .subtitle {
+  padding-right: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: right;
+  margin-top: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #21181D;
+  text-transform: uppercase;
+}
+
+.Home .text .title {
+  padding-right: 20px;
+  font-size: 80px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: right;
+  margin-top: 0px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.Home .text .callToAction {
+  text-align: right;
+  padding-right: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.Home .text .callToAction a {
+  border: 1px solid #ffffff;
+  background-color: #ed4845;
+  padding: 6px 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.Home .text .callToAction a:hover {
+  background-color: #ffffff;
+  color: #ed4845;
   cursor: pointer;
 }
 
-.Home .video .overlay:hover {
-  cursor: pointer;
-}
-
-.Home .video > a + div {
-  height: 360px !important;
-}
-
-.Home .albumArt {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 60%;
-  margin: 25px auto 0px auto;
-}
-
-.Home .albumArt img {
-  height: 200px;
-}
-
-@media (max-width: 1200px) {
-  .Home .video {
-    width: 60%;
-  }
-
-  .Home .albumArt {
-    width: 70%;
-  }
-
-  .Home .albumArt img {
-    height: 175px;
-  }
-}
-
-@media (max-width: 1035px) {
-  .Home .albumArt img {
-    height: 150px;
-  }
-}
-
-@media (max-width: 991px) {
-  .Home .video {
-    width: 70%;
-  }
-
-  .Home .albumArt {
-    width: 80%;
-  }
-}
-
-@media (max-width: 771px) {
-  .Home .albumArt img {
-    height: 125px;
-  }
-
-  .Home .video > a + div {
-    height: 300px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .Home .albumArt img {
-    height: 100px;
-  }
-
-  .Home .albumArt img {
-    height: 100%;
-    width: 25%;
+@media (max-width: 576px) {
+  .Home .text .title {
+    font-size: 65px;
   }
 }
 
 @media (max-width: 576px) {
-  .Home .video {
-    width: 100%;
-  }
-
-  .Home .albumArt {
-    width: 100%;
+  .Home .text .title {
+    font-size: 65px;
   }
 }
 
 @media (max-width: 400px) {
-  .Home .video {
-    width: 100%;
-  }
-
-  .Home .albumArt {
-    width: 100%;
-  }
-
-  .Home .video .loader {
-    margin-top: 8vh;
-  }
-
-  .Home .video > a + div {
-    height: 250px !important;
-  }
-}
-
-@media (max-width: 376px) {
-  .Home .video {
-    width: 100%;
-  }
-
-  .Home .albumArt {
-    width: 100%;
+  .Home .text .title {
+    font-size: 50px;
   }
 }

@@ -1,0 +1,31 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 300;
+  color: #b5b5b5;
+  margin-top: 25px;
+  padding: 25px 0px;
+}
+
+.Footer .socialMedia {
+  margin-top: 10px;
+}
+
+.Footer .socialMedia a {
+  margin-right: 10px;
+}
+
+.Footer .socialMedia a:last-child {
+  margin-right: 0px;
+}
+
+.Footer .socialMedia img {
+  filter: invert(77%) sepia(1%) saturate(27%) hue-rotate(326deg) brightness(95%) contrast(89%);
+  width: 25px;
+}
+
+.Footer .socialMedia img:hover {
+  filter: invert(65%) sepia(74%) saturate(6956%) hue-rotate(339deg) brightness(103%) contrast(86%);
+}
