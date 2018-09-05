@@ -1,5 +1,4 @@
 import React from 'react';
-import ip from 'ip';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -9,7 +8,7 @@ import GAListener from './components/GAListener';
 import App from './scenes';
 import store from './store';
 
-const isNotLocal = ip.address() !== "127.0.0.1";
+const isNotLocal = window.location.hostname !== "localhost";
 
 if (isNotLocal) { ReactGA.initialize('UA-125276937-1') }
 
