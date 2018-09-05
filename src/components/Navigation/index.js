@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import { NavLink } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions } from '../../services/transitions';
@@ -12,8 +13,16 @@ class Navigation extends Component {
       <nav className="Navigation">
         <ReactCSSTransitionGroup {...transitionOptions}>
           <NavLink to="/">Home</NavLink>
-          <a href={soundCloudAccountUrl}>Music</a>
-          <a href={instagramAccountUrl}>Instagram</a>
+          <ReactGA.OutboundLink
+            eventLabel="soundCloudAccountUrl"
+            to={soundCloudAccountUrl}>
+            Music
+          </ReactGA.OutboundLink>
+          <ReactGA.OutboundLink
+            eventLabel="instagramAccountUrl"
+            to={instagramAccountUrl}>
+            Instagram
+          </ReactGA.OutboundLink>
         </ReactCSSTransitionGroup>
       </nav>
     );

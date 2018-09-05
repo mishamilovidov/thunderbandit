@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
+import { meta } from '../../services/analytics';
 import { soundCloudSexOnTheTarmac } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
@@ -7,20 +9,8 @@ import './styles.css';
 
 class Home extends Component {
   render() {
-    const meta = {
-      title: 'THUNDER BANDIT',
-      description: 'SEX ON THE TARMAC OUT NOW via (you guessed it) SoundCloud. Listen to the new EP released September 1, 2018. All media created and produced by Thunder Bandit.',
-      canonical: 'https://thunderbandit.com/',
-      meta: {
-        charset: 'utf-8',
-        name: {
-          keywords: 'thunderbandit,@thunderbandit,thunder,bandit,tarmac,sex,ep,released'
-        }
-      }
-    };
-
     return (
-      <DocumentMeta {...meta}>
+      <DocumentMeta {...meta.Home}>
         <div className="Home">
           <div className="layer"></div>
           <ReactCSSTransitionGroup {...transitionOptions}>
@@ -33,9 +23,11 @@ class Home extends Component {
             <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
               <div className="title">Sex on the Tarmac</div>
               <div className="callToAction">
-                <a href={soundCloudSexOnTheTarmac}>
+                <ReactGA.OutboundLink
+                  eventLabel="soundCloudSexOnTheTarmac"
+                  to={soundCloudSexOnTheTarmac}>
                   Listen on SoundCloud
-                </a>
+                </ReactGA.OutboundLink>
               </div>
             </ReactCSSTransitionGroup>
           </div>
