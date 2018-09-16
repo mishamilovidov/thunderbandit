@@ -1,3 +1,7 @@
+.Navigation .active {
+  color: #ed4845;
+}
+
 .Header {
   background-color: #21181D;
   color: #ffffff;
@@ -11,6 +15,7 @@
 }
 
 .Header .navigationOverlay {
+  display: none;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -20,7 +25,6 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -127,5 +131,9 @@
     display: block;
     right: 20px;
     top: 14px;
+  }
+
+  .Header .navigationOverlay {
+    display: flex;
   }
 }

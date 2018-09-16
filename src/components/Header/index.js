@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
-import Navigation from '../Navigation';
+import ReactGA from 'react-ga';
+import { NavLink } from 'react-router-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { transitionOptions } from '../../services/transitions';
+import { instagramAccountUrl } from '../../services/instagram';
+import { twitterAccountUrl } from '../../services/twitter';
 import './styles.css';
 
 class Header extends Component {
@@ -21,6 +26,37 @@ class Header extends Component {
     });
   }
 
+  renderNav() {
+    return (
+      <nav className="Navigation">
+        <ReactCSSTransitionGroup {...transitionOptions}>
+          <NavLink exact
+            to="/"
+            onClick={this.handleClick.bind(this)}
+            >
+            Home
+          </NavLink>
+          <NavLink
+            to="/music"
+            onClick={this.handleClick.bind(this)}
+            >
+            Music
+          </NavLink>
+          <ReactGA.OutboundLink
+            eventLabel="instagramAccountUrl"
+            to={instagramAccountUrl}>
+            Instagram
+          </ReactGA.OutboundLink>
+          <ReactGA.OutboundLink
+            eventLabel="twitterAccountUrl"
+            to={twitterAccountUrl}>
+            Twitter
+          </ReactGA.OutboundLink>
+        </ReactCSSTransitionGroup>
+      </nav>
+    );
+  }
+
   render() {
     return (
       <header className="Header">
@@ -34,7 +70,7 @@ class Header extends Component {
           }
           >
           <div className="navigation">
-            <Navigation />
+            {this.renderNav()}
           </div>
         </div>
         <div className="mobile-title">
@@ -49,7 +85,7 @@ class Header extends Component {
             </Link>
           </div>
           <div className="navigation">
-            <Navigation />
+            {this.renderNav()}
           </div>
         </div>
         <div className="hamburger">

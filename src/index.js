@@ -20,10 +20,10 @@ ReactDOM.render(
           isNotLocal
           ?
           <GAListener>
-            <Route exact path='/' component={App} />
+            <Route path='/' component={App} />
           </GAListener>
           :
-          <Route exact path='/' component={App} />
+          <Route path='/' component={App} />
         }
       </LastLocationProvider>
     </BrowserRouter>

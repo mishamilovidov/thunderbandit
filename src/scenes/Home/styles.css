@@ -29,7 +29,7 @@
   width: 100%;
   height: 100vh;
   margin-top: 60px;
-  text-align: righ20
+  text-align: right;
 }
 
 .Home .text .subtitle {
@@ -76,12 +76,6 @@
   background-color: #ffffff;
   color: #ed4845;
   cursor: pointer;
-}
-
-@media (max-width: 576px) {
-  .Home .text .title {
-    font-size: 65px;
-  }
 }
 
 @media (max-width: 576px) {

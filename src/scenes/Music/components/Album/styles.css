@@ -1,0 +1,133 @@
+.Album {
+  width: 300px;
+  margin: 25px 0px;
+}
+
+.Album img {
+  width: 300px;
+}
+
+.Album .album-title {
+  margin: 10px 0px 0px 0px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Album .album-title:hover {
+  color: #ed4845;
+}
+
+.Album .release-date {
+  font-size: 14px;
+}
+
+.Album .songs {
+  margin-top: 10px;
+}
+
+.Album .song {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 10px 0px;
+  border-top: 1px solid #463e42;
+  display: flex;
+}
+
+.Album .song .track-number span.no-hover {
+  display: inline-block;
+}
+
+.Album .song .track-number span.hover {
+  display: none;
+}
+
+.Album .song .track-playtime span.no-hover {
+  display: inline-block;
+}
+
+.Album .song .track-playtime span.hover {
+  display: none;
+}
+
+.Album .song:last-child {
+  border-bottom: 1px solid #463e42;
+}
+
+.Album .song div:first-child {
+  margin-right: 15px;
+}
+
+.Album .song div:last-child {
+  margin-left: auto;
+}
+
+.Album .song:hover {
+  cursor: pointer;
+  color: #ed4845;
+}
+
+.Album .song:hover .track-number span.no-hover {
+  display: none;
+}
+
+.Album .song:hover .track-number span.hover {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.Album .song:hover .track-playtime span.no-hover {
+  display: none;
+}
+
+.Album .song:hover .track-playtime span.hover {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.Album .song:hover div:first-child {
+  margin-right: 14.5px;
+}
+
+@media (max-width: 1300px) {
+  .Album {
+    width: 250px;
+  }
+
+  .Album img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Album {
+    width: 200px;
+  }
+
+  .Album img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 991px) {
+  .Album {
+    width: 175px;
+  }
+
+  .Album img {
+    width: 175px;
+  }
+}
+
+@media (max-width: 778px) {
+  .Album {
+    width: 250px;
+  }
+
+  .Album img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+
+}
