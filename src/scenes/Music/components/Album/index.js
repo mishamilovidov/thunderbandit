@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import moment from 'moment';
-import TimeFormat from 'hh-mm-ss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions } from '../../../../services/transitions';
@@ -29,15 +28,7 @@ class Album extends Component {
               {song.name}
             </div>
             <div className="track-playtime">
-              <span className="no-hover">
-                {
-                  song.playTime > 3600
-                  ?
-                  TimeFormat.fromS(song.playTime, 'hh:mm:ss')
-                  :
-                  TimeFormat.fromS(song.playTime, 'mm:ss')
-                }
-              </span>
+              <span className="no-hover">{song.playTime}</span>
               <span className="hover">
                 <FontAwesomeIcon icon="external-link-alt" />
               </span>
