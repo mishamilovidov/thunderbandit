@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import camelCase from 'camelcase';
 import moment from 'moment';
 import TimeFormat from 'hh-mm-ss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +15,7 @@ class Album extends Component {
       return (
         <ReactGA.OutboundLink
           key={`${song.name}${song.playTime}`}
-          eventLabel={`${camelCase(song.name)}Url`}
+          eventLabel={`${_.camelCase(song.name)}Url`}
           target="_blank"
           to={song.link}>
           <div className="song">
@@ -51,12 +51,12 @@ class Album extends Component {
       <ReactCSSTransitionGroup {...transitionOptions}>
         <div className="Album">
             <ReactGA.OutboundLink
-              eventLabel={`${camelCase(album.name)}Url`}
+              eventLabel={`${_.camelCase(album.name)}Url`}
               to={album.link}>
               <img src={require(`../../../../services/soundcloud/albumart/${album.albumArt}`)} alt={album.name} />
             </ReactGA.OutboundLink>
           <ReactGA.OutboundLink
-            eventLabel={`${camelCase(album.name)}Url`}
+            eventLabel={`${_.camelCase(album.name)}Url`}
             to={album.link}>
             <div className="album-title">
               {album.name}
