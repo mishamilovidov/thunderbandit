@@ -15,7 +15,6 @@ class Album extends Component {
         <ReactGA.OutboundLink
           key={`${song.name}${song.playTime}`}
           eventLabel={`${_.camelCase(song.name)}Url`}
-          target="_blank"
           to={song.link}>
           <div className="song">
             <div className="track-number">
