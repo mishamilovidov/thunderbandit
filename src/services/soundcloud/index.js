@@ -1,7 +1,24 @@
 export const soundCloudAccountUrl = 'https://soundcloud.com/user-544895508';
 export const soundCloudSexOnTheTarmac = 'https://soundcloud.com/user-544895508/sets/sex-on-the-tarmac';
+export const soundCloudBaskets = 'https://soundcloud.com/user-544895508/baskets';
 
 export const soundCloudMusic = [
+  {
+    name: 'BASKETS',
+    description: '',
+    playTime: '48:36',
+    link: 'https://soundcloud.com/user-544895508/baskets',
+    albumArt: 'baskets.png',
+    releaseDate: '2018-09-20',
+    songs: [
+      {
+        name: 'BASKETS',
+        playTime: '48:36',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/baskets',
+      }
+    ]
+  },
   {
     name: 'iMissUGod',
     description: '',

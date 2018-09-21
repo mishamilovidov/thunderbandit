@@ -1,10 +1,10 @@
 .Album {
-  width: 300px;
+  width: 200px;
   margin: 25px 0px;
 }
 
 .Album img {
-  width: 300px;
+  width: 200px;
 }
 
 .Album .album-title {
@@ -90,31 +90,31 @@
 
 @media (max-width: 1300px) {
   .Album {
-    width: 250px;
+    width: 155px;
   }
 
   .Album img {
-    width: 250px;
+    width: 155px;
   }
 }
 
 @media (max-width: 1100px) {
   .Album {
-    width: 200px;
+    width: 155px;
   }
 
   .Album img {
-    width: 200px;
+    width: 155px;
   }
 }
 
 @media (max-width: 991px) {
   .Album {
-    width: 175px;
+    width: 155px;
   }
 
   .Album img {
-    width: 175px;
+    width: 155px;
   }
 }
 
