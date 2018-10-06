@@ -1,5 +1,6 @@
 .Music .title {
-  background-color: rgba(237, 72, 69, 1);
+  /* background-color: rgba(237, 72, 69, 1); */
+  background-color: #FDC138;
   min-height: 200px;
   width: 100%;
   display: flex;

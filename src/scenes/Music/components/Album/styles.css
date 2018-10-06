@@ -14,7 +14,8 @@
 }
 
 .Album .album-title:hover {
-  color: #ed4845;
+  /* color: #ed4845; */
+  color: #FDC138;
 }
 
 .Album .release-date {
@@ -63,7 +64,8 @@
 
 .Album .song:hover {
   cursor: pointer;
-  color: #ed4845;
+  /* color: #ed4845; */
+  color: #FDC138;
 }
 
 .Album .song:hover .track-number span.no-hover {
