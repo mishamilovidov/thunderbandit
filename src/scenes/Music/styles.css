@@ -23,7 +23,11 @@
   margin: 50px auto 0 auto;
   color: #ffffff;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* align-items: center; */
 }
 
 @media (max-width: 1300px) {
@@ -61,7 +65,8 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

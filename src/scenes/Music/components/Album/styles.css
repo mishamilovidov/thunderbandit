@@ -1,6 +1,7 @@
 .Album {
   width: 200px;
-  margin: 25px 0px;
+  margin: 25px 15px 25px 0px;
+  /* flex: 1; */
 }
 
 .Album img {
@@ -92,31 +93,31 @@
 
 @media (max-width: 1300px) {
   .Album {
-    width: 155px;
+    width: 200px;
   }
 
   .Album img {
-    width: 155px;
+    width: 200px;
   }
 }
 
 @media (max-width: 1100px) {
   .Album {
-    width: 155px;
+    width: 200px;
   }
 
   .Album img {
-    width: 155px;
+    width: 200px;
   }
 }
 
 @media (max-width: 991px) {
   .Album {
-    width: 155px;
+    width: 300px;
   }
 
   .Album img {
-    width: 155px;
+    width: 300px;
   }
 }
 

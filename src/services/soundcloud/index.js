@@ -1,8 +1,25 @@
 export const soundCloudAccountUrl = 'https://soundcloud.com/user-544895508';
 export const soundCloudSexOnTheTarmac = 'https://soundcloud.com/user-544895508/sets/sex-on-the-tarmac';
 export const soundCloudBaskets = 'https://soundcloud.com/user-544895508/baskets';
+export const soundCloudSansForgetica = 'https://soundcloud.com/user-544895508/sans-forgetica';
 
 export const soundCloudMusic = [
+  {
+    name: 'Sans Forgetica',
+    description: '',
+    playTime: '49:04',
+    link: 'https://soundcloud.com/user-544895508/sans-forgetica',
+    albumArt: 'sans-forgetica.png',
+    releaseDate: '2018-10-09',
+    songs: [
+      {
+        name: 'Sans Forgetica',
+        playTime: '49:04',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/sans-forgetica',
+      }
+    ]
+  },
   {
     name: 'BASKETS',
     description: '',
