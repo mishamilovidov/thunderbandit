@@ -2,8 +2,25 @@ export const soundCloudAccountUrl = 'https://soundcloud.com/user-544895508';
 export const soundCloudSexOnTheTarmac = 'https://soundcloud.com/user-544895508/sets/sex-on-the-tarmac';
 export const soundCloudBaskets = 'https://soundcloud.com/user-544895508/baskets';
 export const soundCloudSansForgetica = 'https://soundcloud.com/user-544895508/sans-forgetica';
+export const soundCloudWaze = 'https://soundcloud.com/user-544895508/waze';
 
 export const soundCloudMusic = [
+  {
+    name: 'waze',
+    description: '',
+    playTime: '3:04',
+    link: 'https://soundcloud.com/user-544895508/waze',
+    albumArt: 'waze.png',
+    releaseDate: '2018-10-19',
+    songs: [
+      {
+        name: 'waze',
+        playTime: '3:04',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/waze',
+      }
+    ]
+  },
   {
     name: 'Sans Forgetica',
     description: '',
