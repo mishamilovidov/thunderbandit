@@ -1,10 +1,61 @@
-export const soundCloudAccountUrl = 'https://soundcloud.com/user-544895508';
-export const soundCloudSexOnTheTarmac = 'https://soundcloud.com/user-544895508/sets/sex-on-the-tarmac';
-export const soundCloudBaskets = 'https://soundcloud.com/user-544895508/baskets';
-export const soundCloudSansForgetica = 'https://soundcloud.com/user-544895508/sans-forgetica';
-export const soundCloudWaze = 'https://soundcloud.com/user-544895508/waze';
+export const soundCloudAgraphia = 'https://soundcloud.com/user-544895508/agraphia'
 
 export const soundCloudMusic = [
+  {
+    name: 'Agraphia',
+    description: '',
+    playTime: '54:02',
+    link: 'https://soundcloud.com/user-544895508/agraphia',
+    albumArt: 'agraphia.png',
+    releaseDate: '2018-11-14',
+    songs: [
+      {
+        name: 'Agraphia',
+        playTime: '54:02',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/agraphia',
+      }
+    ]
+  },
+  {
+    name: 'Crazy Diamond Interlude',
+    description: '',
+    link: 'https://soundcloud.com/user-544895508/sets/crazy-diamond-interlude',
+    albumArt: 'crazy-diamond-interlude.png',
+    releaseDate: '2018-10-21',
+    songs: [
+      {
+        name: 'like woah',
+        playTime: '04:58',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/like-woah?in=user-544895508/sets/crazy-diamond-interlude',
+      },
+      {
+        name: 'father said',
+        playTime: '02:15',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/father-said?in=user-544895508/sets/crazy-diamond-interlude',
+      },
+      {
+        name: 'waze',
+        playTime: '03:04',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/waze-1?in=user-544895508/sets/crazy-diamond-interlude',
+      },
+      {
+        name: 'the walk from work to the car',
+        playTime: '01:36',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/the-walk-from-work-to-the-car?in=user-544895508/sets/crazy-diamond-interlude',
+      },
+      {
+        name: 'love machine',
+        playTime: '05:13',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/love-machine?in=user-544895508/sets/crazy-diamond-interlude',
+      },
+    ]
+  },
   {
     name: 'waze',
     description: '',

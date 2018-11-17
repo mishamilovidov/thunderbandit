@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudWaze } from '../../services/soundcloud';
+import { soundCloudAgraphia } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -18,14 +18,14 @@ class Home extends Component {
           </ReactCSSTransitionGroup>
           <div className="text">
             <ReactCSSTransitionGroup {...transitionOptions}>
-              <div className="subtitle">Interlude Single</div>
+              <div className="subtitle">Setlist out now</div>
             </ReactCSSTransitionGroup>
             <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-              <div className="title">Waze</div>
+              <div className="title">Agraphia</div>
               <div className="callToAction">
                 <ReactGA.OutboundLink
                   eventLabel="soundCloudBaskets"
-                  to={soundCloudWaze}>
+                  to={soundCloudAgraphia}>
                   Listen on SoundCloud
                 </ReactGA.OutboundLink>
               </div>
