@@ -1,7 +1,7 @@
 export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
-    description: 'Cleansing set list Agraphia out now via SoundCloud. Listen to the new set list released November 14, 2018. All media created and produced by Thunder Bandit.',
+    description: 'Cleansing set list Project Reverse Mockingbird out now via SoundCloud. Listen to the new set list released January 12, 2019. All media created and produced by Thunder Bandit.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',
