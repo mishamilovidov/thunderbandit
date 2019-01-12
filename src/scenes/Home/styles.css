@@ -82,12 +82,12 @@
 
 @media (max-width: 576px) {
   .Home .text .title {
-    font-size: 65px;
+    font-size: 45px;
   }
 }
 
 @media (max-width: 400px) {
   .Home .text .title {
-    font-size: 50px;
+    font-size: 35px;
   }
 }
