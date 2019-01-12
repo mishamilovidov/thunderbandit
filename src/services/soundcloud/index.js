@@ -1,6 +1,64 @@
-export const soundCloudAgraphia = 'https://soundcloud.com/user-544895508/agraphia'
+export const soundCloudProjectReverseMockingbird = 'https://soundcloud.com/user-544895508/sets/project-reverse-mockingbird'
 
 export const soundCloudMusic = [
+  {
+    name: 'Project Reverse Mockingbird',
+    description: '',
+    playTime: '17:02',
+    link: 'https://soundcloud.com/user-544895508/sets/project-reverse-mockingbird',
+    albumArt: 'project-reverse-mockingbird.png',
+    releaseDate: '2019-01-12',
+    songs: [
+      {
+        name: 'prelude',
+        playTime: '01:11',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/prelude',
+      },
+      {
+        name: 'snctm',
+        playTime: '02:30',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/snctm',
+      },
+      {
+        name: 'belmont',
+        playTime: '02:19',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/belmont',
+      },
+      {
+        name: 'seraph',
+        playTime: '02:22',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/seraph',
+      },
+      {
+        name: 'lifted down',
+        playTime: '02:16',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/lifted-down',
+      },
+      {
+        name: 'snake bite',
+        playTime: '00:51',
+        trackNumber: 6,
+        link: 'https://soundcloud.com/user-544895508/snake-bite',
+      },
+      {
+        name: 'good sons lose',
+        playTime: '03:08',
+        trackNumber: 7,
+        link: 'https://soundcloud.com/user-544895508/good-sons-lose',
+      },
+      {
+        name: 'like i do',
+        playTime: '02:21',
+        trackNumber: 8,
+        link: 'https://soundcloud.com/user-544895508/like-i-do',
+      },
+    ]
+  },
   {
     name: 'Agraphia',
     description: '',
