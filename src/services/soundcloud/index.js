@@ -1,6 +1,40 @@
-export const soundCloudProjectReverseMockingbird = 'https://soundcloud.com/user-544895508/sets/project-reverse-mockingbird'
+export const soundCloud4 = 'https://soundcloud.com/user-544895508/sets/4a-1';
 
 export const soundCloudMusic = [
+  {
+    name: '4',
+    description: '',
+    playTime: '12:48',
+    link: 'https://soundcloud.com/user-544895508/sets/4a-1',
+    albumArt: '4.png',
+    releaseDate: '2019-01-30',
+    songs: [
+      {
+        name: 'Martian',
+        playTime: '02:55',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/martian',
+      },
+      {
+        name: 'Past Life',
+        playTime: '03:44',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/past-life',
+      },
+      {
+        name: 'Cries from Jupiter',
+        playTime: '03:13',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/cries-from-jupiter',
+      },
+      {
+        name: 'God Wink',
+        playTime: '02:55',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/god-wink',
+      },
+    ]
+  },
   {
     name: 'Project Reverse Mockingbird',
     description: '',
