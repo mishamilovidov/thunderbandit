@@ -18,7 +18,7 @@ class Home extends Component {
           </ReactCSSTransitionGroup>
           <div className="text">
             <ReactCSSTransitionGroup {...transitionOptions}>
-              <div className="subtitle">Setlist out now</div>
+              <div className="subtitle">EP out now</div>
             </ReactCSSTransitionGroup>
             <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
               <div className="title">4</div>

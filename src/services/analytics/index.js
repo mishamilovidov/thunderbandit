@@ -1,7 +1,7 @@
 export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
-    description: 'Set list "4" out now via SoundCloud. Listen to the new set list released January 30, 2019. All media created and produced by Thunder Bandit.',
+    description: '"4" out now via SoundCloud. Listen to the new EP released January 30, 2019. All media created and produced by Thunder Bandit.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',
