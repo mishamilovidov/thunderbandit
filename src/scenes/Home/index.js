@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudProjectReverseMockingbird } from '../../services/soundcloud';
+import { soundCloud5 } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -18,14 +18,14 @@ class Home extends Component {
           </ReactCSSTransitionGroup>
           <div className="text">
             <ReactCSSTransitionGroup {...transitionOptions}>
-              <div className="subtitle">Setlist out now</div>
+              <div className="subtitle">EP out now</div>
             </ReactCSSTransitionGroup>
             <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-              <div className="title">Project Reverse<br /> Mockingbird</div>
+              <div className="title">5</div>
               <div className="callToAction">
                 <ReactGA.OutboundLink
-                  eventLabel="soundCloudBaskets"
-                  to={soundCloudProjectReverseMockingbird}>
+                  eventLabel="soundCloud5"
+                  to={soundCloud5}>
                   Listen on SoundCloud
                 </ReactGA.OutboundLink>
               </div>

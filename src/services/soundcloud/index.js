@@ -1,6 +1,80 @@
-export const soundCloudProjectReverseMockingbird = 'https://soundcloud.com/user-544895508/sets/project-reverse-mockingbird'
+export const soundCloud5 = 'https://soundcloud.com/user-544895508/sets/5a-1';
 
 export const soundCloudMusic = [
+  {
+    name: '5',
+    description: '',
+    playTime: '12:48',
+    link: 'https://soundcloud.com/user-544895508/sets/5a-1',
+    albumArt: '5.png',
+    releaseDate: '2019-05-31',
+    songs: [
+      {
+        name: 'White Horse Prophecy',
+        playTime: '03:13',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/white-horse-prophecy'
+      },
+      {
+        name: 'New Age',
+        playTime: '02:47',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/new-age'
+      },
+      {
+        name: 'Fallen Angel',
+        playTime: '03:26',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/fallen-angel'
+      },
+      {
+        name: 'Blue Room Red Room',
+        playTime: '03:32',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/blue-room-red-room'
+      },
+      {
+        name: 'The Art of Shining',
+        playTime: '03:48',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/the-art-of-shining'
+      },
+    ]
+  },
+  {
+    name: '4',
+    description: '',
+    playTime: '12:48',
+    link: 'https://soundcloud.com/user-544895508/sets/4a-1',
+    albumArt: '4.png',
+    releaseDate: '2019-01-30',
+    songs: [
+      {
+        name: 'Martian',
+        playTime: '02:55',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/martian',
+      },
+      {
+        name: 'Past Life',
+        playTime: '03:44',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/past-life',
+      },
+      {
+        name: 'Cries from Jupiter',
+        playTime: '03:13',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/cries-from-jupiter',
+      },
+      {
+        name: 'God Wink',
+        playTime: '02:55',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/god-wink',
+      },
+    ]
+  },
   {
     name: 'Project Reverse Mockingbird',
     description: '',
