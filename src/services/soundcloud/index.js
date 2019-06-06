@@ -2,6 +2,22 @@ export const soundCloud5 = 'https://soundcloud.com/user-544895508/sets/5a-1';
 
 export const soundCloudMusic = [
   {
+    name: 'The 6th',
+    description: '',
+    playTime: '01:13:07',
+    link: 'https://soundcloud.com/user-544895508/the-6th',
+    albumArt: 'the-6th.png',
+    releaseDate: '2019-06-06',
+    songs: [
+      {
+        name: 'The 6th',
+        playTime: '01:13:07',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-6th'
+      },
+    ]
+  },
+  {
     name: '5',
     description: '',
     playTime: '12:48',
