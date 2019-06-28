@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "thunderbandit-tht"
+    "default": "osito-oto"
+  },
+  "targets": {
+    "osito-oto": {
+      "hosting": {
+        "thunderbandit": [
+          "thunderbandit"
+        ]
+      }
+    }
   }
 }

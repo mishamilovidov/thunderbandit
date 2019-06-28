@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "thunderbandit",
     "public": "build",
     "ignore": [
       "firebase.json",

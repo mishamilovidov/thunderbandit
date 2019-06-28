@@ -11,6 +11,10 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
 
+  # Apply Target for Deploy
+  - name: 'gcr.io/$PROJECT_ID/firebase'
+    args: ['target:apply', 'hosting', 'thunderbandit', 'thunderbandit']
+
   # Deploy
   - name: 'gcr.io/$PROJECT_ID/firebase'
-    args: ['deploy']
+    args: ['deploy', '--only', 'hosting:thunderbandit']
