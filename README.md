@@ -1,55 +1,36 @@
-# thunderbandit.com
+# Thunder Bandit 🎧 🙌
 
-This is the repo for thunderbandit.com. This is a React app bootstrapped with
-`create-react-app`.
+This project is for [thunderbandit.com](https://thunderbandit.com). You can find
+Thunder Bandit on 📷 Instagram [@thunderbandit](https://www.instagram.com/thunderbandit/),
+🐦 Twitter [@imthunderbandit](https://twitter.com/imthunderbandit), and
+🎵 [SoundCloud](https://soundcloud.com/user-544895508).
 
-## Requirements
+## Local Setup
 
-For development, you will only need Node.js installed on your environment.
+You can get this project up and running using either Node.js via npm or Docker 
+via Docker Compose. 
 
-### Node
+### 📦 Node.js via npm
 
-[Node](http://nodejs.org/) is really easy to install & now includes [NPM](https://npmjs.org/).
-You should be able to run the following command after the installation procedure
-below.
+* Install [Node.js](http://nodejs.org/) (v8 or newer)
+* Clone repository
+* Change to repository root
+* Run `npm install` to install packages
+* Run `npm start` to get local server up and running on port 3000
 
-    $ node --version
-    v8.11.2
+### 🐳 Docker via Docker Compose
 
-    $ npm --version
-    5.6.0
+* Install [Docker](https://hub.docker.com/search/?q=docker%20desktop&type=edition&offering=community) based on your operating system 
+* Install Docker Compose based on your operating system (comes with Docker Desktop for Mac and Windows)
+* Add `127.0.0.1    thunderbandit.construo.us` to local hosts file
+* Change to the repository root
+* Run `docker-compose up --build`
+* Navigate to http://thunderbandit.construo.us in your local browser
+* To stop docker compose, run `docker-compose down -v`
 
-#### Node installation on macOS
 
-You will need to use a Terminal. On macOS, you can find the default terminal in
-`/Applications/Utilities/Terminal.app`.
+## Deployment
 
-Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
-
-    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-If everything when fine, you should run
-
-    $ brew install node@8
-
-#### Node installation on Linux
-
-    sudo apt-get install python-software-properties
-    sudo add-apt-repository ppa:chris-lea/node.js
-    sudo apt-get update
-    sudo apt-get install nodejs=8.11.2-1chl1~precise1
-
-#### Node installation on Windows
-
-Just go on [official Node.js website](http://nodejs.org/) & grab the installer for version 8.11.2.
-Also, be sure to have `git` available in your PATH, `npm` might need it.
-
-## Install
-
-    $ git clone https://gitlab.com/m_milovidov/thunderbandit.git
-    $ cd thunderbandit
-    $ npm install
-
-## Start & Watch
-
-    $ npm start
+The site is hosting using Firebase Hosting and is deploy via Google Cloud Build.
+A build is trigger anytime the master branch is changed. Build steps are outlined
+in the [cloudbuild.yaml](cloudbuild.yaml) file in the root of the repo.

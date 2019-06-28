@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Main from '../components/Main';
 import Header from '../components/Header';
-// import Footer from '../components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlay, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import WebFont from 'webfontloader';
@@ -16,18 +15,13 @@ WebFont.load({
   }
 });
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Main />
-        {
-          // <Footer />
-        }
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+    </div>
+  );
+};
 
 export default App;

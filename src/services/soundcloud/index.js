@@ -1,6 +1,22 @@
-export const soundCloud5 = 'https://soundcloud.com/user-544895508/sets/5a-1';
+export const soundCloudVergingRevalations = 'https://soundcloud.com/user-544895508/verging-revalations';
 
 export const soundCloudMusic = [
+  {
+    name: 'Verging Revalations',
+    description: '',
+    playTime: '02:16',
+    link: 'https://soundcloud.com/user-544895508/verging-revalations',
+    albumArt: 'verging-revalations.png',
+    releaseDate: '2019-06-27',
+    songs: [
+      {
+        name: 'Verging Revalations',
+        playTime: '02:16',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/verging-revalations'
+      },
+    ]
+  },
   {
     name: 'The 6th',
     description: '',
