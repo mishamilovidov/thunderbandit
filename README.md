@@ -10,7 +10,7 @@ Thunder Bandit on 📷 Instagram [@thunderbandit](https://www.instagram.com/thun
 You can get this project up and running using either Node.js via npm or Docker 
 via Docker Compose. 
 
-### 📦 Node.js via npm
+### 🐢 Node.js via npm
 
 * Install [Node.js](http://nodejs.org/) (v8 or newer)
 * Clone repository
