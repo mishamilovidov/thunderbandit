@@ -10,14 +10,10 @@ import { twitterAccountUrl } from '../../services/twitter';
 import './styles.css';
 
 class Header extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      open: false,
-      navigationOverlayDisplay: false
-    }
-  }
+  state = {
+    open: false,
+    navigationOverlayDisplay: false
+  };
 
   handleClick() {
     this.setState({
