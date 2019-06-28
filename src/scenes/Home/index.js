@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloud5 } from '../../services/soundcloud';
+import { soundCloudVergingRevalations } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -18,14 +18,14 @@ class Home extends Component {
           </ReactCSSTransitionGroup>
           <div className="text">
             <ReactCSSTransitionGroup {...transitionOptions}>
-              <div className="subtitle">EP out now</div>
+              <div className="subtitle">Single out now</div>
             </ReactCSSTransitionGroup>
             <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-              <div className="title">5</div>
+              <div className="title">Verging Revalations</div>
               <div className="callToAction">
                 <ReactGA.OutboundLink
-                  eventLabel="soundCloud5"
-                  to={soundCloud5}>
+                  eventLabel="soundCloudVergingRevalations"
+                  to={soundCloudVergingRevalations}>
                   Listen on SoundCloud
                 </ReactGA.OutboundLink>
               </div>
