@@ -1,6 +1,22 @@
-export const soundCloudVergingRevalations = 'https://soundcloud.com/user-544895508/verging-revalations';
+export const soundCloudYeahNah = 'https://soundcloud.com/user-544895508/yeah-nah';
 
 export const soundCloudMusic = [
+  {
+    name: 'yeah nah',
+    description: '',
+    playTime: '48:31',
+    link: 'https://soundcloud.com/user-544895508/yeah-nah',
+    albumArt: 'yeah-nah.png',
+    releaseDate: '2019-07-11',
+    songs: [
+      {
+        name: 'yeah nah',
+        playTime: '48:31',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/yeah-nah'
+      },
+    ]
+  },
   {
     name: 'Verging Revalations',
     description: '',
