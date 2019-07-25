@@ -1,6 +1,22 @@
-export const soundCloudYeahNah = 'https://soundcloud.com/user-544895508/yeah-nah';
+export const soundCloudCrowning = 'https://soundcloud.com/user-544895508/crowning';
 
 export const soundCloudMusic = [
+  {
+    name: 'CROWNING',
+    description: '',
+    playTime: '49:14',
+    link: 'https://soundcloud.com/user-544895508/crowning',
+    albumArt: 'crowning.png',
+    releaseDate: '2019-07-24',
+    songs: [
+      {
+        name: 'CROWNING',
+        playTime: '49:14',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/crowning'
+      },
+    ]
+  },
   {
     name: 'yeah nah',
     description: '',
