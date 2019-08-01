@@ -10,7 +10,7 @@ export const soundCloudMusic = [
     releaseDate: '2019-07-31',
     songs: [
       {
-        name: 'CROWNING',
+        name: 'Simple',
         playTime: '02:31',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/simple'
