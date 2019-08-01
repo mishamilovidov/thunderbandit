@@ -1,7 +1,7 @@
 export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
-    description: '"CROWNING" out now via SoundCloud. Listen to the new EP released July 24, 2019. All media created and produced by Thunder Bandit.',
+    description: '"Simple" out now via SoundCloud. Listen to the new single released July 31, 2019. All media created and produced by Thunder Bandit.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',
@@ -12,7 +12,7 @@ export const meta = {
   },
   Music: {
     title: 'Music | THUNDER BANDIT',
-    description: 'All of the music produced and created by Thunder Bandit from Sex on the Tarmac to yeah nah.',
+    description: 'All of the music produced and created by Thunder Bandit from Sex on the Tarmac to Simple.',
     canonical: 'https://thunderbandit.com/music',
     meta: {
       charset: 'utf-8',

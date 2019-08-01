@@ -1,6 +1,22 @@
-export const soundCloudCrowning = 'https://soundcloud.com/user-544895508/crowning';
+export const soundCloudSimple = 'https://soundcloud.com/user-544895508/simple';
 
 export const soundCloudMusic = [
+  {
+    name: 'Simple',
+    description: '',
+    playTime: '02:31',
+    link: 'https://soundcloud.com/user-544895508/simple',
+    albumArt: 'simple.png',
+    releaseDate: '2019-07-31',
+    songs: [
+      {
+        name: 'CROWNING',
+        playTime: '02:31',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/simple'
+      },
+    ]
+  },
   {
     name: 'CROWNING',
     description: '',
