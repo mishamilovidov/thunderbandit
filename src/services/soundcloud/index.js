@@ -1,6 +1,22 @@
-export const soundCloudSimple = 'https://soundcloud.com/user-544895508/simple';
+export const soundCloudBlessings = 'https://soundcloud.com/user-544895508/blessings';
 
 export const soundCloudMusic = [
+  {
+    name: 'BLESSINGS',
+    description: '',
+    playTime: '01:04:31',
+    link: 'https://soundcloud.com/user-544895508/blessings',
+    albumArt: 'blessings.png',
+    releaseDate: '2019-08-04',
+    songs: [
+      {
+        name: 'BLESSINGS',
+        playTime: '01:04:31',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/blessings'
+      },
+    ]
+  },
   {
     name: 'Simple',
     description: '',
