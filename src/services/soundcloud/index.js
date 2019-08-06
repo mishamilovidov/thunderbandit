@@ -1,6 +1,22 @@
-export const soundCloudBlessings = 'https://soundcloud.com/user-544895508/blessings';
+export const soundCloudForever = 'https://soundcloud.com/user-544895508/forever';
 
 export const soundCloudMusic = [
+  {
+    name: 'Forever',
+    description: '',
+    playTime: '09:38',
+    link: 'https://soundcloud.com/user-544895508/forever',
+    albumArt: 'forever.png',
+    releaseDate: '2019-08-05',
+    songs: [
+      {
+        name: 'Forever',
+        playTime: '09:38',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/forever'
+      },
+    ]
+  },
   {
     name: 'BLESSINGS',
     description: '',
