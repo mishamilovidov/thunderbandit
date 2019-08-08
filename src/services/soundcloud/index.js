@@ -1,6 +1,38 @@
-export const soundCloudForever = 'https://soundcloud.com/user-544895508/forever';
+export const soundCloudJohn1519 = 'https://soundcloud.com/user-544895508/john-1519';
 
 export const soundCloudMusic = [
+  {
+    name: 'John 15:19',
+    description: '',
+    playTime: '03:41',
+    link: 'https://soundcloud.com/user-544895508/john-1519',
+    albumArt: 'john-1519.png',
+    releaseDate: '2019-08-07',
+    songs: [
+      {
+        name: 'John 15:19',
+        playTime: '03:41',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/john-1519'
+      },
+    ]
+  },
+  {
+    name: 'Malidoma Patrice Somé',
+    description: '',
+    playTime: '01:10:54',
+    link: 'https://soundcloud.com/user-544895508/malidoma-patrice-some',
+    albumArt: 'malidoma-patrice-some.png',
+    releaseDate: '2019-08-07',
+    songs: [
+      {
+        name: 'Malidoma Patrice Somé',
+        playTime: '01:10:54',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/malidoma-patrice-some'
+      },
+    ]
+  },
   {
     name: 'Forever',
     description: '',
