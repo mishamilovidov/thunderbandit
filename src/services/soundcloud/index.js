@@ -1,6 +1,22 @@
-export const soundCloudJohn1519 = 'https://soundcloud.com/user-544895508/john-1519';
+export const soundCloudBigKahuna = 'https://soundcloud.com/user-544895508/big-kahuna';
 
 export const soundCloudMusic = [
+  {
+    name: 'Big Kahuna',
+    description: '',
+    playTime: '05:59',
+    link: 'https://soundcloud.com/user-544895508/big-kahuna',
+    albumArt: 'big-kahuna.png',
+    releaseDate: '2019-08-08',
+    songs: [
+      {
+        name: 'Big Kahuna',
+        playTime: '05:59',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/big-kahuna'
+      },
+    ]
+  },
   {
     name: 'John 15:19',
     description: '',
