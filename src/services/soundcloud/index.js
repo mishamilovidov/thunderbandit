@@ -1,6 +1,54 @@
-export const soundCloudBigKahuna = 'https://soundcloud.com/user-544895508/big-kahuna';
+export const soundCloudAscended = 'https://soundcloud.com/user-544895508/ascended';
 
 export const soundCloudMusic = [
+  {
+    name: 'Ascended',
+    description: '',
+    playTime: '03:17',
+    link: 'https://soundcloud.com/user-544895508/ascended',
+    albumArt: 'ascended.png',
+    releaseDate: '2019-08-15',
+    songs: [
+      {
+        name: 'Ascended',
+        playTime: '03:17',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/ascended'
+      },
+    ]
+  },
+  {
+    name: 'Isaiah 60:1',
+    description: '',
+    playTime: '01:24:00',
+    link: 'https://soundcloud.com/user-544895508/isaiah-601',
+    albumArt: 'isaiah-601.png',
+    releaseDate: '2019-08-15',
+    songs: [
+      {
+        name: 'Isaiah 60:1',
+        playTime: '01:24:00',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/isaiah-601'
+      },
+    ]
+  },
+  {
+    name: 'Ascension',
+    description: '',
+    playTime: '03:25',
+    link: 'https://soundcloud.com/user-544895508/ascension',
+    albumArt: 'ascension.png',
+    releaseDate: '2019-08-15',
+    songs: [
+      {
+        name: 'Ascension',
+        playTime: '03:25',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/ascension'
+      },
+    ]
+  },
   {
     name: 'Big Kahuna',
     description: '',
