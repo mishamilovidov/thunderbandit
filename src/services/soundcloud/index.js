@@ -1,6 +1,22 @@
-export const soundCloudAscended = 'https://soundcloud.com/user-544895508/ascended';
+export const soundCloudAcclimate = 'https://soundcloud.com/user-544895508/acclimate';
 
 export const soundCloudMusic = [
+  {
+    name: 'Acclimate',
+    description: '',
+    playTime: '01:18:56',
+    link: 'https://soundcloud.com/user-544895508/acclimate',
+    albumArt: 'acclimate.png',
+    releaseDate: '2019-08-19',
+    songs: [
+      {
+        name: 'Acclimate',
+        playTime: '01:18:56',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/acclimate'
+      },
+    ]
+  },
   {
     name: 'Ascended',
     description: '',
