@@ -1,6 +1,22 @@
-export const soundCloudAcclimate = 'https://soundcloud.com/user-544895508/acclimate';
+export const soundCloudGalahad = 'https://soundcloud.com/user-544895508/galahad';
 
 export const soundCloudMusic = [
+  {
+    name: 'GALAHAD',
+    description: '',
+    playTime: '01:06:54',
+    link: 'https://soundcloud.com/user-544895508/galahad',
+    albumArt: 'galahad.png',
+    releaseDate: '2019-08-20',
+    songs: [
+      {
+        name: 'GALAHAD',
+        playTime: '01:06:54',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/galahad'
+      },
+    ]
+  },
   {
     name: 'Acclimate',
     description: '',
