@@ -1,6 +1,22 @@
-export const soundCloudGalahad = 'https://soundcloud.com/user-544895508/galahad';
+export const soundCloudAutonomous = 'https://soundcloud.com/user-544895508/autonomous';
 
 export const soundCloudMusic = [
+  {
+    name: 'AUTONOMOUS',
+    description: '',
+    playTime: '02:44',
+    link: 'https://soundcloud.com/user-544895508/autonomous',
+    albumArt: 'autonomous.png',
+    releaseDate: '2019-08-23',
+    songs: [
+      {
+        name: 'AUTONOMOUS',
+        playTime: '02:44',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/autonomous'
+      },
+    ]
+  },
   {
     name: 'GALAHAD',
     description: '',
