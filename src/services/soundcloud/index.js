@@ -1,6 +1,54 @@
-export const soundCloudAutonomous = 'https://soundcloud.com/user-544895508/autonomous';
+export const soundCloudHolyHolyHoly = 'https://soundcloud.com/user-544895508/holy-holy-holy';
 
 export const soundCloudMusic = [
+  {
+    name: 'HOLY HOLY HOLY',
+    description: '',
+    playTime: '55:59',
+    link: 'https://soundcloud.com/user-544895508/holy-holy-holy',
+    albumArt: 'holy-holy-holy.png',
+    releaseDate: '2019-08-27',
+    songs: [
+      {
+        name: 'HOLY HOLY HOLY',
+        playTime: '55:59',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/holy-holy-holy'
+      },
+    ]
+  },
+  {
+    name: 'HAPPY SONG 4 U',
+    description: '',
+    playTime: '04:08',
+    link: 'https://soundcloud.com/user-544895508/happy-song-4-u',
+    albumArt: 'happy-song-4-u.png',
+    releaseDate: '2019-08-27',
+    songs: [
+      {
+        name: 'HAPPY SONG 4 U',
+        playTime: '04:08',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/happy-song-4-u'
+      },
+    ]
+  },
+  {
+    name: 'HOLY RANT',
+    description: '',
+    playTime: '03:20',
+    link: 'https://soundcloud.com/user-544895508/holy-rant',
+    albumArt: 'holy-rant.png',
+    releaseDate: '2019-08-27',
+    songs: [
+      {
+        name: 'HOLY RANT',
+        playTime: '03:20',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/holy-rant'
+      },
+    ]
+  },
   {
     name: 'AUTONOMOUS',
     description: '',
