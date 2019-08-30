@@ -1,6 +1,22 @@
-export const soundCloudHolyHolyHoly = 'https://soundcloud.com/user-544895508/holy-holy-holy';
+export const soundCloudTheGreatBeyond= 'https://soundcloud.com/user-544895508/the-great-beyond';
 
 export const soundCloudMusic = [
+  {
+    name: 'THE GREAT BEYOND',
+    description: '',
+    playTime: '01:03:11',
+    link: 'https://soundcloud.com/user-544895508/the-great-beyond',
+    albumArt: 'the-great-beyond.png',
+    releaseDate: '2019-08-27',
+    songs: [
+      {
+        name: 'THE GREAT BEYOND',
+        playTime: '01:03:11',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-great-beyond'
+      },
+    ]
+  },
   {
     name: 'HOLY HOLY HOLY',
     description: '',
