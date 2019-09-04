@@ -2,7 +2,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudTheGreatBeyond } from '../../services/soundcloud';
+import { soundCloudConversationsWithFather } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -17,14 +17,14 @@ const Home = () => {
         </ReactCSSTransitionGroup>
         <div className="text">
           <ReactCSSTransitionGroup {...transitionOptions}>
-            <div className="subtitle">Setlist out now</div>
+            <div className="subtitle">Single out now</div>
           </ReactCSSTransitionGroup>
           <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <div className="title">The Great Beyond</div>
+            <div className="title">Conversations With Father</div>
             <div className="callToAction">
               <ReactGA.OutboundLink
-                eventLabel="soundCloudTheGreatBeyond"
-                to={soundCloudTheGreatBeyond}>
+                eventLabel="soundCloudConversationsWithFather"
+                to={soundCloudConversationsWithFather}>
                 Listen on SoundCloud
               </ReactGA.OutboundLink>
             </div>

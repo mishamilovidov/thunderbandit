@@ -1,6 +1,22 @@
-export const soundCloudTheGreatBeyond= 'https://soundcloud.com/user-544895508/the-great-beyond';
+export const soundCloudConversationsWithFather = 'https://soundcloud.com/user-544895508/conversations-with-father';
 
 export const soundCloudMusic = [
+  {
+    name: 'Conversations With Father',
+    description: '',
+    playTime: '02:13',
+    link: 'https://soundcloud.com/user-544895508/conversations-with-father',
+    albumArt: 'conversations-with-father.png',
+    releaseDate: '2019-09-03',
+    songs: [
+      {
+        name: 'Conversations With Father',
+        playTime: '02:13',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/conversations-with-father'
+      },
+    ]
+  },
   {
     name: 'THE GREAT BEYOND',
     description: '',
