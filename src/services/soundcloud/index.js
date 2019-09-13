@@ -1,6 +1,22 @@
-export const soundCloudConversationsWithFather = 'https://soundcloud.com/user-544895508/conversations-with-father';
+export const soundCloudSongOfSolomon = 'https://soundcloud.com/user-544895508/song-of-solomon';
 
 export const soundCloudMusic = [
+  {
+    name: 'Song Of Solomon',
+    description: '',
+    playTime: '59:21',
+    link: 'https://soundcloud.com/user-544895508/song-of-solomon',
+    albumArt: 'song-of-solomon.png',
+    releaseDate: '2019-09-12',
+    songs: [
+      {
+        name: 'Song Of Solomon',
+        playTime: '59:21',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/song-of-solomon'
+      },
+    ]
+  },
   {
     name: 'Conversations With Father',
     description: '',
