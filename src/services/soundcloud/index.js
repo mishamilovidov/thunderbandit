@@ -1,6 +1,38 @@
-export const soundCloudSongOfSolomon = 'https://soundcloud.com/user-544895508/song-of-solomon';
+export const soundCloudFireOfGod= 'https://soundcloud.com/user-544895508/fire-of-god';
 
 export const soundCloudMusic = [
+  {
+    name: 'Fire of God',
+    description: '',
+    playTime: '59:13',
+    link: 'https://soundcloud.com/user-544895508/fire-of-god',
+    albumArt: 'fire-of-god.png',
+    releaseDate: '2019-09-17',
+    songs: [
+      {
+        name: 'Fire of God',
+        playTime: '59:13',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/fire-of-god'
+      },
+    ]
+  },
+  {
+    name: 'Youth of Tartarus Judge',
+    description: '',
+    playTime: '03:22',
+    link: 'https://soundcloud.com/user-544895508/youth-of-tartarus-judge',
+    albumArt: 'youth-of-tartarus-judge.png',
+    releaseDate: '2019-09-17',
+    songs: [
+      {
+        name: 'Youth of Tartarus Judge',
+        playTime: '03:22',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/youth-of-tartarus-judge'
+      },
+    ]
+  },
   {
     name: 'Song Of Solomon',
     description: '',
