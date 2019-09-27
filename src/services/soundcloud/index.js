@@ -1,6 +1,54 @@
-export const soundCloudFireOfGod= 'https://soundcloud.com/user-544895508/fire-of-god';
+export const soundCloudMountOlympus = 'https://soundcloud.com/user-544895508/mount-olympus';
 
 export const soundCloudMusic = [
+  {
+    name: 'Mount Olympus',
+    description: '',
+    playTime: '01:07:08',
+    link: 'https://soundcloud.com/user-544895508/mount-olympus',
+    albumArt: 'mount-olympus.png',
+    releaseDate: '2019-09-26',
+    songs: [
+      {
+        name: 'Mount Olympus',
+        playTime: '01:07:08',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/mount-olympus'
+      },
+    ]
+  },
+  {
+    name: 'Gods\'s Correction',
+    description: '',
+    playTime: '04:20',
+    link: 'https://soundcloud.com/user-544895508/gods-correction',
+    albumArt: 'gods-correction.png',
+    releaseDate: '2019-09-26',
+    songs: [
+      {
+        name: 'Gods\'s Correction',
+        playTime: '04:20',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/gods-correction'
+      },
+    ]
+  },
+  {
+    name: 'Job\'s Trial',
+    description: '',
+    playTime: '04:12',
+    link: 'https://soundcloud.com/user-544895508/jobs-trial',
+    albumArt: 'jobs-trial.png',
+    releaseDate: '2019-09-26',
+    songs: [
+      {
+        name: 'Job\'s Trial',
+        playTime: '04:12',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/jobs-trial'
+      },
+    ]
+  },
   {
     name: 'Fire of God',
     description: '',
