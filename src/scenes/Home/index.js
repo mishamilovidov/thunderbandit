@@ -2,7 +2,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudMountOlympus } from '../../services/soundcloud';
+import { soundCloudEmpyrean } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -20,11 +20,11 @@ const Home = () => {
             <div className="subtitle">Setlist out now</div>
           </ReactCSSTransitionGroup>
           <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <div className="title">Mount Olympus</div>
+            <div className="title">Empyrean</div>
             <div className="callToAction">
               <ReactGA.OutboundLink
-                eventLabel="soundCloudMountOlympus"
-                to={soundCloudMountOlympus}>
+                eventLabel="soundCloudEmpyrean"
+                to={soundCloudEmpyrean}>
                 Listen on SoundCloud
               </ReactGA.OutboundLink>
             </div>

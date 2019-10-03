@@ -1,6 +1,22 @@
-export const soundCloudMountOlympus = 'https://soundcloud.com/user-544895508/mount-olympus';
+export const soundCloudEmpyrean = 'https://soundcloud.com/user-544895508/empyrean';
 
 export const soundCloudMusic = [
+  {
+    name: 'Empyrean',
+    description: '',
+    playTime: '01:02:26',
+    link: 'https://soundcloud.com/user-544895508/empyrean',
+    albumArt: 'empyrean.png',
+    releaseDate: '2019-10-02',
+    songs: [
+      {
+        name: 'Empyrean',
+        playTime: '01:02:26',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/empyrean'
+      },
+    ]
+  },
   {
     name: 'Mount Olympus',
     description: '',
