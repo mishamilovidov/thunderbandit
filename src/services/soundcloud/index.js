@@ -1,6 +1,22 @@
-export const soundCloudEmpyrean = 'https://soundcloud.com/user-544895508/empyrean';
+export const soundCloud144000 = 'https://soundcloud.com/user-544895508/144000a';
 
 export const soundCloudMusic = [
+  {
+    name: '144,000',
+    description: '',
+    playTime: '49:15',
+    link: 'https://soundcloud.com/user-544895508/144000a',
+    albumArt: '144000.png',
+    releaseDate: '2019-11-05',
+    songs: [
+      {
+        name: '144,000',
+        playTime: '49:15',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/144000a'
+      },
+    ]
+  },
   {
     name: 'Empyrean',
     description: '',
