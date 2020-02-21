@@ -1,6 +1,22 @@
-export const soundCloud144000 = 'https://soundcloud.com/user-544895508/144000a';
+export const soundCloudMetratron = 'https://soundcloud.com/user-544895508/metatron';
 
 export const soundCloudMusic = [
+  {
+    name: 'Metratron',
+    description: '',
+    playTime: '50:30',
+    link: 'https://soundcloud.com/user-544895508/metatron',
+    albumArt: 'metratron.png',
+    releaseDate: '2020-02-20',
+    songs: [
+      {
+        name: 'Metratron',
+        playTime: '50:30',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/metatron'
+      },
+    ]
+  },
   {
     name: '144,000',
     description: '',
