@@ -1,7 +1,7 @@
 export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
-    description: '"Metatron" setlist out now via SoundCloud. Listen to the new setlist released February 20, 2020. All media created and produced by Thunder Bandit.',
+    description: '"7" EP out now via SoundCloud. Listen to the new setlist released March 16, 2020.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',

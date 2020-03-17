@@ -1,6 +1,58 @@
-export const soundCloudMetatron = 'https://soundcloud.com/user-544895508/metatron';
+export const soundCloud7 = 'https://soundcloud.com/user-544895508/sets/7a-1';
 
 export const soundCloudMusic = [
+  {
+    name: '7',
+    description: '',
+    playTime: '21:07',
+    link: 'https://soundcloud.com/user-544895508/sets/7a-1',
+    albumArt: '7.png',
+    releaseDate: '2020-03-16',
+    songs: [
+      {
+        name: 'The Little Book (prod. kujo & nayz)',
+        playTime: '02:00',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-little-book-prod-kujo-nayz?in=user-544895508/sets/7a-1'
+      },
+      {
+        name: 'The Thunder, Perfect Mind (prod. Young Swisher Beats)',
+        playTime: '03:13',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/the-thunder-perfect-mind-prod?in=user-544895508/sets/7a-1'
+      },
+      {
+        name: 'Pacification (prod. Stoic Beats)',
+        playTime: '03:32',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/pacification-prod-stoic-beats?in=user-544895508/sets/7a-1'
+      },
+      {
+        name: 'Anagalactic (prod. Donnie Katana)',
+        playTime: '02:48',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/anagalactic-prod-donnie-katana?in=user-544895508/sets/7a-1'
+      },
+      {
+        name: 'Incoronate (prod. pilotkid)',
+        playTime: '03:32',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/incoronate-prod-pilotkid?in=user-544895508/sets/7a-1'
+      },
+      {
+        name: 'Sovereign Citizen (prod. Thunder Bandit)',
+        playTime: '02:28',
+        trackNumber: 6,
+        link: 'https://soundcloud.com/user-544895508/sovereign-citizen-prod-thunder?in=user-544895508/sets/7a-1'
+      },
+      {
+        name: 'The Dormition of Casualism (prod. GC)',
+        playTime: '03:32',
+        trackNumber: 7,
+        link: 'https://soundcloud.com/user-544895508/the-dormition-of-casualism?in=user-544895508/sets/7a-1'
+      },
+    ]
+  },
   {
     name: 'Metatron',
     description: '',

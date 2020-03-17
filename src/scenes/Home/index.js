@@ -2,7 +2,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudMetatron } from '../../services/soundcloud';
+import { soundCloud7 } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -17,14 +17,14 @@ const Home = () => {
         </ReactCSSTransitionGroup>
         <div className="text">
           <ReactCSSTransitionGroup {...transitionOptions}>
-            <div className="subtitle">Setlist out now</div>
+            <div className="subtitle">EP out now</div>
           </ReactCSSTransitionGroup>
           <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <div className="title">Metatron</div>
+            <div className="title">7</div>
             <div className="callToAction">
               <ReactGA.OutboundLink
-                eventLabel="soundCloudMetatron"
-                to={soundCloudMetatron}>
+                eventLabel="soundCloud7"
+                to={soundCloud7}>
                 Listen on SoundCloud
               </ReactGA.OutboundLink>
             </div>
