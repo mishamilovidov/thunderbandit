@@ -2,6 +2,22 @@ export const soundCloud7 = 'https://soundcloud.com/user-544895508/sets/7a-1';
 
 export const soundCloudMusic = [
   {
+    name: 'Dima',
+    description: '',
+    playTime: '54:39',
+    link: 'https://soundcloud.com/user-544895508/dima',
+    albumArt: 'dima.png',
+    releaseDate: '2020-02-25',
+    songs: [
+      {
+        name: 'Dima',
+        playTime: '54:39',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/dima'
+      },
+    ]
+  },
+  {
     name: '7',
     description: '',
     playTime: '21:07',
