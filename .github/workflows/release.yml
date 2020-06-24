@@ -1,6 +1,9 @@
 name: release
 
 on:
+  push:
+    branches:
+      - mishamilovidov/feature/update
   release:
     types:
       - published
