@@ -2,6 +2,22 @@ export const soundCloud7 = 'https://soundcloud.com/user-544895508/sets/7a-1';
 
 export const soundCloudMusic = [
   {
+    name: 'Universalism',
+    description: '',
+    playTime: '1:03:18',
+    link: 'https://soundcloud.com/user-544895508/universalism',
+    albumArt: 'universalism.png',
+    releaseDate: '2020-06-23',
+    songs: [
+      {
+        name: 'Universalism',
+        playTime: '1:03:18',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/universalism',
+      },
+    ]
+  },
+  {
     name: 'Dima',
     description: '',
     playTime: '54:39',
