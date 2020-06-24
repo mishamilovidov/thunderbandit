@@ -12,7 +12,7 @@ via Docker Compose.
 
 ### 🐢 Node.js via npm
 
-* Install [Node.js](http://nodejs.org/) (v8 or newer)
+* Install [Node.js](http://nodejs.org/) (v10 or newer)
 * Clone repository
 * Change to repository root
 * Run `npm install` to install packages
@@ -27,10 +27,3 @@ via Docker Compose.
 * Run `docker-compose up --build`
 * Navigate to http://thunderbandit.construo.us in your local browser
 * To stop docker compose, run `docker-compose down -v`
-
-
-## Deployment
-
-The site is hosting using Firebase Hosting and is deploy via Google Cloud Build.
-A build is trigger anytime the master branch is changed. Build steps are outlined
-in the [cloudbuild.yaml](cloudbuild.yaml) file in the root of the repo.
