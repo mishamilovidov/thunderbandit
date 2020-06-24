@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A website for promoting Thunder Bandit Media",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint src/",
     "test": "echo \"test\"",
     "test:ci": "CI=true npm test",
     "start": "react-scripts start",
