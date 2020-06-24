@@ -1,17 +1,9 @@
 name: release
 
 on:
-  push:
-    branches:
-      - mishamilovidov/feature/update
   release:
     types:
       - published
-    paths:
-      - 'public/**'
-      - 'src/**'
-      - 'firestore.indexes.json'
-      - 'firestore.rules'
 
 jobs:
   build:
