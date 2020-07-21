@@ -1,6 +1,6 @@
 {
   "name": "thunderbandit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A website for promoting Thunder Bandit Media",
   "scripts": {
     "lint": "eslint src/",
