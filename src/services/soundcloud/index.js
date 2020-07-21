@@ -2,6 +2,22 @@ export const soundCloud7 = 'https://soundcloud.com/user-544895508/sets/7a-1';
 
 export const soundCloudMusic = [
   {
+    name: 'Nomothetic Logomancy',
+    description: '',
+    playTime: '1:25:26',
+    link: 'https://soundcloud.com/user-544895508/nomothetic-logomancy',
+    albumArt: 'nomothetic-logomancy.png',
+    releaseDate: '2020-07-20',
+    songs: [
+      {
+        name: 'Nomothetic Logomancy',
+        playTime: '1:25:26',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/nomothetic-logomancy',
+      },
+    ]
+  },
+  {
     name: 'Universalism',
     description: '',
     playTime: '1:03:18',
