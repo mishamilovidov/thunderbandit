@@ -1,7 +1,7 @@
 export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
-    description: '"Bodement" EP out now via SoundCloud. Listen to the new setlist released July 31, 2020.',
+    description: '"Bodement" EP out now via SoundCloud. Listen to the new album released July 31, 2020.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',
