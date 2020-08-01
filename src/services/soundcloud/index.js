@@ -1,6 +1,100 @@
-export const soundCloud7 = 'https://soundcloud.com/user-544895508/sets/7a-1';
+export const soundCloudBodement = 'https://soundcloud.com/user-544895508/sets/bodement';
 
 export const soundCloudMusic = [
+  {
+    name: 'Bodement',
+    description: '',
+    playTime: '46:04',
+    link: 'https://soundcloud.com/user-544895508/sets/bodement',
+    albumArt: 'bodement.png',
+    releaseDate: '2020-07-31',
+    songs: [
+      {
+        name: 'Intro (The Great Vivification)',
+        playTime: '02:06',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/intro-the-great-vivification?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'I Am',
+        playTime: '03:45',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/i-am?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Faith',
+        playTime: '03:45',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/faith?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Bodement',
+        playTime: '03:42',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/bodement?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'The 7 Churches',
+        playTime: '02:07',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/the-7-churches?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Superpower',
+        playTime: '03:22',
+        trackNumber: 6,
+        link: 'https://soundcloud.com/user-544895508/superpower?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Polypsychic',
+        playTime: '03:13',
+        trackNumber: 7,
+        link: 'https://soundcloud.com/user-544895508/polypsychic?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Elevate (Interlude)',
+        playTime: '02:52',
+        trackNumber: 8,
+        link: 'https://soundcloud.com/user-544895508/elevate-interlude?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Pslam Praise',
+        playTime: '03:34',
+        trackNumber: 9,
+        link: 'https://soundcloud.com/user-544895508/psalm-praise?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Smart Child',
+        playTime: '02:40',
+        trackNumber: 10,
+        link: 'https://soundcloud.com/user-544895508/smart-child?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Earned',
+        playTime: '03:17',
+        trackNumber: 11,
+        link: 'https://soundcloud.com/user-544895508/earned?in=user-544895508/sets/bodement'
+      },
+      {
+        name: '7 God',
+        playTime: '04:34',
+        trackNumber: 12,
+        link: 'https://soundcloud.com/user-544895508/7-god?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Doomster',
+        playTime: '02:13',
+        trackNumber: 13,
+        link: 'https://soundcloud.com/user-544895508/doomster?in=user-544895508/sets/bodement'
+      },
+      {
+        name: 'Heaven',
+        playTime: '04:48',
+        trackNumber: 14,
+        link: 'https://soundcloud.com/user-544895508/heaven?in=user-544895508/sets/bodement'
+      }
+    ]
+  },
   {
     name: 'Nomothetic Logomancy',
     description: '',
