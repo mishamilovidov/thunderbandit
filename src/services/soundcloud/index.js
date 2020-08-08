@@ -7,7 +7,7 @@ export const soundCloudMusic = [
     playTime: '51:39',
     link: 'https://soundcloud.com/user-544895508/fatiloquent-frequencies',
     albumArt: 'fatiloquent-frequencies.png',
-    releaseDate: '2018-09-20',
+    releaseDate: '2020-08-07',
     songs: [
       {
         name: 'Fatiloquent Frequencies',
