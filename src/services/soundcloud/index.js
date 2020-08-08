@@ -2,6 +2,22 @@ export const soundCloudBodement = 'https://soundcloud.com/user-544895508/sets/bo
 
 export const soundCloudMusic = [
   {
+    name: 'Fatiloquent Frequencies',
+    description: '',
+    playTime: '51:39',
+    link: 'https://soundcloud.com/user-544895508/fatiloquent-frequencies',
+    albumArt: 'fatiloquent-frequencies.png',
+    releaseDate: '2018-09-20',
+    songs: [
+      {
+        name: 'Fatiloquent Frequencies',
+        playTime: '51:39',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/fatiloquent-frequencies',
+      }
+    ]
+  },
+  {
     name: 'Bodement',
     description: '',
     playTime: '46:04',
