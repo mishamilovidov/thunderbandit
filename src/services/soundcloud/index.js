@@ -2,6 +2,22 @@ export const soundCloudBodement = 'https://soundcloud.com/user-544895508/sets/bo
 
 export const soundCloudMusic = [
   {
+    name: 'Aevum',
+    description: '',
+    playTime: '56:03',
+    link: 'https://soundcloud.com/user-544895508/aevum',
+    albumArt: 'aevum.png',
+    releaseDate: '2020-08-07',
+    songs: [
+      {
+        name: 'Aevum',
+        playTime: '56:03',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/aevum',
+      }
+    ]
+  },
+  {
     name: 'Fatiloquent Frequencies',
     description: '',
     playTime: '51:39',
