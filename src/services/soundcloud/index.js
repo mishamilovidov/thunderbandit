@@ -7,7 +7,7 @@ export const soundCloudMusic = [
     playTime: '56:03',
     link: 'https://soundcloud.com/user-544895508/aevum',
     albumArt: 'aevum.png',
-    releaseDate: '2020-08-07',
+    releaseDate: '2020-08-16',
     songs: [
       {
         name: 'Aevum',
