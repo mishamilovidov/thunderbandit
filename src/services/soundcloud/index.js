@@ -2,7 +2,7 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
-    name: 'Freestyle Side A & B',
+    name: 'Freestyle Side A & Z',
     description: '',
     playTime: '06:27',
     link: 'https://soundcloud.com/user-544895508/sets/freestyle-side-a-z',
@@ -16,7 +16,7 @@ export const soundCloudMusic = [
         link: 'https://soundcloud.com/user-544895508/freestyle-side-a'
       },
       {
-        name: 'Freestyle Side B',
+        name: 'Freestyle Side Z',
         playTime: '03:37',
         trackNumber: 2,
         link: 'https://soundcloud.com/user-544895508/freestyle-side-z'
