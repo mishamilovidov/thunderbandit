@@ -1,8 +1,8 @@
-import React from 'react';
 import ReactGA from 'react-ga';
+import React from 'react';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudBodement } from '../../services/soundcloud';
+import { soundCloudFreestyleSideAZ } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -17,14 +17,14 @@ const Home = () => {
         </ReactCSSTransitionGroup>
         <div className="text">
           <ReactCSSTransitionGroup {...transitionOptions}>
-            <div className="subtitle">Album out now</div>
+            <div className="subtitle">EP out now</div>
           </ReactCSSTransitionGroup>
           <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <div className="title">Bodement</div>
+            <div className="title">Freestyle Side A & Z</div>
             <div className="callToAction">
               <ReactGA.OutboundLink
-                eventLabel="soundCloudBodement"
-                to={soundCloudBodement}>
+                eventLabel="soundCloudFreestyleSideAZ"
+                to={soundCloudFreestyleSideAZ}>
                 Listen on SoundCloud
               </ReactGA.OutboundLink>
             </div>
