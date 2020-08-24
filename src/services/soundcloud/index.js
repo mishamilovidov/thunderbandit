@@ -1,6 +1,28 @@
-export const soundCloudBodement = 'https://soundcloud.com/user-544895508/sets/bodement';
+export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/sets/freestyle-side-a-z';
 
 export const soundCloudMusic = [
+  {
+    name: 'Freestyle Side A & B',
+    description: '',
+    playTime: '06:27',
+    link: 'https://soundcloud.com/user-544895508/sets/freestyle-side-a-z',
+    albumArt: 'freestylesideaz.png',
+    releaseDate: '2020-08-23',
+    songs: [
+      {
+        name: 'Freestyle Side A',
+        playTime: '02:50',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/freestyle-side-a'
+      },
+      {
+        name: 'Freestyle Side B',
+        playTime: '03:37',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/freestyle-side-z'
+      },
+    ]    
+  },
   {
     name: 'Aevum',
     description: '',
