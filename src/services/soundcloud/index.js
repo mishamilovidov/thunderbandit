@@ -2,6 +2,22 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
+    name: 'Peace',
+    description: '',
+    playTime: '57:26',
+    link: 'https://soundcloud.com/user-544895508/peace',
+    albumArt: 'peace.png',
+    releaseDate: '2020-08-29',
+    songs: [
+      {
+        name: 'Peace',
+        playTime: '57:26',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/peace',
+      }
+    ]
+  },
+  {
     name: 'Freestyle Side A & Z',
     description: '',
     playTime: '06:27',
@@ -187,7 +203,7 @@ export const soundCloudMusic = [
     playTime: '54:39',
     link: 'https://soundcloud.com/user-544895508/dima',
     albumArt: 'dima.png',
-    releaseDate: '2020-02-25',
+    releaseDate: '2020-03-25',
     songs: [
       {
         name: 'Dima',
