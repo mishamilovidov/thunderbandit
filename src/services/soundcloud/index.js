@@ -2,6 +2,22 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
+    name: 'Theophany',
+    description: '',
+    playTime: '1:27:05',
+    link: 'https://soundcloud.com/user-544895508/theophany',
+    albumArt: 'theophany.png',
+    releaseDate: '2020-09-18',
+    songs: [
+      {
+        name: 'Theophany',
+        playTime: '1:27:05',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/theophany',
+      }
+    ]
+  },
+  {
     name: 'Peace',
     description: '',
     playTime: '57:26',
