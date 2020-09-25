@@ -2,6 +2,22 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
+    name: 'Believer of Varsal Philalethist',
+    description: '',
+    playTime: '1:17:18',
+    link: 'https://soundcloud.com/user-544895508/believer-of-varsal-philalethist',
+    albumArt: 'believer-of-varsal-philalethist.png',
+    releaseDate: '2020-09-24',
+    songs: [
+      {
+        name: 'Believer of Varsal Philalethist',
+        playTime: '1:17:18',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/believer-of-varsal-philalethist',
+      }
+    ]
+  },
+  {
     name: 'Theophany',
     description: '',
     playTime: '1:27:05',
