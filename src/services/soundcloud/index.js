@@ -2,6 +2,22 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
+    name: 'Epopee',
+    description: '',
+    playTime: '1:15:07',
+    link: 'https://soundcloud.com/user-544895508/epopee',
+    albumArt: 'epopee.png',
+    releaseDate: '2020-10-02',
+    songs: [
+      {
+        name: 'Epopee',
+        playTime: '1:15:07',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/epopee',
+      }
+    ]
+  },
+  {
     name: 'Believer of Varsal Philalethist',
     description: '',
     playTime: '1:17:18',
