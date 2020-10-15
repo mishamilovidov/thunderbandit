@@ -2,6 +2,22 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
+    name: 'Corroborate Sooth',
+    description: '',
+    playTime: '1:08:14',
+    link: 'https://soundcloud.com/user-544895508/corroborate-sooth',
+    albumArt: 'corroborate-sooth.png',
+    releaseDate: '2020-10-14',
+    songs: [
+      {
+        name: 'Corroborate Sooth',
+        playTime: '1:08:14',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/corroborate-sooth',
+      }
+    ]
+  },
+  {
     name: 'Epopee',
     description: '',
     playTime: '1:15:07',
