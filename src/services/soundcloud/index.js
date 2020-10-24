@@ -2,6 +2,22 @@ export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/
 
 export const soundCloudMusic = [
   {
+    name: 'Advanced Kenosis',
+    description: '',
+    playTime: '1:25:43',
+    link: 'https://soundcloud.com/user-544895508/advanced-kenosis',
+    albumArt: 'advanced-kenosis.png',
+    releaseDate: '2020-10-23',
+    songs: [
+      {
+        name: 'Advanced Kenosis',
+        playTime: '1:25:43',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/advanced-kenosis',
+      }
+    ]
+  },
+  {
     name: 'Corroborate Sooth',
     description: '',
     playTime: '1:08:14',
