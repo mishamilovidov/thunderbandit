@@ -1,6 +1,64 @@
-export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/sets/freestyle-side-a-z';
+export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/sets/the-story-of-uriel';
 
 export const soundCloudMusic = [
+  {
+    name: 'The Story of Uriel',
+    description: '',
+    playTime: '24:59',
+    link: 'https://soundcloud.com/user-544895508/sets/the-story-of-uriel',
+    albumArt: 'story-of-uriel.png',
+    releaseDate: '2020-10-28',
+    songs: [
+      {
+        name: 'Yasharahla',
+        playTime: '02:50',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/yasharahla?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Plenipotent',
+        playTime: '03:32',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/plenipotent?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Fire of God',
+        playTime: '03:05',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/fire-of-god-1?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Sibylline Oracles',
+        playTime: '02:44',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/sibylline-oracles?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Photonic',
+        playTime: '02:55',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/photonic?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Star Road',
+        playTime: '03:53',
+        trackNumber: 6,
+        link: 'https://soundcloud.com/user-544895508/star-road?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Strong\'s Concordance',
+        playTime: '02:24',
+        trackNumber: 7,
+        link: 'https://soundcloud.com/user-544895508/strongs-concordance?in=user-544895508/sets/the-story-of-uriel'
+      },
+      {
+        name: 'Keraunoscopia (Chosen)',
+        playTime: '03:32',
+        trackNumber: 8,
+        link: 'https://soundcloud.com/user-544895508/keraunoscopia-chosen?in=user-544895508/sets/the-story-of-uriel'
+      }
+    ]
+  },
   {
     name: 'Advanced Kenosis',
     description: '',
