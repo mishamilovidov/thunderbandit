@@ -2,7 +2,7 @@ import ReactGA from 'react-ga';
 import React from 'react';
 import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
-import { soundCloudFreestyleSideAZ } from '../../services/soundcloud';
+import { soundCloudStoryOfUriel } from '../../services/soundcloud';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
 import './styles.css';
@@ -20,11 +20,11 @@ const Home = () => {
             <div className="subtitle">EP out now</div>
           </ReactCSSTransitionGroup>
           <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <div className="title">Freestyle Side A & Z</div>
+            <div className="title">The Story of Uriel</div>
             <div className="callToAction">
               <ReactGA.OutboundLink
-                eventLabel="soundCloudFreestyleSideAZ"
-                to={soundCloudFreestyleSideAZ}>
+                eventLabel="soundCloudStoryOfUriel"
+                to={soundCloudStoryOfUriel}>
                 Listen on SoundCloud
               </ReactGA.OutboundLink>
             </div>

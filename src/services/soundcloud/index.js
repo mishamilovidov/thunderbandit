@@ -1,4 +1,4 @@
-export const soundCloudFreestyleSideAZ = 'https://soundcloud.com/user-544895508/sets/freestyle-side-a-z';
+export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/sets/the-story-of-uriel';
 
 export const soundCloudMusic = [
   {
@@ -47,7 +47,7 @@ export const soundCloudMusic = [
       },
       {
         name: 'Strong\'s Concordance',
-        playTime: '03:32',
+        playTime: '02:24',
         trackNumber: 7,
         link: 'https://soundcloud.com/user-544895508/strongs-concordance?in=user-544895508/sets/the-story-of-uriel'
       },
