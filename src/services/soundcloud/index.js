@@ -2,6 +2,22 @@ export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/set
 
 export const soundCloudMusic = [
   {
+    name: 'Regent of the Sun',
+    description: '',
+    playTime: '3:36',
+    link: 'https://soundcloud.com/user-544895508/regent-of-the-sun',
+    albumArt: 'regent-of-the-sun.png',
+    releaseDate: '2020-11-03',
+    songs: [
+      {
+        name: 'Regent of the Sun',
+        playTime: '3:36',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/regent-of-the-sun',
+      }
+    ]
+  },
+  {
     name: 'The Story of Uriel',
     description: '',
     playTime: '24:59',
