@@ -6,7 +6,7 @@ export const soundCloudMusic = [
     description: '',
     playTime: '1:05:29',
     link: 'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror',
-    albumArt: 'regent-of-the-sun.png',
+    albumArt: 'the-éclatd-of-thunder-and-terror.png',
     releaseDate: '2020-11-11',
     songs: [
       {
