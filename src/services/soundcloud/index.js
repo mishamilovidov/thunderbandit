@@ -2,6 +2,22 @@ export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/set
 
 export const soundCloudMusic = [
   {
+    name: 'The Éclat of Thunder and Terror',
+    description: '',
+    playTime: '1:05:29',
+    link: 'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror',
+    albumArt: 'regent-of-the-sun.png',
+    releaseDate: '2020-11-11',
+    songs: [
+      {
+        name: 'The Éclat of Thunder and Terror',
+        playTime: '1:05:29',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror',
+      }
+    ]
+  },
+  {
     name: 'Regent of the Sun',
     description: '',
     playTime: '3:36',
