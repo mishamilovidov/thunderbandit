@@ -24,13 +24,13 @@ jobs:
 
       - name: export command to fetch github access token
         run: |
-          echo "::set-env name=CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV::gcloud beta secrets versions access latest --secret=GITHUB_PAT_MISHAMILOVIDOV --quiet --project=osito-oto"
+          echo "CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV=gcloud beta secrets versions access latest --secret=GITHUB_PAT_MISHAMILOVIDOV --quiet --project=osito-oto" >> $GITHUB_ENV
 
       - name: mask github access token
         run: echo "::add-mask::$(eval "$CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV")"
 
       - name: export github access token
-        run: echo "::set-env name=GITHUB_PAT_MISHAMILOVIDOV::$(eval "$CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV")"
+        run: echo "GITHUB_PAT_MISHAMILOVIDOV=$(eval "$CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV")" >> $GITHUB_ENV
 
       - name: draft release
         uses: release-drafter/release-drafter@v5
