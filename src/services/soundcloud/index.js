@@ -2,6 +2,22 @@ export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/set
 
 export const soundCloudMusic = [
   {
+    name: 'Aleph',
+    description: '',
+    playTime: '55:27',
+    link: 'https://soundcloud.com/user-544895508/aleph',
+    albumArt: 'aleph.png',
+    releaseDate: '2020-11-17',
+    songs: [
+      {
+        name: 'Aleph',
+        playTime: '55:27',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/aleph',
+      }
+    ]
+  },
+  {
     name: 'The Éclat of Thunder and Terror',
     description: '',
     playTime: '1:05:29',
