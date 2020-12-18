@@ -2,7 +2,7 @@ export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/set
 
 export const soundCloudMusic = [
   {
-    name: 'It\'s Time Yeah',
+    name: 'It\'s Time Yah',
     description: '',
     playTime: '1:26:39',
     link: 'https://soundcloud.com/user-544895508/its-time-yah-1',
@@ -10,7 +10,7 @@ export const soundCloudMusic = [
     releaseDate: '2020-12-17',
     songs: [
       {
-        name: 'It\'s Time Yeah',
+        name: 'It\'s Time Yah',
         playTime: '1:26:39',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/its-time-yah-1',
