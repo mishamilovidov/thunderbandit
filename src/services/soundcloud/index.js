@@ -18,7 +18,7 @@ export const soundCloudMusic = [
     ]
   },
   {
-    name: 'It\'s Time Yeah',
+    name: 'It\'s Time Yah',
     description: '',
     playTime: '1:26:39',
     link: 'https://soundcloud.com/user-544895508/its-time-yah-1',
