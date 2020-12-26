@@ -2,7 +2,23 @@ export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/set
 
 export const soundCloudMusic = [
   {
-    name: 'It\'s Time Yah',
+    name: 'And When It All Hurts So Bad',
+    description: '',
+    playTime: '1:04:02',
+    link: 'https://soundcloud.com/user-544895508/and-when-it-all-hurts-so-bad',
+    albumArt: 'and-when-it-all-hurts-so-bad.png',
+    releaseDate: '2020-12-25',
+    songs: [
+      {
+        name: 'And When It All Hurts So Bad',
+        playTime: '1:04:02',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/and-when-it-all-hurts-so-bad',
+      }
+    ]
+  },
+  {
+    name: 'It\'s Time Yeah',
     description: '',
     playTime: '1:26:39',
     link: 'https://soundcloud.com/user-544895508/its-time-yah-1',
