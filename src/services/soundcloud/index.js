@@ -30,6 +30,22 @@ export const soundCloudMusic = [
     ]
   },
   {
+    name: 'Remember To Smile',
+    description: '',
+    playTime: '1:00:30',
+    link: 'https://soundcloud.com/user-544895508/remember-to-smile',
+    albumArt: 'remember-to-smile.png',
+    releaseDate: '2020-12-30',
+    songs: [
+      {
+        name: 'Remember To Smile',
+        playTime: '1:00:30',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/remember-to-smile',
+      }
+    ]
+  },
+  {
     name: 'And When It All Hurts So Bad',
     description: '',
     playTime: '1:04:02',
