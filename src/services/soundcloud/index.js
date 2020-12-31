@@ -1,6 +1,34 @@
-export const soundCloudStoryOfUriel = 'https://soundcloud.com/user-544895508/sets/the-story-of-uriel';
+export const soundCloud111 = 'https://soundcloud.com/user-544895508/sets/111a';
 
 export const soundCloudMusic = [
+  {
+    name: '111',
+    description: '',
+    playTime: '12:21',
+    link: 'https://soundcloud.com/user-544895508/sets/111a',
+    albumArt: '111.png',
+    releaseDate: '2020-12-30',
+    songs: [
+      {
+        name: 'Swish',
+        playTime: '3:47',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/swish?in=user-544895508/sets/111a',
+      },
+      {
+        name: '100%',
+        playTime: '3:38',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/100-1?in=user-544895508/sets/111a',
+      },
+      {
+        name: 'Paraclete',
+        playTime: '4:55',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/paraclete?in=user-544895508/sets/111a',
+      }
+    ]
+  },
   {
     name: 'And When It All Hurts So Bad',
     description: '',
