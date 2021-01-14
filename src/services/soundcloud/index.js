@@ -2,6 +2,38 @@ export const soundCloud111 = 'https://soundcloud.com/user-544895508/sets/111a';
 
 export const soundCloudMusic = [
   {
+    name: 'Me',
+    description: '',
+    playTime: '1:06:04',
+    link: 'https://soundcloud.com/user-544895508/me-1',
+    albumArt: 'me.png',
+    releaseDate: '2021-01-13',
+    songs: [
+      {
+        name: 'Me',
+        playTime: '1:06:04',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/me-1',
+      }
+    ]
+  },
+  {
+    name: 'Epiphany',
+    description: '',
+    playTime: '1:17:32',
+    link: 'https://soundcloud.com/user-544895508/epiphany',
+    albumArt: 'epiphany.png',
+    releaseDate: '2021-01-13',
+    songs: [
+      {
+        name: 'Epiphany',
+        playTime: '1:17:32',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/epiphany',
+      }
+    ]
+  },
+  {
     name: '111',
     description: '',
     playTime: '12:21',
