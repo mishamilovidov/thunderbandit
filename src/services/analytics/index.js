@@ -1,7 +1,7 @@
 export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
-    description: '"111" EP out now via SoundCloud. Listen to the new album released December 30, 2020.',
+    description: '"73 37 89 44 34" Setlist out now via SoundCloud. Listen to the new album released January 28, 2021.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',
@@ -12,12 +12,12 @@ export const meta = {
   },
   Music: {
     title: 'Music | THUNDER BANDIT',
-    description: 'All of the music produced and created by Thunder Bandit from The Story of Uriel to 111.',
+    description: 'All of the music produced and created by Thunder Bandit from "The Story of Uriel" to "73 37 89 44 34".',
     canonical: 'https://thunderbandit.com/music',
     meta: {
       charset: 'utf-8',
       name: {
-        keywords: 'thunderbandit music,@thunderbandit music,thunder bandit music,THUNDER BANDIT music,Thunder Bandit music,thunder,bandit,tarmac,sex,ep,released,Ascended single,bodement,story of uriel,111'
+        keywords: 'thunderbandit music,@thunderbandit music,thunder bandit music,THUNDER BANDIT music,Thunder Bandit music,thunder,bandit,tarmac,sex,ep,released,Ascended single,bodement,story of uriel,111,73 37 89 44 34'
       }
     }
   }

@@ -1,6 +1,22 @@
-export const soundCloud111 = 'https://soundcloud.com/user-544895508/sets/111a';
+export const soundCloud7337894434 = 'https://soundcloud.com/user-544895508/73-37-89-44-34a';
 
 export const soundCloudMusic = [
+  {
+    name: '73 37 89 44 34',
+    description: '',
+    playTime: '1:11:42',
+    link: 'https://soundcloud.com/user-544895508/73-37-89-44-34a',
+    albumArt: '73-37-89-44-34.png',
+    releaseDate: '2021-01-28',
+    songs: [
+      {
+        name: '73 37 89 44 34',
+        playTime: '1:11:42',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/73-37-89-44-34a',
+      }
+    ]
+  },
   {
     name: 'Me',
     description: '',
