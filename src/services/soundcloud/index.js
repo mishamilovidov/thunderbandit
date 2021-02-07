@@ -1,6 +1,24 @@
-export const soundCloud7337894434 = 'https://soundcloud.com/user-544895508/73-37-89-44-34a';
+import _ from 'lodash';
 
-export const soundCloudMusic = [
+const HOME_TRACK = '314';
+
+const music = [
+  {
+    name: '314',
+    description: '',
+    playTime: '56:38',
+    link: 'https://soundcloud.com/user-544895508/314a',
+    albumArt: '314.png',
+    releaseDate: '2021-02-06',
+    songs: [
+      {
+        name: '314',
+        playTime: '56:38',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/314a',
+      }
+    ]
+  },
   {
     name: '73 37 89 44 34',
     description: '',
@@ -1379,4 +1397,8 @@ export const soundCloudMusic = [
       },
     ]
   },
-]
+];
+
+const home = _.filter(music, o => o.name === HOME_TRACK)[0];
+
+export default { home, music };

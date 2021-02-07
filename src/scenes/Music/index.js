@@ -3,15 +3,15 @@ import DocumentMeta from 'react-document-meta';
 import { meta } from '../../services/analytics';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { slideUpTransitionOptions } from '../../services/transitions';
-import { soundCloudMusic } from '../../services/soundcloud';
+import soundcloud from '../../services/soundcloud';
 import Album from './components/Album';
 import './styles.css';
 
 const Music = () => {
-  const albums = soundCloudMusic.map((album) => {
+  const albums = soundcloud.music.map((album) => {
     return (
       <Album
-        key={album.releaseDate}
+        key={album.name}
         album={album}
         />
     );
