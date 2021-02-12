@@ -1,8 +1,24 @@
 import _ from 'lodash';
 
-const HOME_TRACK = '314';
+const HOME_TRACK = 'The Legend of Metatron';
 
 const music = [
+  {
+    name: 'The Legend of Metatron',
+    description: '',
+    playTime: '28:01',
+    link: 'https://soundcloud.com/user-544895508/sets/the-legend-of-metatron',
+    albumArt: 'legend-of-metatron.png',
+    releaseDate: '2021-02-12',
+    songs: [
+      {
+        name: '314',
+        playTime: '56:38',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/314a',
+      }
+    ]
+  },
   {
     name: '314',
     description: '',
