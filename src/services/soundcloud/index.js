@@ -1,8 +1,66 @@
 import _ from 'lodash';
 
-const HOME_TRACK = '314';
+const HOME_TRACK = 'The Legend of Metatron';
 
 const music = [
+  {
+    name: 'The Legend of Metatron',
+    description: '',
+    playTime: '28:01',
+    link: 'https://soundcloud.com/user-544895508/sets/the-legend-of-metatron',
+    albumArt: 'legend-of-metatron.png',
+    releaseDate: '2021-02-12',
+    songs: [
+      {
+        name: 'The Legend Me',
+        playTime: '4:21',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-legend-me?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'Holy Spririt',
+        playTime: '2:18',
+        trackNumber: 2,
+        link: 'https://soundcloud.com/user-544895508/holy-spirit?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'Perfect Timing',
+        playTime: '4:15',
+        trackNumber: 3,
+        link: 'https://soundcloud.com/user-544895508/perfect-timing?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'Renascent',
+        playTime: '3:26',
+        trackNumber: 4,
+        link: 'https://soundcloud.com/user-544895508/renascent?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'Fire',
+        playTime: '3:23',
+        trackNumber: 5,
+        link: 'https://soundcloud.com/user-544895508/fire?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'Metstyle',
+        playTime: '2:10',
+        trackNumber: 6,
+        link: 'https://soundcloud.com/user-544895508/mestyle?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'God of War',
+        playTime: '3:19',
+        trackNumber: 7,
+        link: 'https://soundcloud.com/user-544895508/god-of-war?in=user-544895508/sets/the-legend-of-metatron',
+      },
+      {
+        name: 'Crowned',
+        playTime: '4:46',
+        trackNumber: 8,
+        link: 'https://soundcloud.com/user-544895508/crowned?in=user-544895508/sets/the-legend-of-metatron',
+      }
+    ]
+  },
   {
     name: '314',
     description: '',
