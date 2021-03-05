@@ -4,6 +4,22 @@ const HOME_TRACK = 'The Legend of Metatron';
 
 const music = [
   {
+    name: 'The Prophesied Arrival of Me',
+    description: '',
+    playTime: '1:08:06',
+    link: 'https://soundcloud.com/user-544895508/the-prophesied-arrival-of-me',
+    albumArt: 'prophesied-arrival-of-me.png',
+    releaseDate: '2021-03-04',
+    songs: [
+      {
+        name: 'The Prophesied Arrival of Me',
+        playTime: '1:08:06',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-prophesied-arrival-of-me',
+      }
+    ]
+  },
+  {
     name: 'The Legend of Metatron',
     description: '',
     playTime: '28:01',
