@@ -4,6 +4,22 @@ const HOME_TRACK = 'The Legend of Metatron';
 
 const music = [
   {
+    name: 'The Divine Logarithmancy',
+    description: '',
+    playTime: '1:03:13',
+    link: 'https://soundcloud.com/user-544895508/the-divine-logarithmancy',
+    albumArt: 'divine-logarithmancy.png',
+    releaseDate: '2021-03-14',
+    songs: [
+      {
+        name: 'The Divine Logarithmancy',
+        playTime: '1:03:13',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/the-divine-logarithmancy',
+      }
+    ]
+  },
+  {
     name: 'The Prophesied Arrival of Me',
     description: '',
     playTime: '1:08:06',
