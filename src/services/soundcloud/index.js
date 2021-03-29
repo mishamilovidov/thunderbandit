@@ -4,6 +4,22 @@ const HOME_TRACK = 'The Legend of Metatron';
 
 const music = [
   {
+    name: 'Nebadon',
+    description: '',
+    playTime: '1:06:12',
+    link: 'https://soundcloud.com/user-544895508/nebadon',
+    albumArt: 'nebadon.png',
+    releaseDate: '2021-03-28',
+    songs: [
+      {
+        name: 'Nebadon',
+        playTime: '1:06:12',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/nebadon',
+      }
+    ]
+  },
+  {
     name: 'The Divine Logarithmancy',
     description: '',
     playTime: '1:03:13',
