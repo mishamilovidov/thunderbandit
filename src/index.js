@@ -10,7 +10,9 @@ import store from './store';
 
 const isNotLocal = window.location.hostname !== "localhost";
 
-if (isNotLocal) { ReactGA.initialize('UA-125276937-1') }
+if (isNotLocal) { 
+  ReactGA.initialize(process.env.REACT_APP_GA_TACKING_ID) 
+}
 
 ReactDOM.render(
   <Provider store={store}>
