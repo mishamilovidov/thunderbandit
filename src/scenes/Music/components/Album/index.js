@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import ReactGA from 'react-ga';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { transitionOptions } from '../../../../services/transitions';
