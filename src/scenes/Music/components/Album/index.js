@@ -41,7 +41,7 @@ const Album = ({ album }) => {
           <ReactGA.OutboundLink
             eventLabel={`${_.camelCase(album.name)}Url`}
             to={album.link}>
-            <img src={require(`../../../../services/soundcloud/albumart/${album.albumArt}`)} alt={album.name} />
+            {/* <img src={require(`../../../../services/soundcloud/albumart/${album.albumArt}`)} alt={album.name} /> */}
           </ReactGA.OutboundLink>
         <ReactGA.OutboundLink
           eventLabel={`${_.camelCase(album.name)}Url`}

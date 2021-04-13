@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import ReactDOM from 'react-dom';
+import App from './scenes';
+import GAListener from './components/GAListener';
+import ReactGA from 'react-ga';
+import { AppInit, AppReducer, types } from './reducers';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
-import ReactGA from 'react-ga';
-import GAListener from './components/GAListener';
-import App from './scenes';
 
 const isNotLocal = window.location.hostname !== 'localhost';
 
@@ -13,6 +14,8 @@ if (isNotLocal) {
 }
 
 const Root = () => {
+  const [state, dispatch] = useReducer(AppReducer, AppInit);
+
   return (
     <BrowserRouter>
       <LastLocationProvider>
