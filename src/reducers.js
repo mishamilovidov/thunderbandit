@@ -1,5 +1,7 @@
 import firebase from 'firebase/app';
+import 'firebase/analytics';
 import 'firebase/firestore';
+import 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -19,7 +21,13 @@ export const types = {
 
 export const AppInit = {
   firebase: {
-    firestore: firebase.firestore()
+    ...{
+      firestore: firebase.firestore(),
+      storage: firebase.storage()
+    },
+    ...(!process.env.REACT_APP_ENV &&  {
+      analytics: firebase.analytics()
+    })
   }
 };
 

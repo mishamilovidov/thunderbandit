@@ -16,6 +16,8 @@ if (isNotLocal) {
 const Root = () => {
   const [state, dispatch] = useReducer(AppReducer, AppInit);
 
+  console.log(state.firebase)
+
   return (
     <BrowserRouter>
       <LastLocationProvider>
