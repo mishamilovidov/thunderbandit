@@ -7,7 +7,10 @@ import soundcloud from '../../services/soundcloud';
 import styled from 'styled-components';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { meta } from '../../services/analytics';
-import { transitionOptions, slideUpTransitionOptions } from '../../services/transitions';
+import { 
+  slideUpTransitionOptions,
+  transitionOptions 
+} from '../../services/transitions';
 
 const HomeWrapper = styled.div``;
 
@@ -78,13 +81,13 @@ const HomeTextAction = styled.div`
     border: 1px solid #ffffff;
     background-color: #21181D;
     padding: 6px 12px;
-    color: #ffffff;
+    color: #ffffff !important;
     text-transform: uppercase;
   }
 
   > a:hover {
     background-color: #ffffff;
-    color: #FDC138;
+    color: #FDC138 !important;
     cursor: pointer;
   }
 `;
