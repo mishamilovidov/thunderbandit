@@ -145,12 +145,12 @@ jobs:
       #   env:
       #     FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
       
-      # - name: deploy firestore rules
-      #   uses: w9jds/firebase-action@v1.2.0
-      #   with:
-      #     args: deploy --only firestore:rules
-      #   env:
-      #     FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
+      - name: deploy firestore rules
+        uses: w9jds/firebase-action@v1.2.0
+        with:
+          args: deploy --only firestore:rules
+        env:
+          FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
 
       - name: apply target for hosting deploy
         uses: w9jds/firebase-action@v1.2.0
