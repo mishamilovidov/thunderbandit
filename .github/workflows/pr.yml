@@ -68,6 +68,7 @@ jobs:
 
       - name: initialize terraform
         if: ${{ contains(matrix.check, 'terraform') }}
+        working-directory: ./infrastructure
         run: terraform init -backend=false
 
       - name: run terraform check
