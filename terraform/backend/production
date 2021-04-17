@@ -1,0 +1,3 @@
+bucket      = "tdbprd_terraform"
+prefix      = "state"
+credentials = "credentials.json"
