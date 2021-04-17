@@ -25,9 +25,22 @@ export const AppInit = {
       firestore: firebase.firestore(),
       storage: firebase.storage()
     },
-    ...(!process.env.REACT_APP_ENV &&  {
+    ...(!process.env.REACT_APP_ENV === 'local' &&  {
       analytics: firebase.analytics()
     })
+  },
+  theme: {
+    appearance: window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light',
+    breakpoints: {
+      sm: '600px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+    },
+    fontFamily: '\'Lato\', sans-serif',
+    scale: 'medium'
   }
 };
 

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './scenes';
 import GAListener from './components/GAListener';
 import ReactGA from 'react-ga';
+import { AppContext } from './contexts';
 import { AppInit, AppReducer, types } from './reducers';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
@@ -16,18 +17,20 @@ if (isNotLocal) {
 const Root = () => {
   const [state, dispatch] = useReducer(AppReducer, AppInit);
 
-  console.log(state.firebase)
+  console.log(state)
 
   return (
     <BrowserRouter>
       <LastLocationProvider>
-        {
-          isNotLocal
-            ? <GAListener>
-                <Route path='/' component={App} />
-              </GAListener>
-            : <Route path='/' component={App} />
-        }
+        <AppContext.Provider value={{ state, dispatch }}>
+          {
+            isNotLocal
+              ? <GAListener>
+                  <Route path='/' component={App} />
+                </GAListener>
+              : <Route path='/' component={App} />
+          }
+        </AppContext.Provider>
       </LastLocationProvider>
     </BrowserRouter>
   );
