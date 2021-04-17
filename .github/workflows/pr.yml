@@ -68,7 +68,7 @@ jobs:
 
       - name: initialize terraform
         if: ${{ contains(matrix.check, 'terraform') }}
-        run: terraform init -backend false
+        run: terraform init -backend=false
 
       - name: run terraform check
         if: ${{ contains(matrix.check, 'terraform') }}
