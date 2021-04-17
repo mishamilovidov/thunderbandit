@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "tdbprd": "tdbprd"
+  },
+  "targets": {
+    "tdbprd": {
+      "hosting": {
+        "thunderbandit.com": [
+          "tdbprd"
+        ]
+      }
+    }
+  }
+}

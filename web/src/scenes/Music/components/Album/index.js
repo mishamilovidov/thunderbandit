@@ -3,13 +3,13 @@ import React, { useContext, useState } from 'react';
 import ReactGA from 'react-ga';
 import moment from 'moment-timezone';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-// import { AppContext } from '../../../../contexts';
+import { AppContext } from '../../../../contexts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { transitionOptions } from '../../../../services/transitions';
 import './styles.css';
 
 const Album = ({ album }) => {
-  // const { state: { firebase } } = useContext(AppContext);
+  const { state: { firebase } } = useContext(AppContext);
   // const [imgUrl, setImgUrl] = useState(null)
 
   // useEffect(() => {
@@ -20,7 +20,7 @@ const Album = ({ album }) => {
   //   recordingsStorageRef
   //     .child(path)
   //     .getDownloadURL()
-  //     .then(url 
+  //     .then(url
   // }, [firebase])
 
   const songs = album.songs.map((song) => {

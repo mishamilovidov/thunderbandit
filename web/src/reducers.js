@@ -25,6 +25,10 @@ export const AppInit = {
       firestore: firebase.firestore(),
       storage: firebase.storage()
     },
+    ...(process.env.REACT_APP_ENV === 'local' && {
+      firestore: firebase.firestore()
+        .useEmulator('localhost', process.env.REACT_APP_FIREBASE_EMULATORS_FIRESTORE_PORT),
+    }),
     ...(!process.env.REACT_APP_ENV === 'local' &&  {
       analytics: firebase.analytics()
     })
