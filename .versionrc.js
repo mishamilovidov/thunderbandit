@@ -14,7 +14,7 @@ module.exports = {
   ],
   "bumpFiles": [
     {
-      "filename": "package.json",
+      "filename": "web/package.json",
       "type": "json"
     }
   ],
