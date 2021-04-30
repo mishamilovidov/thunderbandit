@@ -15,7 +15,7 @@ const music = [
         name: 'Guide and Guardian of the Visionary',
         playTime: '1:24:08',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/guide-and-guardian-of-the- visionary',
+        link: 'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary',
       }
     ]
   },
