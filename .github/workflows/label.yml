@@ -3,7 +3,7 @@ name: label
 on:
   pull_request:
     branches:
-      - master
+      - main
     types:
       - opened
 
