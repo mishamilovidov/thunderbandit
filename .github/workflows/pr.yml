@@ -36,11 +36,11 @@ jobs:
           terraform_version: 0.15.0
 
       - name: initialize terraform for artifacts
-        working-directory: ./${{ matrix.resource }}
+        working-directory: ./infrastructure/${{ matrix.resource }}
         run: terraform init -backend=false
 
       - name: run terraform check
-        working-directory: ./${{ matrix.resource }}
+        working-directory: ./infrastructure/${{ matrix.resource }}
         run: terraform ${{ matrix.check }}
 
   check_yarn:
