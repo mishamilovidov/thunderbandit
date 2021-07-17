@@ -1,12 +1,24 @@
 {
   "parserOptions": {
     // Required for certain syntax usages
-    "ecmaVersion": 2019
+    "ecmaVersion": 2019,
+    "sourceType": "module"
   },
   "plugins": [
     "promise"
   ],
-  "extends": "eslint:recommended",
+  "extends": [
+    "airbnb", 
+    "plugin:prettier/recommended", 
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
   "rules": {
     // Removed rule "disallow the use of console" from recommended eslint rules
     "no-console": "off",
