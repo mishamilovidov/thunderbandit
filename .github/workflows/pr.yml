@@ -7,18 +7,52 @@ on:
       - reopened
       - synchronize
 
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
-  check:
-    name: Check
+  check_terraform:
+    name: Check (Terraform)
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        check:
-          - yarn lint
-          - yarn lint:commits
-          - yarn test:ci
-          - terraform fmt -check
-          - terraform validate
+        check: 
+          - fmt -check -diff
+          - validate
+        resource:
+          - networking/dns
+          - tools/artifacts
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: setup terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.15.0
+
+      - name: initialize terraform for artifacts
+        working-directory: ./${{ matrix.resource }}
+        run: terraform init -backend=false
+
+      - name: run terraform check
+        working-directory: ./${{ matrix.resource }}
+        run: terraform ${{ matrix.check }}
+
+  check_yarn:
+    name: Check (Yarn)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        check: 
+          - lint
+          - lint:commits
+          - test:ci
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
@@ -26,22 +60,15 @@ jobs:
           fetch-depth: 0
 
       - name: setup node
-        if: ${{ contains(matrix.check, 'yarn') }}
         uses: actions/setup-node@v1
         with:
-          node-version: 12
-
-      - name: install yarn
-        if: ${{ contains(matrix.check, 'yarn') }}
-        run: npm install -g yarn
+          node-version: 14
 
       - name: get yarn cache directory path
-        if: ${{ contains(matrix.check, 'yarn') }}
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: cache npm modules
-        if: ${{ contains(matrix.check, 'yarn') }}
         uses: actions/cache@v2
         id: yarn-cache
         with:
@@ -51,30 +78,10 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: install dependencies
-        if: ${{ contains(matrix.check, 'yarn') }}
-        working-directory: ./web
         run: yarn install
 
-      - name: run yarn check
-        if: ${{ contains(matrix.check, 'yarn') }}
-        working-directory: ./web
-        run: ${{ matrix.check }}
-
-      - name: setup terraform
-        if: ${{ contains(matrix.check, 'terraform') }}
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 0.15.0
-
-      - name: initialize terraform
-        if: ${{ contains(matrix.check, 'terraform') }}
-        working-directory: ./infrastructure
-        run: terraform init -backend=false
-
-      - name: run terraform check
-        if: ${{ contains(matrix.check, 'terraform') }}
-        working-directory: ./infrastructure
-        run: ${{ matrix.check }}
+      - name: run check
+        run: yarn ${{ matrix.check }}
 
   label:
     name: Label
@@ -89,5 +96,3 @@ jobs:
           configuration-path: .github/pr-labeler.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  # TODO: add job to update pull request title to adhere to convential commit specification
