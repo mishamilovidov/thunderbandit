@@ -1,0 +1,51 @@
+{
+  "emulators": {
+    "firestore": {
+      "port": 8080
+    },
+    "ui": {
+      "enabled": true,
+      "host": "localhost",
+      "port": 4000
+    }
+  },
+  "firestore": {
+    "rules": "config/firebase/firestore.rules"
+  },
+  "hosting": [
+    {
+      "target": "thunderbandit.com",
+      "public": "build",
+      "ignore": [
+        "README.md",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": ""
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            }
+          ]
+       }
+      ]
+    }
+  ]
+}
