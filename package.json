@@ -6,6 +6,7 @@
     "lint": "yarn --cwd ./website lint",
     "lint:commits": "commitlint --from=HEAD~1 --verbose",
     "postinstall": "yarn --cwd ./website install",
+    "release": "chmod +x ./.github/bin/release.sh && ./.github/bin/release.sh",
     "test": "yarn --cwd ./website test",
     "test:ci": " CI=true yarn test"
   },
