@@ -16,13 +16,17 @@ terraform {
 #
 
 provider "google" {
-  project     = var.project
+  project     = var.project.id
   credentials = file(var.credentials)
+  region      = var.regions[var.region_default].region
+  zone        = "${var.regions[var.region_default].region}-a"
 }
 
 provider "google-beta" {
-  project     = var.project
+  project     = var.project.id
   credentials = file(var.credentials)
+  region      = var.regions[var.region_default].region
+  zone        = "${var.regions[var.region_default].region}-a"
 }
 
 #

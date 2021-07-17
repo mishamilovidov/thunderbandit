@@ -1,5 +1,9 @@
 variable "project" {
-  type        = string
+  type = object({
+    id     = string
+    name   = string
+    number = number
+  })
   description = "gcp project name; resource-specific project takes precedence"
 }
 
@@ -10,7 +14,13 @@ variable "credentials" {
 }
 
 variable "environment" {
-  type = string
+  type        = string
+  description = "deployment environment"
+}
+
+variable "region_default" {
+  type        = string
+  description = "default region"
 }
 
 variable "regions" {
@@ -23,13 +33,15 @@ variable "regions" {
     country      = string,
     countryGroup = string
   }))
+  description = "available regions"
 }
 
-variable "dns_managed_zones" {
-  type = map(any)
+variable "repositories" {
+  type = map(object({
+    id          = string,
+    location    = string,
+    description = string,
+    format      = string
+  }))
+  description = "artifact repositories"
 }
-
-variable "dns_record_sets" {
-  type = map(any)
-}
-

@@ -1,3 +1,3 @@
-bucket      = "tdbprd_terraform"
+bucket      = "tbprd-networking_terraform"
 prefix      = "state"
 credentials = "credentials.json"
