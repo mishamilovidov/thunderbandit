@@ -3,8 +3,7 @@
     "build": "craco build",
     "lint": "eslint src/; exit 0",
     "start": "FAST_REFRESH=false craco start",
-    "test": "craco test --passWithNoTests",
-    "test:ci": "CI=true craco test --passWithNoTests"
+    "test": "./node_modules/.bin/craco test --passWithNoTests"
   },
   "engines": {
     "node": ">=12"
@@ -29,6 +28,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@craco/craco": "^6.2.0",
     "dotenv-webpack": "^7.0.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
