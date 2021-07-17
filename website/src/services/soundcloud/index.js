@@ -4,6 +4,22 @@ const HOME_TRACK = 'The Legend of Metatron';
 
 const music = [
   {
+    name: 'Guide and Guardian of the Visionary',
+    description: '',
+    playTime: '1:24:08',
+    link: 'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary',
+    albumArt: 'guide-and-guardian-of-the-visionary.png',
+    releaseDate: '2021-04-29',
+    songs: [
+      {
+        name: 'Guide and Guardian of the Visionary',
+        playTime: '1:24:08',
+        trackNumber: 1,
+        link: 'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary',
+      }
+    ]
+  },
+  {
     name: 'Nebadon',
     description: '',
     playTime: '1:06:12',
