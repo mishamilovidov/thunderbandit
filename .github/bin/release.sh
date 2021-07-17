@@ -21,10 +21,10 @@ fi
 echo "[$(date +"%Y-%m-%d %T.%3N %Z")] [INFO] updating package version in README.md"
 [ "$RELEASE_AS" != "" ] && FLAG_RELEASE_AS="--release-as $RELEASE_AS" || FLAG_RELEASE_AS=""
 [ "$PRERELEASE" != "" ] && FLAG_PRERELEASE="--prerelease $PRERELEASE" || FLAG_PRERELEASE=""
-UPDATE_MESSAGE=$(./node_modules/.bin/standard-version $FLAG_RELEASE_AS $FLAG_PRERELEASE --dry-run | grep "bumping version in package.json from")
+UPDATE_MESSAGE=$(./node_modules/.bin/standard-version $FLAG_RELEASE_AS $FLAG_PRERELEASE --dry-run | grep "tagging release")
 IFS=' ' read -ra UPDATE_MESSAGE_ARRAY <<< "$UPDATE_MESSAGE"
-VERSION_PREVIOUS=v${UPDATE_MESSAGE_ARRAY[6]}
-VERSION_NEW=v${UPDATE_MESSAGE_ARRAY[8]}
+VERSION_PREVIOUS="$(git describe --abbrev=0 --tags)"
+VERSION_NEW=${UPDATE_MESSAGE_ARRAY[3]}
 VERSION_NEW_BADGE="${VERSION_NEW//-/--}"  
 sed "s/$VERSION_PREVIOUS/$VERSION_NEW/g" README.md > README.md.new
 sed "s/-$VERSION_PREVIOUS-/-$VERSION_NEW_BADGE-/g" README.md.new > README.md
