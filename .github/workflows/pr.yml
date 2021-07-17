@@ -1,0 +1,98 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  check_terraform:
+    name: Check (Terraform)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        check: 
+          - fmt -check -diff
+          - validate
+        resource:
+          - networking/dns
+          - tools/artifacts
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: setup terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.15.0
+
+      - name: initialize terraform for artifacts
+        working-directory: ./infrastructure/${{ matrix.resource }}
+        run: terraform init -backend=false
+
+      - name: run terraform check
+        working-directory: ./infrastructure/${{ matrix.resource }}
+        run: terraform ${{ matrix.check }}
+
+  check_yarn:
+    name: Check (Yarn)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        check: 
+          - lint
+          - lint:commits
+          - test:ci
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: cache npm modules
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: install dependencies
+        run: yarn install
+
+      - name: run check
+        run: yarn ${{ matrix.check }}
+
+  label:
+    name: Label
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: label pull request
+        uses: TimonVS/pr-labeler-action@v3
+        with:
+          configuration-path: .github/pr-labeler.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

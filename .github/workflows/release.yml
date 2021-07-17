@@ -1,158 +1,100 @@
-name: release
+name: Release
 
 on:
-  release:
-    types:
-      - published
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: 'pre-release name [alpha,beta]'
+        required: false
+        default: ''
+      release_as:
+        description: 'version to override automatic bump [major,minor,patch]'
+        required: false
+        default: ''
+      git_tag_previous:
+        description: 'git tag to override default previous tag for generated release notes'
+        required: false
+        default: ''
+      trigger_deploy:
+        description: 'trigger deploy workflow after release [true, false]'
+        required: true
+        default: 'false'
 
 jobs:
-  build:
-    name: build application
+  cut:
+    name: Cut
     runs-on: ubuntu-latest
     steps:
+      - name: set workflow variables for "workflow_dispatch" trigger
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo "prerelease=${{ github.event.inputs.prerelease }}" >> $GITHUB_ENV;
+          echo "release_as=${{ github.event.inputs.release_as }}" >> $GITHUB_ENV;
+          echo "git_tag_previous=${{ github.event.inputs.git_tag_previous }}" >> $GITHUB_ENV;
+          echo "trigger_deploy=${{ github.event.inputs.trigger_deploy }}" >> $GITHUB_ENV;
+
+      - name: set workflow variables
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        run: |
+          echo "prerelease=" >> $GITHUB_ENV;
+          echo "release_as=" >> $GITHUB_ENV;
+          echo "git_tag_previous=" >> $GITHUB_ENV;
+          echo "trigger_deploy=true" >> $GITHUB_ENV;
+
       - name: checkout repository
         uses: actions/checkout@v2
-
-      - name: setup gcloud for secret manager
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          version: '281.0.0'
-          service_account_key: ${{ secrets.GCP_SA_SECRETMANAGER_KEY }}
-      
-      - name: setup gcloud beta components
-        run: gcloud components install beta
-        shell: bash
-
-      - name: export command to fetch github access token
-        run: |
-          echo "CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV=gcloud beta secrets versions access latest --secret=GITHUB_PAT_MISHAMILOVIDOV --quiet --project=osito-oto" >> $GITHUB_ENV
-        shell: bash
-
-      - name: mask github access token
-        run: echo "::add-mask::$(eval "$CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV")"
-        shell: bash
-
-      - name: export github access token
-        run: echo "GITHUB_PAT_MISHAMILOVIDOV=$(eval "$CMD_FETCH_GITHUB_PAT_MISHAMILOVIDOV")" >> $GITHUB_ENV
-        shell: bash
+          fetch-depth: 0
 
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 14
 
-      - name: cache node modules
-        uses: actions/cache@v1
+      - name: install yarn
+        run: npm install -g yarn
+
+      - name: get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: cache npm modules
+        uses: actions/cache@v2
+        id: yarn-cache
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-yarn-
 
       - name: install dependencies
-        run: npm install
+        run: yarn install
 
-      - name: build application
-        run: npm run build
+      - name: run tests
+        run: yarn test:ci
 
-      - name: archive build artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: build
-          path: build
-
-  application:
-    name: deploy application
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repository
-        uses: actions/checkout@v2
-
-      - name: setup gcloud for secrets manager
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-        with:
-          version: '281.0.0'
-          service_account_key: ${{ secrets.GCP_SA_SECRETMANAGER_KEY }}
-
-      - name: setup gcloud beta components
-        run: gcloud components install beta
-        shell: bash
-
-      - name: export command to fetch firebase service account credentials
+      - name: run release
         run: |
-          echo "CMD_FETCH_GCP_SA_FIREBASE_KEY=gcloud beta secrets versions access latest --secret=GCP_SA_FIREBASE_KEY --quiet --project=osito-oto" >> $GITHUB_ENV
-          echo "CMD_FETCH_GCP_SA_FIREBASE_EMAIL=gcloud beta secrets versions access latest --secret=GCP_SA_FIREBASE_EMAIL --quiet --project=osito-oto" >> $GITHUB_ENV
-        shell: bash
-
-      - name: mask firebase service account key
-        run: |
-          echo "::add-mask::$(eval "$CMD_FETCH_GCP_SA_FIREBASE_KEY")"
-        shell: bash
-
-      - name: export firebase service account credentials
-        run: |
-          echo "GCP_SA_FIREBASE_KEY=$(eval "$CMD_FETCH_GCP_SA_FIREBASE_KEY")" >> $GITHUB_ENV
-          echo "GCP_SA_FIREBASE_EMAIL=$(eval "$CMD_FETCH_GCP_SA_FIREBASE_EMAIL")" >> $GITHUB_ENV
-        shell: bash
-
-      - name: setup gcloud for firebase
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-        with:
-          version: '281.0.0'
-          service_account_email: ${{ env.GCP_SA_FIREBASE_EMAIL }}
-          service_account_key: ${{ env.GCP_SA_FIREBASE_KEY }}
-
-      - name: export command to fetch firebase access token
-        run: echo "CMD_FETCH_FIREBASE_TOKEN=gcloud auth print-access-token --quiet --project=osito-oto" >> $GITHUB_ENV
-        shell: bash
-
-      - name: mask firebase access token
-        run: echo "::add-mask::$(eval "$CMD_FETCH_FIREBASE_TOKEN")"
-        shell: bash
-
-      - name: export firebase access token
-        run: echo "FIREBASE_TOKEN=$(eval "$CMD_FETCH_FIREBASE_TOKEN")" >> $GITHUB_ENV
-        shell: bash
-
-      - name: download build artifacts
-        uses: actions/download-artifact@v1
-        with:
-          name: build
-
-      - name: set firebase project
-        uses: w9jds/firebase-action@v1.2.0
-        with:
-          args: use --add osito-oto
+          yarn release >> yarn_release
+          cat yarn_release
+          echo "$(cat yarn_release | grep GIT_TAG_LATEST)" >> $GITHUB_ENV
         env:
-          FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
+          REF: ${{ env.GITHUB_REF }}
+          RELEASE_AS: ${{ env.release_as }}
+          PRERELEASE: ${{ env.prerelease }}
+          GIT_TAG_PREVIOUS: ${{ env.git_tag_previous }}
+          GREN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_USER_EMAIL: 'github-actions'
+          GIT_USER_NAME: 'github-actions'
 
-      # - name: deploy firestore indexes
-      #   uses: w9jds/firebase-action@v1.2.0
-      #   with:
-      #     args: deploy --only firestore:indexes
-      #   env:
-      #     FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
-      
-      # - name: deploy firestore rules
-      #   uses: w9jds/firebase-action@v1.2.0
-      #   with:
-      #     args: deploy --only firestore:rules
-      #   env:
-      #     FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
-
-      - name: apply target for hosting deploy
-        uses: w9jds/firebase-action@v1.2.0
+      - name: trigger deploy workflow
+        uses: benc-uk/workflow-dispatch@v1
+        if: ${{ env.trigger_deploy == 'true' }}
         with:
-          args: target:apply hosting thunderbandit thunderbandit
-        env:
-          FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
-
-      - name: deploy hosting
-        uses: w9jds/firebase-action@v1.2.0
-        with:
-          args: deploy --only hosting:thunderbandit
-        env:
-          FIREBASE_TOKEN: ${{ env.FIREBASE_TOKEN }}
+          workflow: Deploy
+          token: ${{ secrets.GITHUB_TOKEN }}
+          inputs: '{ "version": "${{ env.GIT_TAG_LATEST }}" }'
+ 
