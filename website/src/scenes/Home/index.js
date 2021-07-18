@@ -2,14 +2,14 @@ import _ from 'lodash';
 import ReactGA from 'react-ga';
 import React from 'react';
 import DocumentMeta from 'react-document-meta';
-import homeImg from'./god-is-love.png';
-import soundcloud from '../../services/soundcloud';
 import styled from 'styled-components';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import homeImg from './god-is-love.png';
+import soundcloud from '../../services/soundcloud';
 import { meta } from '../../services/analytics';
-import { 
+import {
   slideUpTransitionOptions,
-  transitionOptions 
+  transitionOptions
 } from '../../services/transitions';
 
 const HomeWrapper = styled.div``;
@@ -79,7 +79,7 @@ const HomeTextAction = styled.div`
 
   > a {
     border: 1px solid #ffffff;
-    background-color: #21181D;
+    background-color: #21181d;
     padding: 6px 12px;
     color: #ffffff !important;
     text-transform: uppercase;
@@ -87,7 +87,7 @@ const HomeTextAction = styled.div`
 
   > a:hover {
     background-color: #ffffff;
-    color: #FDC138 !important;
+    color: #fdc138 !important;
     cursor: pointer;
   }
 `;
@@ -96,9 +96,9 @@ const Home = () => {
   return (
     <DocumentMeta {...meta.Home}>
       <HomeWrapper>
-        <HomeLayer></HomeLayer>
+        <HomeLayer />
         <ReactCSSTransitionGroup {...transitionOptions}>
-          <HomeImg></HomeImg>
+          <HomeImg />
         </ReactCSSTransitionGroup>
         <HomeText>
           <ReactCSSTransitionGroup {...transitionOptions}>
@@ -111,7 +111,8 @@ const Home = () => {
             <HomeTextAction>
               <ReactGA.OutboundLink
                 eventLabel={`soundCloud${_.camelCase(soundcloud.home.name)}`}
-                to={soundcloud.home.link}>
+                to={soundcloud.home.link}
+              >
                 Listen on SoundCloud
               </ReactGA.OutboundLink>
             </HomeTextAction>

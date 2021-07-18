@@ -7,7 +7,8 @@ const music = [
     name: 'Guide and Guardian of the Visionary',
     description: '',
     playTime: '1:24:08',
-    link: 'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary',
+    link:
+      'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary',
     albumArt: 'guide-and-guardian-of-the-visionary.png',
     releaseDate: '2021-04-29',
     songs: [
@@ -15,7 +16,8 @@ const music = [
         name: 'Guide and Guardian of the Visionary',
         playTime: '1:24:08',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary',
+        link:
+          'https://soundcloud.com/user-544895508/guide-and-guardian-of-the-visionary'
       }
     ]
   },
@@ -31,7 +33,7 @@ const music = [
         name: 'Nebadon',
         playTime: '1:06:12',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/nebadon',
+        link: 'https://soundcloud.com/user-544895508/nebadon'
       }
     ]
   },
@@ -47,7 +49,7 @@ const music = [
         name: 'The Divine Logarithmancy',
         playTime: '1:03:13',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/the-divine-logarithmancy',
+        link: 'https://soundcloud.com/user-544895508/the-divine-logarithmancy'
       }
     ]
   },
@@ -63,7 +65,8 @@ const music = [
         name: 'The Prophesied Arrival of Me',
         playTime: '1:08:06',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/the-prophesied-arrival-of-me',
+        link:
+          'https://soundcloud.com/user-544895508/the-prophesied-arrival-of-me'
       }
     ]
   },
@@ -79,49 +82,57 @@ const music = [
         name: 'The Legend Me',
         playTime: '4:21',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/the-legend-me?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/the-legend-me?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'Holy Spririt',
         playTime: '2:18',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/holy-spirit?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/holy-spirit?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'Perfect Timing',
         playTime: '4:15',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/perfect-timing?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/perfect-timing?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'Renascent',
         playTime: '3:26',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/renascent?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/renascent?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'Fire',
         playTime: '3:23',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/fire?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/fire?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'Metstyle',
         playTime: '2:10',
         trackNumber: 6,
-        link: 'https://soundcloud.com/user-544895508/mestyle?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/mestyle?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'God of War',
         playTime: '3:19',
         trackNumber: 7,
-        link: 'https://soundcloud.com/user-544895508/god-of-war?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/god-of-war?in=user-544895508/sets/the-legend-of-metatron'
       },
       {
         name: 'Crowned',
         playTime: '4:46',
         trackNumber: 8,
-        link: 'https://soundcloud.com/user-544895508/crowned?in=user-544895508/sets/the-legend-of-metatron',
+        link:
+          'https://soundcloud.com/user-544895508/crowned?in=user-544895508/sets/the-legend-of-metatron'
       }
     ]
   },
@@ -137,7 +148,7 @@ const music = [
         name: '314',
         playTime: '56:38',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/314a',
+        link: 'https://soundcloud.com/user-544895508/314a'
       }
     ]
   },
@@ -153,7 +164,7 @@ const music = [
         name: '73 37 89 44 34',
         playTime: '1:11:42',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/73-37-89-44-34a',
+        link: 'https://soundcloud.com/user-544895508/73-37-89-44-34a'
       }
     ]
   },
@@ -169,7 +180,7 @@ const music = [
         name: 'Me',
         playTime: '1:06:04',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/me-1',
+        link: 'https://soundcloud.com/user-544895508/me-1'
       }
     ]
   },
@@ -185,7 +196,7 @@ const music = [
         name: 'Epiphany',
         playTime: '1:17:32',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/epiphany',
+        link: 'https://soundcloud.com/user-544895508/epiphany'
       }
     ]
   },
@@ -201,19 +212,22 @@ const music = [
         name: 'Swish',
         playTime: '3:47',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/swish?in=user-544895508/sets/111a',
+        link:
+          'https://soundcloud.com/user-544895508/swish?in=user-544895508/sets/111a'
       },
       {
         name: '100%',
         playTime: '3:38',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/100-1?in=user-544895508/sets/111a',
+        link:
+          'https://soundcloud.com/user-544895508/100-1?in=user-544895508/sets/111a'
       },
       {
         name: 'Paraclete',
         playTime: '4:55',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/paraclete?in=user-544895508/sets/111a',
+        link:
+          'https://soundcloud.com/user-544895508/paraclete?in=user-544895508/sets/111a'
       }
     ]
   },
@@ -229,7 +243,7 @@ const music = [
         name: 'Remember To Smile',
         playTime: '1:00:30',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/remember-to-smile',
+        link: 'https://soundcloud.com/user-544895508/remember-to-smile'
       }
     ]
   },
@@ -245,12 +259,13 @@ const music = [
         name: 'And When It All Hurts So Bad',
         playTime: '1:04:02',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/and-when-it-all-hurts-so-bad',
+        link:
+          'https://soundcloud.com/user-544895508/and-when-it-all-hurts-so-bad'
       }
     ]
   },
   {
-    name: 'It\'s Time Yah',
+    name: "It's Time Yah",
     description: '',
     playTime: '1:26:39',
     link: 'https://soundcloud.com/user-544895508/its-time-yah-1',
@@ -258,10 +273,10 @@ const music = [
     releaseDate: '2020-12-17',
     songs: [
       {
-        name: 'It\'s Time Yah',
+        name: "It's Time Yah",
         playTime: '1:26:39',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/its-time-yah-1',
+        link: 'https://soundcloud.com/user-544895508/its-time-yah-1'
       }
     ]
   },
@@ -277,7 +292,7 @@ const music = [
         name: 'Aleph',
         playTime: '55:27',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/aleph',
+        link: 'https://soundcloud.com/user-544895508/aleph'
       }
     ]
   },
@@ -285,7 +300,8 @@ const music = [
     name: 'The Éclat of Thunder and Terror',
     description: '',
     playTime: '1:05:29',
-    link: 'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror',
+    link:
+      'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror',
     albumArt: 'the-éclatd-of-thunder-and-terror.png',
     releaseDate: '2020-11-11',
     songs: [
@@ -293,7 +309,8 @@ const music = [
         name: 'The Éclat of Thunder and Terror',
         playTime: '1:05:29',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror',
+        link:
+          'https://soundcloud.com/user-544895508/the-eclat-of-thunder-and-terror'
       }
     ]
   },
@@ -309,7 +326,7 @@ const music = [
         name: 'Regent of the Sun',
         playTime: '3:36',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/regent-of-the-sun',
+        link: 'https://soundcloud.com/user-544895508/regent-of-the-sun'
       }
     ]
   },
@@ -325,49 +342,57 @@ const music = [
         name: 'Yasharahla',
         playTime: '02:50',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/yasharahla?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/yasharahla?in=user-544895508/sets/the-story-of-uriel'
       },
       {
         name: 'Plenipotent',
         playTime: '03:32',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/plenipotent?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/plenipotent?in=user-544895508/sets/the-story-of-uriel'
       },
       {
         name: 'Fire of God',
         playTime: '03:05',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/fire-of-god-1?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/fire-of-god-1?in=user-544895508/sets/the-story-of-uriel'
       },
       {
         name: 'Sibylline Oracles',
         playTime: '02:44',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/sibylline-oracles?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/sibylline-oracles?in=user-544895508/sets/the-story-of-uriel'
       },
       {
         name: 'Photonic',
         playTime: '02:55',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/photonic?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/photonic?in=user-544895508/sets/the-story-of-uriel'
       },
       {
         name: 'Star Road',
         playTime: '03:53',
         trackNumber: 6,
-        link: 'https://soundcloud.com/user-544895508/star-road?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/star-road?in=user-544895508/sets/the-story-of-uriel'
       },
       {
-        name: 'Strong\'s Concordance',
+        name: "Strong's Concordance",
         playTime: '02:24',
         trackNumber: 7,
-        link: 'https://soundcloud.com/user-544895508/strongs-concordance?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/strongs-concordance?in=user-544895508/sets/the-story-of-uriel'
       },
       {
         name: 'Keraunoscopia (Chosen)',
         playTime: '03:32',
         trackNumber: 8,
-        link: 'https://soundcloud.com/user-544895508/keraunoscopia-chosen?in=user-544895508/sets/the-story-of-uriel'
+        link:
+          'https://soundcloud.com/user-544895508/keraunoscopia-chosen?in=user-544895508/sets/the-story-of-uriel'
       }
     ]
   },
@@ -383,7 +408,7 @@ const music = [
         name: 'Advanced Kenosis',
         playTime: '1:25:43',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/advanced-kenosis',
+        link: 'https://soundcloud.com/user-544895508/advanced-kenosis'
       }
     ]
   },
@@ -399,7 +424,7 @@ const music = [
         name: 'Corroborate Sooth',
         playTime: '1:08:14',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/corroborate-sooth',
+        link: 'https://soundcloud.com/user-544895508/corroborate-sooth'
       }
     ]
   },
@@ -415,7 +440,7 @@ const music = [
         name: 'Epopee',
         playTime: '1:15:07',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/epopee',
+        link: 'https://soundcloud.com/user-544895508/epopee'
       }
     ]
   },
@@ -423,7 +448,8 @@ const music = [
     name: 'Believer of Varsal Philalethist',
     description: '',
     playTime: '1:17:18',
-    link: 'https://soundcloud.com/user-544895508/believer-of-varsal-philalethist',
+    link:
+      'https://soundcloud.com/user-544895508/believer-of-varsal-philalethist',
     albumArt: 'believer-of-varsal-philalethist.png',
     releaseDate: '2020-09-24',
     songs: [
@@ -431,7 +457,8 @@ const music = [
         name: 'Believer of Varsal Philalethist',
         playTime: '1:17:18',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/believer-of-varsal-philalethist',
+        link:
+          'https://soundcloud.com/user-544895508/believer-of-varsal-philalethist'
       }
     ]
   },
@@ -447,7 +474,7 @@ const music = [
         name: 'Theophany',
         playTime: '1:27:05',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/theophany',
+        link: 'https://soundcloud.com/user-544895508/theophany'
       }
     ]
   },
@@ -463,7 +490,7 @@ const music = [
         name: 'Peace',
         playTime: '57:26',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/peace',
+        link: 'https://soundcloud.com/user-544895508/peace'
       }
     ]
   },
@@ -486,8 +513,8 @@ const music = [
         playTime: '03:37',
         trackNumber: 2,
         link: 'https://soundcloud.com/user-544895508/freestyle-side-z'
-      },
-    ]    
+      }
+    ]
   },
   {
     name: 'Aevum',
@@ -501,7 +528,7 @@ const music = [
         name: 'Aevum',
         playTime: '56:03',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/aevum',
+        link: 'https://soundcloud.com/user-544895508/aevum'
       }
     ]
   },
@@ -517,7 +544,7 @@ const music = [
         name: 'Fatiloquent Frequencies',
         playTime: '51:39',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/fatiloquent-frequencies',
+        link: 'https://soundcloud.com/user-544895508/fatiloquent-frequencies'
       }
     ]
   },
@@ -533,85 +560,99 @@ const music = [
         name: 'Intro (The Great Vivification)',
         playTime: '02:06',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/intro-the-great-vivification?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/intro-the-great-vivification?in=user-544895508/sets/bodement'
       },
       {
         name: 'I Am',
         playTime: '03:45',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/i-am?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/i-am?in=user-544895508/sets/bodement'
       },
       {
         name: 'Faith',
         playTime: '03:45',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/faith?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/faith?in=user-544895508/sets/bodement'
       },
       {
         name: 'Bodement',
         playTime: '03:42',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/bodement?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/bodement?in=user-544895508/sets/bodement'
       },
       {
         name: 'The 7 Churches',
         playTime: '02:07',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/the-7-churches?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/the-7-churches?in=user-544895508/sets/bodement'
       },
       {
         name: 'Superpower',
         playTime: '03:22',
         trackNumber: 6,
-        link: 'https://soundcloud.com/user-544895508/superpower?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/superpower?in=user-544895508/sets/bodement'
       },
       {
         name: 'Polypsychic',
         playTime: '03:13',
         trackNumber: 7,
-        link: 'https://soundcloud.com/user-544895508/polypsychic?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/polypsychic?in=user-544895508/sets/bodement'
       },
       {
         name: 'Elevate (Interlude)',
         playTime: '02:52',
         trackNumber: 8,
-        link: 'https://soundcloud.com/user-544895508/elevate-interlude?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/elevate-interlude?in=user-544895508/sets/bodement'
       },
       {
         name: 'Pslam Praise',
         playTime: '03:34',
         trackNumber: 9,
-        link: 'https://soundcloud.com/user-544895508/psalm-praise?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/psalm-praise?in=user-544895508/sets/bodement'
       },
       {
         name: 'Smart Child',
         playTime: '02:40',
         trackNumber: 10,
-        link: 'https://soundcloud.com/user-544895508/smart-child?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/smart-child?in=user-544895508/sets/bodement'
       },
       {
         name: 'Earned',
         playTime: '03:17',
         trackNumber: 11,
-        link: 'https://soundcloud.com/user-544895508/earned?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/earned?in=user-544895508/sets/bodement'
       },
       {
         name: '7 God',
         playTime: '04:34',
         trackNumber: 12,
-        link: 'https://soundcloud.com/user-544895508/7-god?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/7-god?in=user-544895508/sets/bodement'
       },
       {
         name: 'Doomster',
         playTime: '02:13',
         trackNumber: 13,
-        link: 'https://soundcloud.com/user-544895508/doomster?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/doomster?in=user-544895508/sets/bodement'
       },
       {
         name: 'Heaven',
         playTime: '04:48',
         trackNumber: 14,
-        link: 'https://soundcloud.com/user-544895508/heaven?in=user-544895508/sets/bodement'
+        link:
+          'https://soundcloud.com/user-544895508/heaven?in=user-544895508/sets/bodement'
       }
     ]
   },
@@ -627,8 +668,8 @@ const music = [
         name: 'Nomothetic Logomancy',
         playTime: '1:25:26',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/nomothetic-logomancy',
-      },
+        link: 'https://soundcloud.com/user-544895508/nomothetic-logomancy'
+      }
     ]
   },
   {
@@ -643,8 +684,8 @@ const music = [
         name: 'Universalism',
         playTime: '1:03:18',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/universalism',
-      },
+        link: 'https://soundcloud.com/user-544895508/universalism'
+      }
     ]
   },
   {
@@ -660,7 +701,7 @@ const music = [
         playTime: '54:39',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/dima'
-      },
+      }
     ]
   },
   {
@@ -675,44 +716,51 @@ const music = [
         name: 'The Little Book (prod. kujo & nayz)',
         playTime: '02:00',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/the-little-book-prod-kujo-nayz?in=user-544895508/sets/7a-1'
+        link:
+          'https://soundcloud.com/user-544895508/the-little-book-prod-kujo-nayz?in=user-544895508/sets/7a-1'
       },
       {
         name: 'The Thunder, Perfect Mind (prod. Young Swisher Beats)',
         playTime: '03:13',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/the-thunder-perfect-mind-prod?in=user-544895508/sets/7a-1'
+        link:
+          'https://soundcloud.com/user-544895508/the-thunder-perfect-mind-prod?in=user-544895508/sets/7a-1'
       },
       {
         name: 'Pacification (prod. Stoic Beats)',
         playTime: '03:32',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/pacification-prod-stoic-beats?in=user-544895508/sets/7a-1'
+        link:
+          'https://soundcloud.com/user-544895508/pacification-prod-stoic-beats?in=user-544895508/sets/7a-1'
       },
       {
         name: 'Anagalactic (prod. Donnie Katana)',
         playTime: '02:48',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/anagalactic-prod-donnie-katana?in=user-544895508/sets/7a-1'
+        link:
+          'https://soundcloud.com/user-544895508/anagalactic-prod-donnie-katana?in=user-544895508/sets/7a-1'
       },
       {
         name: 'Incoronate (prod. pilotkid)',
         playTime: '03:32',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/incoronate-prod-pilotkid?in=user-544895508/sets/7a-1'
+        link:
+          'https://soundcloud.com/user-544895508/incoronate-prod-pilotkid?in=user-544895508/sets/7a-1'
       },
       {
         name: 'Sovereign Citizen (prod. Thunder Bandit)',
         playTime: '02:28',
         trackNumber: 6,
-        link: 'https://soundcloud.com/user-544895508/sovereign-citizen-prod-thunder?in=user-544895508/sets/7a-1'
+        link:
+          'https://soundcloud.com/user-544895508/sovereign-citizen-prod-thunder?in=user-544895508/sets/7a-1'
       },
       {
         name: 'The Dormition of Casualism (prod. GC)',
         playTime: '03:32',
         trackNumber: 7,
-        link: 'https://soundcloud.com/user-544895508/the-dormition-of-casualism?in=user-544895508/sets/7a-1'
-      },
+        link:
+          'https://soundcloud.com/user-544895508/the-dormition-of-casualism?in=user-544895508/sets/7a-1'
+      }
     ]
   },
   {
@@ -728,7 +776,7 @@ const music = [
         playTime: '50:30',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/metatron'
-      },
+      }
     ]
   },
   {
@@ -744,7 +792,7 @@ const music = [
         playTime: '49:15',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/144000a'
-      },
+      }
     ]
   },
   {
@@ -760,7 +808,7 @@ const music = [
         playTime: '01:02:26',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/empyrean'
-      },
+      }
     ]
   },
   {
@@ -776,11 +824,11 @@ const music = [
         playTime: '01:07:08',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/mount-olympus'
-      },
+      }
     ]
   },
   {
-    name: 'Gods\'s Correction',
+    name: "Gods's Correction",
     description: '',
     playTime: '04:20',
     link: 'https://soundcloud.com/user-544895508/gods-correction',
@@ -788,15 +836,15 @@ const music = [
     releaseDate: '2019-09-26',
     songs: [
       {
-        name: 'Gods\'s Correction',
+        name: "Gods's Correction",
         playTime: '04:20',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/gods-correction'
-      },
+      }
     ]
   },
   {
-    name: 'Job\'s Trial',
+    name: "Job's Trial",
     description: '',
     playTime: '04:12',
     link: 'https://soundcloud.com/user-544895508/jobs-trial',
@@ -804,11 +852,11 @@ const music = [
     releaseDate: '2019-09-26',
     songs: [
       {
-        name: 'Job\'s Trial',
+        name: "Job's Trial",
         playTime: '04:12',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/jobs-trial'
-      },
+      }
     ]
   },
   {
@@ -824,7 +872,7 @@ const music = [
         playTime: '59:13',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/fire-of-god'
-      },
+      }
     ]
   },
   {
@@ -840,7 +888,7 @@ const music = [
         playTime: '03:22',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/youth-of-tartarus-judge'
-      },
+      }
     ]
   },
   {
@@ -856,7 +904,7 @@ const music = [
         playTime: '59:21',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/song-of-solomon'
-      },
+      }
     ]
   },
   {
@@ -872,7 +920,7 @@ const music = [
         playTime: '02:13',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/conversations-with-father'
-      },
+      }
     ]
   },
   {
@@ -888,7 +936,7 @@ const music = [
         playTime: '01:03:11',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/the-great-beyond'
-      },
+      }
     ]
   },
   {
@@ -904,7 +952,7 @@ const music = [
         playTime: '55:59',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/holy-holy-holy'
-      },
+      }
     ]
   },
   {
@@ -920,7 +968,7 @@ const music = [
         playTime: '04:08',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/happy-song-4-u'
-      },
+      }
     ]
   },
   {
@@ -936,7 +984,7 @@ const music = [
         playTime: '03:20',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/holy-rant'
-      },
+      }
     ]
   },
   {
@@ -952,7 +1000,7 @@ const music = [
         playTime: '02:44',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/autonomous'
-      },
+      }
     ]
   },
   {
@@ -968,7 +1016,7 @@ const music = [
         playTime: '01:06:54',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/galahad'
-      },
+      }
     ]
   },
   {
@@ -984,7 +1032,7 @@ const music = [
         playTime: '01:18:56',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/acclimate'
-      },
+      }
     ]
   },
   {
@@ -1000,7 +1048,7 @@ const music = [
         playTime: '03:17',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/ascended'
-      },
+      }
     ]
   },
   {
@@ -1016,7 +1064,7 @@ const music = [
         playTime: '01:24:00',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/isaiah-601'
-      },
+      }
     ]
   },
   {
@@ -1032,7 +1080,7 @@ const music = [
         playTime: '03:25',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/ascension'
-      },
+      }
     ]
   },
   {
@@ -1048,7 +1096,7 @@ const music = [
         playTime: '05:59',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/big-kahuna'
-      },
+      }
     ]
   },
   {
@@ -1064,7 +1112,7 @@ const music = [
         playTime: '03:41',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/john-1519'
-      },
+      }
     ]
   },
   {
@@ -1080,7 +1128,7 @@ const music = [
         playTime: '01:10:54',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/malidoma-patrice-some'
-      },
+      }
     ]
   },
   {
@@ -1096,7 +1144,7 @@ const music = [
         playTime: '09:38',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/forever'
-      },
+      }
     ]
   },
   {
@@ -1112,7 +1160,7 @@ const music = [
         playTime: '01:04:31',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/blessings'
-      },
+      }
     ]
   },
   {
@@ -1128,7 +1176,7 @@ const music = [
         playTime: '02:31',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/simple'
-      },
+      }
     ]
   },
   {
@@ -1144,7 +1192,7 @@ const music = [
         playTime: '49:14',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/crowning'
-      },
+      }
     ]
   },
   {
@@ -1160,7 +1208,7 @@ const music = [
         playTime: '48:31',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/yeah-nah'
-      },
+      }
     ]
   },
   {
@@ -1176,7 +1224,7 @@ const music = [
         playTime: '02:16',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/verging-revalations'
-      },
+      }
     ]
   },
   {
@@ -1192,7 +1240,7 @@ const music = [
         playTime: '01:13:07',
         trackNumber: 1,
         link: 'https://soundcloud.com/user-544895508/the-6th'
-      },
+      }
     ]
   },
   {
@@ -1232,7 +1280,7 @@ const music = [
         playTime: '03:48',
         trackNumber: 5,
         link: 'https://soundcloud.com/user-544895508/the-art-of-shining'
-      },
+      }
     ]
   },
   {
@@ -1247,33 +1295,34 @@ const music = [
         name: 'Martian',
         playTime: '02:55',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/martian',
+        link: 'https://soundcloud.com/user-544895508/martian'
       },
       {
         name: 'Past Life',
         playTime: '03:44',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/past-life',
+        link: 'https://soundcloud.com/user-544895508/past-life'
       },
       {
         name: 'Cries from Jupiter',
         playTime: '03:13',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/cries-from-jupiter',
+        link: 'https://soundcloud.com/user-544895508/cries-from-jupiter'
       },
       {
         name: 'God Wink',
         playTime: '02:55',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/god-wink',
-      },
+        link: 'https://soundcloud.com/user-544895508/god-wink'
+      }
     ]
   },
   {
     name: 'Project Reverse Mockingbird',
     description: '',
     playTime: '17:02',
-    link: 'https://soundcloud.com/user-544895508/sets/project-reverse-mockingbird',
+    link:
+      'https://soundcloud.com/user-544895508/sets/project-reverse-mockingbird',
     albumArt: 'project-reverse-mockingbird.png',
     releaseDate: '2019-01-12',
     songs: [
@@ -1281,50 +1330,50 @@ const music = [
         name: 'prelude',
         playTime: '01:11',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/prelude',
+        link: 'https://soundcloud.com/user-544895508/prelude'
       },
       {
         name: 'snctm',
         playTime: '02:30',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/snctm',
+        link: 'https://soundcloud.com/user-544895508/snctm'
       },
       {
         name: 'belmont',
         playTime: '02:19',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/belmont',
+        link: 'https://soundcloud.com/user-544895508/belmont'
       },
       {
         name: 'seraph',
         playTime: '02:22',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/seraph',
+        link: 'https://soundcloud.com/user-544895508/seraph'
       },
       {
         name: 'lifted down',
         playTime: '02:16',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/lifted-down',
+        link: 'https://soundcloud.com/user-544895508/lifted-down'
       },
       {
         name: 'snake bite',
         playTime: '00:51',
         trackNumber: 6,
-        link: 'https://soundcloud.com/user-544895508/snake-bite',
+        link: 'https://soundcloud.com/user-544895508/snake-bite'
       },
       {
         name: 'good sons lose',
         playTime: '03:08',
         trackNumber: 7,
-        link: 'https://soundcloud.com/user-544895508/good-sons-lose',
+        link: 'https://soundcloud.com/user-544895508/good-sons-lose'
       },
       {
         name: 'like i do',
         playTime: '02:21',
         trackNumber: 8,
-        link: 'https://soundcloud.com/user-544895508/like-i-do',
-      },
+        link: 'https://soundcloud.com/user-544895508/like-i-do'
+      }
     ]
   },
   {
@@ -1339,7 +1388,7 @@ const music = [
         name: 'Agraphia',
         playTime: '54:02',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/agraphia',
+        link: 'https://soundcloud.com/user-544895508/agraphia'
       }
     ]
   },
@@ -1354,32 +1403,37 @@ const music = [
         name: 'like woah',
         playTime: '04:58',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/like-woah?in=user-544895508/sets/crazy-diamond-interlude',
+        link:
+          'https://soundcloud.com/user-544895508/like-woah?in=user-544895508/sets/crazy-diamond-interlude'
       },
       {
         name: 'father said',
         playTime: '02:15',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/father-said?in=user-544895508/sets/crazy-diamond-interlude',
+        link:
+          'https://soundcloud.com/user-544895508/father-said?in=user-544895508/sets/crazy-diamond-interlude'
       },
       {
         name: 'waze',
         playTime: '03:04',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/waze-1?in=user-544895508/sets/crazy-diamond-interlude',
+        link:
+          'https://soundcloud.com/user-544895508/waze-1?in=user-544895508/sets/crazy-diamond-interlude'
       },
       {
         name: 'the walk from work to the car',
         playTime: '01:36',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/the-walk-from-work-to-the-car?in=user-544895508/sets/crazy-diamond-interlude',
+        link:
+          'https://soundcloud.com/user-544895508/the-walk-from-work-to-the-car?in=user-544895508/sets/crazy-diamond-interlude'
       },
       {
         name: 'love machine',
         playTime: '05:13',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/love-machine?in=user-544895508/sets/crazy-diamond-interlude',
-      },
+        link:
+          'https://soundcloud.com/user-544895508/love-machine?in=user-544895508/sets/crazy-diamond-interlude'
+      }
     ]
   },
   {
@@ -1394,7 +1448,7 @@ const music = [
         name: 'waze',
         playTime: '3:04',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/waze',
+        link: 'https://soundcloud.com/user-544895508/waze'
       }
     ]
   },
@@ -1410,7 +1464,7 @@ const music = [
         name: 'Sans Forgetica',
         playTime: '49:04',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/sans-forgetica',
+        link: 'https://soundcloud.com/user-544895508/sans-forgetica'
       }
     ]
   },
@@ -1426,7 +1480,7 @@ const music = [
         name: 'BASKETS',
         playTime: '48:36',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/baskets',
+        link: 'https://soundcloud.com/user-544895508/baskets'
       }
     ]
   },
@@ -1442,7 +1496,7 @@ const music = [
         name: 'iMissUGod',
         playTime: '01:13:20',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/thankugod',
+        link: 'https://soundcloud.com/user-544895508/thankugod'
       }
     ]
   },
@@ -1458,7 +1512,7 @@ const music = [
         name: 'thankUgod',
         playTime: '01:04:48',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/thankugod',
+        link: 'https://soundcloud.com/user-544895508/thankugod'
       }
     ]
   },
@@ -1473,52 +1527,60 @@ const music = [
         name: 'Growing Painz',
         playTime: '03:19',
         trackNumber: 1,
-        link: 'https://soundcloud.com/user-544895508/growing-painz?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/growing-painz?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'Morning Radio',
         playTime: '02:56',
         trackNumber: 2,
-        link: 'https://soundcloud.com/user-544895508/morning-radio?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/morning-radio?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'HoldingU',
         playTime: '03:08',
         trackNumber: 3,
-        link: 'https://soundcloud.com/user-544895508/holdingu?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/holdingu?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'miiind stroll',
         playTime: '01:24',
         trackNumber: 4,
-        link: 'https://soundcloud.com/user-544895508/miiind-stroll?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/miiind-stroll?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'LIVING PROPHET',
         playTime: '02:27',
         trackNumber: 5,
-        link: 'https://soundcloud.com/user-544895508/living-prophet?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/living-prophet?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'Gomorrah',
         playTime: '02:27',
         trackNumber: 6,
-        link: 'https://soundcloud.com/user-544895508/gomorrah?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/gomorrah?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'Talk2U',
         playTime: '02:53',
         trackNumber: 7,
-        link: 'https://soundcloud.com/user-544895508/talk2u?in=user-544895508/sets/sex-on-the-tarmac',
+        link:
+          'https://soundcloud.com/user-544895508/talk2u?in=user-544895508/sets/sex-on-the-tarmac'
       },
       {
         name: 'Ode To Jimmy',
         playTime: '03:47',
         trackNumber: 8,
-        link: 'https://soundcloud.com/user-544895508/ode-to-jimmy?in=user-544895508/sets/sex-on-the-tarmac',
-      },
+        link:
+          'https://soundcloud.com/user-544895508/ode-to-jimmy?in=user-544895508/sets/sex-on-the-tarmac'
+      }
     ]
-  },
+  }
 ];
 
 const home = _.filter(music, o => o.name === HOME_TRACK)[0];

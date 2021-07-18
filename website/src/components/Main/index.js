@@ -10,6 +10,6 @@ const Main = () => (
       <Route path='/' component={Home} />
     </Switch>
   </main>
-)
+);
 
 export default Main;

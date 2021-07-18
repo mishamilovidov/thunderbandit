@@ -9,17 +9,17 @@ class Footer extends Component {
   }
 
   render() {
-    const year = (new Date()).getFullYear();
+    const year = new Date().getFullYear();
 
     return (
-      <footer className="Footer">
-        <div className="copyright">&copy; {year} by Dmitri Milovidov</div>
-        <div className="socialMedia">
-          <a href="https://soundcloud.com/user-544895508">
-            <img src={soundCloudLogo} alt="SoundCloud" />
+      <footer className='Footer'>
+        <div className='copyright'>&copy; {year} by Dmitri Milovidov</div>
+        <div className='socialMedia'>
+          <a href='https://soundcloud.com/user-544895508'>
+            <img src={soundCloudLogo} alt='SoundCloud' />
           </a>
-          <a href="https://www.instagram.com/thunderbandit/">
-            <img src={instagramLogo} alt="Instagram Logo" />
+          <a href='https://www.instagram.com/thunderbandit/'>
+            <img src={instagramLogo} alt='Instagram Logo' />
           </a>
         </div>
       </footer>

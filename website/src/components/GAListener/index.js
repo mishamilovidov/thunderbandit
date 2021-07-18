@@ -1,25 +1,23 @@
-import { Component } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
 
-class GAListener extends Component {
-  static contextTypes = {
-    router: PropTypes.object
-  };
-
-  componentDidMount() {
-    this.sendPageView(this.context.router.history.location);
-    this.context.router.history.listen(this.sendPageView);
-  }
-
-  sendPageView(location) {
+const GAListener = ({ router }) => {
+  const sendPageView = location => {
     ReactGA.set({ page: location.pathname });
     ReactGA.pageview(location.pathname);
-  }
+  };
 
-  render() {
-    return this.props.children;
-  }
-}
+  useEffect(() => {
+    sendPageView(router.history.location);
+    router.history.listen(sendPageView);
+  }, [router]);
+
+  return this.props.children;
+};
+
+GAListener.propTypes = {
+  router: PropTypes.objectOf(PropTypes.object)
+};
 
 export default GAListener;

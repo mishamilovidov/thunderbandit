@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 
 export const types = {
   UPDATE: 'UPDATE'
-}
+};
 
 export const AppInit = {
   firebase: {
@@ -26,10 +26,14 @@ export const AppInit = {
       storage: firebase.storage()
     },
     ...(process.env.REACT_APP_ENV === 'local' && {
-      firestore: firebase.firestore()
-        .useEmulator('localhost', process.env.REACT_APP_FIREBASE_EMULATORS_FIRESTORE_PORT),
+      firestore: firebase
+        .firestore()
+        .useEmulator(
+          'localhost',
+          process.env.REACT_APP_FIREBASE_EMULATORS_FIRESTORE_PORT
+        )
     }),
-    ...(!process.env.REACT_APP_ENV === 'local' &&  {
+    ...(!process.env.REACT_APP_ENV === 'local' && {
       analytics: firebase.analytics()
     })
   },
@@ -41,9 +45,9 @@ export const AppInit = {
       sm: '600px',
       md: '768px',
       lg: '992px',
-      xl: '1200px',
+      xl: '1200px'
     },
-    fontFamily: '\'Lato\', sans-serif',
+    fontFamily: "'Lato', sans-serif",
     scale: 'medium'
   }
 };

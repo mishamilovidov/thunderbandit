@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Main from '../components/Main';
-import Header from '../components/Header';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import WebFont from 'webfontloader';
-import { AppContext } from '../contexts';
-import { createGlobalStyle } from 'styled-components'
 import { faPlay, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import Main from '../components/Main';
+import Header from '../components/Header';
+import { AppContext } from '../contexts';
 
 library.add(faPlay);
 library.add(faExternalLinkAlt);
@@ -55,16 +54,18 @@ const GlobalStyle = createGlobalStyle`
     opacity: 1;
     transition: .5s ease-in all;
   }
-`
+`;
 
 const AppWrapper = styled.div`
   font-family: 'Lato', sans-serif;
-  color: #2F3D4D;
-  background-color: #21181D;
+  color: #2f3d4d;
+  background-color: #21181d;
 `;
 
 const App = () => {
-  const { state: { theme } } = useContext(AppContext);
+  const {
+    state: { theme }
+  } = useContext(AppContext);
 
   return (
     <AppWrapper theme={theme}>
@@ -76,7 +77,7 @@ const App = () => {
 };
 
 AppWrapper.propTypes = {
-  theme: PropTypes.object.isRequired
-}
+  theme: PropTypes.objectOf(PropTypes.object).isRequired
+};
 
 export default App;

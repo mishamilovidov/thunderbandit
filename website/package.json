@@ -2,6 +2,7 @@
   "scripts": {
     "build": "craco build",
     "lint": "eslint src/; exit 0",
+    "prettier": "prettier --write \"**/*.js\"",
     "start": "FAST_REFRESH=false craco start",
     "test": "./node_modules/.bin/craco test --passWithNoTests"
   },
@@ -15,6 +16,7 @@
     "firebase": "^8.4.0",
     "lodash": "^4.17.15",
     "moment-timezone": "^0.5.33",
+    "prop-types": "^15.7.2",
     "react": "16.14.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-document-meta": "^3.0.0-beta.2",
