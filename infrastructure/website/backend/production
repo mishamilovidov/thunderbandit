@@ -1,3 +1,0 @@
-bucket      = "tbprd-website_terraform"
-prefix      = "state"
-credentials = "credentials.json"
