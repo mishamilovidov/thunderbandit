@@ -35,3 +35,7 @@ variable "regions" {
   }))
   description = "available regions"
 }
+
+variable "google_storage_buckets" {
+  type = map(any)
+}

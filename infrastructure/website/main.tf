@@ -32,3 +32,9 @@ provider "google-beta" {
 #
 # resources ###################################################################
 #
+
+resource "google_storage_bucket" "default" {
+  for_each = var.google_storage_buckets
+  name     = each.value.name
+  location = each.value.location
+}
