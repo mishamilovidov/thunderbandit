@@ -1,18 +1,4 @@
 # Changelog
-### [1.1.33](https://github.com/mishamilovidov/thunderbandit/compare/v2.0.0...v1.1.33) (2021-07-17)
-
-
-### 🐛 Fixes
-
-* **ci:** release script ([0424aaa](https://github.com/mishamilovidov/thunderbandit/commits/0424aaa693c137474567951b0cbf763e219a1b2b))
-
-
-### 🧰 Maintenance
-
-* merge pull request [#36](https://github.com/mishamilovidov/thunderbandit/issues/36) ([9e24090](https://github.com/mishamilovidov/thunderbandit/commits/9e240907121665505b371939a5c4a55238ea4a80))
-* merge pull request [#37](https://github.com/mishamilovidov/thunderbandit/issues/37) ([428090c](https://github.com/mishamilovidov/thunderbandit/commits/428090c0ebf7164aa94f2a65cf3c130453f59844))
-* update version in readme to v1.1.33 ([b5787cf](https://github.com/mishamilovidov/thunderbandit/commits/b5787cf74410d5a05477cb5b8a6ca048b44b5e53))
-
 ## [2.0.0](https://github.com/mishamilovidov/thunderbandit/compare/v1.1.32...v2.0.0) (2021-07-17)
 
 
