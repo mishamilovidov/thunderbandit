@@ -8,9 +8,4 @@ credentials = "credentials.json"
 
 environment = "prd"
 
-google_storage_buckets = {
-  "assets" : {
-    "name"      = "tbprd-website_assets"
-    "location"  = "US"
-  }
-}
+google_storage_buckets = {}
