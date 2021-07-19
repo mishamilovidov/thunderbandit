@@ -48,6 +48,7 @@ export const AppInit = {
       xl: '1300px'
     },
     colors: {
+      backgroundColor: '#21181d',
       border: '#664d5c',
       text: '#f4f0f3'
     },

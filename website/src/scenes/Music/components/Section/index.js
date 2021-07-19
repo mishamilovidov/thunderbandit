@@ -25,7 +25,7 @@ const SectionHeader = styled.h3`
   color: ${({ theme }) => theme.color};
 `;
 
-const Section = ({ collections, title }) => {
+const Section = ({ title, types }) => {
   const {
     state: { firebase, theme }
   } = useContext(AppContext);
@@ -33,14 +33,21 @@ const Section = ({ collections, title }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await firebase.firestore.collection(collections[0]).get();
-        console.debug(data);
+        const snapshot = await firebase.firestore
+          .collection('releases')
+          .where('type', '==', types[0])
+          .get();
+        snapshot.forEach(doc => {
+          const release = doc.data();
+          const item = release.item.id;
+          console.debug(item);
+        });
       } catch (err) {
         console.error(err);
       }
     };
     fetchData();
-  }, [collections]);
+  }, [types]);
 
   return (
     <SectionWrapper theme={theme}>
@@ -50,12 +57,12 @@ const Section = ({ collections, title }) => {
 };
 
 Section.propTypes = {
-  collections: PropTypes.objectOf(PropTypes.array).isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  types: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 SectionWrapper.propTypes = {
-  theme: PropTypes.objectOf(PropTypes.object).isRequired
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
 export default Section;

@@ -2,7 +2,6 @@ import React, { useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { LastLocationProvider } from 'react-router-last-location';
 import App from './scenes';
 import GAListener from './components/GAListener';
 import { AppContext } from './contexts';
@@ -17,21 +16,17 @@ if (isNotLocal) {
 const Root = () => {
   const [state, dispatch] = useReducer(AppReducer, AppInit);
 
-  console.log(state);
-
   return (
     <BrowserRouter>
-      <LastLocationProvider>
-        <AppContext.Provider value={{ state, dispatch }}>
-          {isNotLocal ? (
-            <GAListener>
-              <Route path='/' component={App} />
-            </GAListener>
-          ) : (
+      <AppContext.Provider value={{ state, dispatch }}>
+        {isNotLocal ? (
+          <GAListener>
             <Route path='/' component={App} />
-          )}
-        </AppContext.Provider>
-      </LastLocationProvider>
+          </GAListener>
+        ) : (
+          <Route path='/' component={App} />
+        )}
+      </AppContext.Provider>
     </BrowserRouter>
   );
 };

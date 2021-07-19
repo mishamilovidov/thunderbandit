@@ -24,7 +24,6 @@
     "react-ga": "^2.5.3",
     "react-hamburger-menu": "^1.1.1",
     "react-router-dom": "^5.2.0",
-    "react-router-last-location": "^1.1.0",
     "react-scripts": "^4.0.3",
     "styled-components": "^5.2.3",
     "webfontloader": "^1.6.28"

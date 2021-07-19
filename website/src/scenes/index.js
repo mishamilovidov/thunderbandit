@@ -47,9 +47,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const AppWrapper = styled.div`
-  font-family: 'Lato', sans-serif;
-  color: #2f3d4d;
-  background-color: #21181d;
+  font-family: ${({ theme }) => theme.fontFamily};
+  background-color: ${({ theme }) => theme.colors.backgroundColor};
 `;
 
 const App = () => {
@@ -67,11 +66,11 @@ const App = () => {
 };
 
 AppWrapper.propTypes = {
-  theme: PropTypes.objectOf(PropTypes.object).isRequired
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
 GlobalStyle.propTypes = {
-  theme: PropTypes.objectOf(PropTypes.object).isRequired
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
 export default App;
