@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 import ReactGA from 'react-ga';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { transitionOptions } from '../../services/transitions';
 import { instagramAccountUrl } from '../../services/instagram';
 import { twitterAccountUrl } from '../../services/twitter';
 import './styles.css';
@@ -17,26 +15,26 @@ const Header = () => {
   };
   const renderNav = () => (
     <nav className='Navigation'>
-      <ReactCSSTransitionGroup {...transitionOptions}>
-        <NavLink exact to='/' onClick={handleClick}>
-          Home
-        </NavLink>
-        <NavLink to='/music' onClick={handleClick}>
-          Music
-        </NavLink>
-        <ReactGA.OutboundLink
-          eventLabel='instagramAccountUrl'
-          to={instagramAccountUrl}
-        >
-          Instagram
-        </ReactGA.OutboundLink>
-        <ReactGA.OutboundLink
-          eventLabel='twitterAccountUrl'
-          to={twitterAccountUrl}
-        >
-          Twitter
-        </ReactGA.OutboundLink>
-      </ReactCSSTransitionGroup>
+      <NavLink exact to='/' onClick={handleClick}>
+        Home
+      </NavLink>
+      <NavLink to='/music' onClick={handleClick}>
+        Music
+      </NavLink>
+      <ReactGA.OutboundLink
+        eventLabel='instagramAccountUrl'
+        to={instagramAccountUrl}
+        target='_blank'
+      >
+        Instagram
+      </ReactGA.OutboundLink>
+      <ReactGA.OutboundLink
+        eventLabel='twitterAccountUrl'
+        to={twitterAccountUrl}
+        target='_blank'
+      >
+        Twitter
+      </ReactGA.OutboundLink>
     </nav>
   );
 

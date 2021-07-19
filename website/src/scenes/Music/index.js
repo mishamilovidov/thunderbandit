@@ -1,27 +1,27 @@
 import React from 'react';
 import DocumentMeta from 'react-document-meta';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import styled from 'styled-components';
 import { meta } from '../../services/analytics';
-import { slideUpTransitionOptions } from '../../services/transitions';
-import soundcloud from '../../services/soundcloud';
-import Album from './components/Album';
+import Albums from './components/Albums';
 import './styles.css';
 
+const MusicWrapper = styled.div`
+  min-height: 100vh;
+`;
+
 const Music = () => {
-  const albums = soundcloud.music.map(album => {
-    return <Album key={album.name} album={album} />;
-  });
+  // const albums = soundcloud.music.map(album => {
+  //   return <Album key={album.name} album={album} />;
+  // });
 
   return (
     <DocumentMeta {...meta.Music}>
-      <div className='Music'>
+      <MusicWrapper className='Music'>
         <div className='title'>
-          <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <div className='text'>Music</div>
-          </ReactCSSTransitionGroup>
+          <div className='text'>Music</div>
         </div>
-        <div className='body'>{albums}</div>
-      </div>
+        <Albums />
+      </MusicWrapper>
     </DocumentMeta>
   );
 };

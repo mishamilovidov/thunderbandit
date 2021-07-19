@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background-color: #21181d;
   }
 
   a,

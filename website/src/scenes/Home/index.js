@@ -3,14 +3,9 @@ import ReactGA from 'react-ga';
 import React from 'react';
 import DocumentMeta from 'react-document-meta';
 import styled from 'styled-components';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import homeImg from './god-is-love.png';
 import soundcloud from '../../services/soundcloud';
 import { meta } from '../../services/analytics';
-import {
-  slideUpTransitionOptions,
-  transitionOptions
-} from '../../services/transitions';
 
 const HomeWrapper = styled.div``;
 
@@ -97,26 +92,20 @@ const Home = () => {
     <DocumentMeta {...meta.Home}>
       <HomeWrapper>
         <HomeLayer />
-        <ReactCSSTransitionGroup {...transitionOptions}>
-          <HomeImg />
-        </ReactCSSTransitionGroup>
+        <HomeImg />
         <HomeText>
-          <ReactCSSTransitionGroup {...transitionOptions}>
-            <HomeTextSubtitle>
-              {soundcloud.home.songs.length > 1 ? 'EP' : 'Setlist'} out now
-            </HomeTextSubtitle>
-          </ReactCSSTransitionGroup>
-          <ReactCSSTransitionGroup {...slideUpTransitionOptions}>
-            <HomeTextTitle>{soundcloud.home.name}</HomeTextTitle>
-            <HomeTextAction>
-              <ReactGA.OutboundLink
-                eventLabel={`soundCloud${_.camelCase(soundcloud.home.name)}`}
-                to={soundcloud.home.link}
-              >
-                Listen on SoundCloud
-              </ReactGA.OutboundLink>
-            </HomeTextAction>
-          </ReactCSSTransitionGroup>
+          <HomeTextSubtitle>
+            {soundcloud.home.songs.length > 1 ? 'EP' : 'Setlist'} out now
+          </HomeTextSubtitle>
+          <HomeTextTitle>{soundcloud.home.name}</HomeTextTitle>
+          <HomeTextAction>
+            <ReactGA.OutboundLink
+              eventLabel={`soundCloud${_.camelCase(soundcloud.home.name)}`}
+              to={soundcloud.home.link}
+            >
+              Listen on SoundCloud
+            </ReactGA.OutboundLink>
+          </HomeTextAction>
         </HomeText>
       </HomeWrapper>
     </DocumentMeta>
