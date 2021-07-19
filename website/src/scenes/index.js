@@ -26,34 +26,23 @@ const GlobalStyle = createGlobalStyle`
     background-color: #21181d;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: ${({ theme }) => theme.colors.text};
+  }
+
   a,
   a:link,
   a:visited,
   a:hover,
   a:active {
-    color: inherit;
+    color: ${({ theme }) => theme.colors.text};
     text-decoration: inherit;
     font-weight: inherit;
-  }
-
-  .fade-slide-up-appear {
-    opacity: 0.01;
-    transform: translate(0px,20px);
-  }
-
-  .fade-slide-up-appear-active {
-    opacity: 1;
-    transform: translate(0px,0px);
-    transition: .5s ease-in all;
-  }
-
-  .fade-appear {
-    opacity: 0.01;
-  }
-
-  .fade-appear-active {
-    opacity: 1;
-    transition: .5s ease-in all;
   }
 `;
 
@@ -70,7 +59,7 @@ const App = () => {
 
   return (
     <AppWrapper theme={theme}>
-      <GlobalStyle />
+      <GlobalStyle theme={theme} />
       <Header />
       <Main />
     </AppWrapper>
@@ -78,6 +67,10 @@ const App = () => {
 };
 
 AppWrapper.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.object).isRequired
+};
+
+GlobalStyle.propTypes = {
   theme: PropTypes.objectOf(PropTypes.object).isRequired
 };
 

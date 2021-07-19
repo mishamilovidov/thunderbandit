@@ -2,7 +2,7 @@ import React from 'react';
 import DocumentMeta from 'react-document-meta';
 import styled from 'styled-components';
 import { meta } from '../../services/analytics';
-import Albums from './components/Albums';
+import Section from './components/Section';
 import './styles.css';
 
 const MusicWrapper = styled.div`
@@ -10,17 +10,15 @@ const MusicWrapper = styled.div`
 `;
 
 const Music = () => {
-  // const albums = soundcloud.music.map(album => {
-  //   return <Album key={album.name} album={album} />;
-  // });
-
   return (
     <DocumentMeta {...meta.Music}>
       <MusicWrapper className='Music'>
         <div className='title'>
           <div className='text'>Music</div>
         </div>
-        <Albums />
+        <Section collections={['albums']} title='Albums' />
+        <Section collections={['singles', 'eps']} title='Singles & EPs' />
+        <Section collections={['setlists']} title='Setlists' />
       </MusicWrapper>
     </DocumentMeta>
   );

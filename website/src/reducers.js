@@ -41,13 +41,26 @@ export const AppInit = {
       ? 'dark'
       : 'light',
     breakpoints: {
-      sm: '600px',
-      md: '768px',
-      lg: '992px',
-      xl: '1200px'
+      xs: '600px',
+      sm: '768px',
+      md: '992px',
+      lg: '1100px',
+      xl: '1300px'
+    },
+    colors: {
+      border: '#664d5c',
+      text: '#f4f0f3'
     },
     fontFamily: "'Lato', sans-serif",
-    scale: 'medium'
+    scale: 'medium',
+    widths: {
+      content: {
+        sm: '85vw',
+        md: '800px',
+        lg: '900px',
+        xl: '1100px'
+      }
+    }
   }
 };
 
