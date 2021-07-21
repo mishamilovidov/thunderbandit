@@ -10,6 +10,7 @@
     }
   },
   "firestore": {
+    "indexes": "config/firebase/firestore.indexes.json",
     "rules": "config/firebase/firestore.rules"
   },
   "hosting": [
