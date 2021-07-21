@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { AppContext } from '../../../../contexts';
@@ -25,29 +25,41 @@ const SectionHeader = styled.h3`
   color: ${({ theme }) => theme.color};
 `;
 
-const Section = ({ title, types }) => {
+const Section = ({ title, type }) => {
   const {
     state: { firebase, theme }
   } = useContext(AppContext);
+  const [items, setItems] = useState([]);
+  const [page, setPage] = useState(1);
+
+  console.debug(items);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.time(type);
         const snapshot = await firebase.firestore
           .collection('releases')
-          .where('type', '==', types[0])
+          .where('type', '==', type)
+          .limit(page * 10)
           .get();
-        snapshot.forEach(doc => {
-          const release = doc.data();
-          const item = release.item.id;
-          console.debug(item);
-        });
+        const releases = snapshot.docs
+          .map(doc => doc.data())
+          .reduce((accumulator, current, index) => {
+            accumulator.push({ index, id: current.item.id });
+            return accumulator;
+          }, []);
+        // const snapshotTest = await firebase.firestore
+        //   .collection(`${type}s`)
+        //   .where('uuid', 'in', releases.map)
+        //   .get();
+        console.timeEnd(type);
       } catch (err) {
         console.error(err);
       }
     };
     fetchData();
-  }, [types]);
+  }, [type]);
 
   return (
     <SectionWrapper theme={theme}>
@@ -58,7 +70,7 @@ const Section = ({ title, types }) => {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  types: PropTypes.arrayOf(PropTypes.string).isRequired
+  type: PropTypes.string.isRequired
 };
 
 SectionWrapper.propTypes = {

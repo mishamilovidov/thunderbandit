@@ -16,9 +16,10 @@ const Music = () => {
         <div className='title'>
           <div className='text'>Music</div>
         </div>
-        <Section types={['album']} title='Albums' />
-        <Section types={['singles', 'eps']} title='Singles & EPs' />
-        <Section types={['setlists']} title='Setlists' />
+        <Section type='album' title='Albums' />
+        <Section type='ep' title='EPs' />
+        <Section type='single' title='Singles' />
+        <Section type='setlist' title='Setlists' />
       </MusicWrapper>
     </DocumentMeta>
   );
