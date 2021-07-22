@@ -54,6 +54,15 @@ export const AppInit = {
     },
     fontFamily: "'Lato', sans-serif",
     scale: 'medium',
+    scenes: {
+      music: {
+        coverart: {
+          height: '200px',
+          width: '200px',
+          placeholderColor: '#a5a5a5'
+        }
+      }
+    },
     widths: {
       content: {
         sm: '85vw',

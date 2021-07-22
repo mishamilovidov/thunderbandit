@@ -1,6 +1,9 @@
+import _ from 'lodash';
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
+import SectionItem from './components/SectionItem';
 import { AppContext } from '../../../../contexts';
 
 const SectionWrapper = styled.div`
@@ -25,35 +28,53 @@ const SectionHeader = styled.h3`
   color: ${({ theme }) => theme.color};
 `;
 
+const SectionContent = styled.div`
+  display: flex;
+  overflow-x: auto;
+  align-items: flex-start;
+  margin-bottom: 48px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 const Section = ({ title, type }) => {
   const {
     state: { firebase, theme }
   } = useContext(AppContext);
-  const [items, setItems] = useState([]);
-  const [page, setPage] = useState(1);
-
-  console.debug(items);
-
+  const [items, setItems] = useState(null);
+  const placeholders = Array(10)
+    .fill()
+    .map(() => uuidv4());
   useEffect(() => {
     const fetchData = async () => {
       try {
-        console.time(type);
         const snapshot = await firebase.firestore
           .collection('releases')
           .where('type', '==', type)
-          .limit(page * 10)
           .get();
         const releases = snapshot.docs
           .map(doc => doc.data())
-          .reduce((accumulator, current, index) => {
-            accumulator.push({ index, id: current.item.id });
-            return accumulator;
+          .reduce((acc, cur, idx) => {
+            acc.push({ index: idx, id: cur.item.id });
+            return acc;
           }, []);
-        // const snapshotTest = await firebase.firestore
-        //   .collection(`${type}s`)
-        //   .where('uuid', 'in', releases.map)
-        //   .get();
-        console.timeEnd(type);
+        const promises = releases.reduce((acc, cur) => {
+          acc.push(
+            firebase.firestore
+              .collection(`${type}s`)
+              .doc(cur.id)
+              .get()
+          );
+          return acc;
+        }, []);
+        const documents = await Promise.all(promises);
+        documents.forEach(doc => {
+          const itemIndex = _.findIndex(releases, o => o.id === doc.id);
+          releases[itemIndex].data = doc.data();
+        });
+        setItems(_.orderBy(releases, 'index'));
       } catch (err) {
         console.error(err);
       }
@@ -64,6 +85,11 @@ const Section = ({ title, type }) => {
   return (
     <SectionWrapper theme={theme}>
       <SectionHeader>{title}</SectionHeader>
+      <SectionContent>
+        {items
+          ? items.map(item => <SectionItem key={item.id} item={item} />)
+          : placeholders.map(item => <SectionItem key={item} item={item} />)}
+      </SectionContent>
     </SectionWrapper>
   );
 };

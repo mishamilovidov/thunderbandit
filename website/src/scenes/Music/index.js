@@ -7,6 +7,7 @@ import './styles.css';
 
 const MusicWrapper = styled.div`
   min-height: 100vh;
+  padding-bottom: 200px;
 `;
 
 const Music = () => {
@@ -16,10 +17,10 @@ const Music = () => {
         <div className='title'>
           <div className='text'>Music</div>
         </div>
-        <Section type='album' title='Albums' />
-        <Section type='ep' title='EPs' />
-        <Section type='single' title='Singles' />
-        <Section type='setlist' title='Setlists' />
+        <Section title='Albums' type='album' />
+        <Section title='EPs' type='ep' />
+        <Section title='Singles' type='single' />
+        <Section title='Setlists' type='setlist' />
       </MusicWrapper>
     </DocumentMeta>
   );
