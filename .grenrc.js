@@ -2,9 +2,9 @@ module.exports = {
   "apiUrl": "https://api.github.com",
   "dataSource": "prs",
   "groupBy": {
-    "✨ Features": ["enhancement", "feature"],
-    "🐛 Fixes": ["bug", "fix"],
-    "🧰 Maintenance": ["maintenance", "chore", "..."]
+    "Features": ["enhancement", "feature"],
+    "Fixes": ["bug", "fix"],
+    "Maintenance": ["..."]
   },
   "template": {
     "commit": ({ message, url, author, name }) => `- [${message}](${url}) - ${author ? `@${author}` : name}`,
