@@ -7,6 +7,7 @@ import { AppContext } from '../../../../../../contexts';
 
 const Item = styled.div`
   margin-right: 24px;
+  padding: 4px;
 
   @keyframes pulse {
     0% {
@@ -32,6 +33,10 @@ const CoverArt = styled.div`
   animation: ${({ loading }) =>
     loading === 1 ? `pulse 1s infinite ease-in-out` : 'unset'};
   border-radius: 6px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const ItemDetails = styled.div`
@@ -47,6 +52,8 @@ const ItemDetails = styled.div`
   }
 `;
 
+const ItemLink = styled.a``;
+
 const ItemTitle = styled.p`
   margin: unset;
   margin-top: 0.75rem;
@@ -54,6 +61,10 @@ const ItemTitle = styled.p`
   font-size: 1.1rem;
   width: ${({ data, theme }) =>
     data === 1 ? theme.scenes.music.coverart.width : '75%'};
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const ItemSubtitle = styled.p`
@@ -96,11 +107,24 @@ const SectionItem = ({ item }) => {
         img={imgUrl}
         title={_.get(data, 'name', '')}
         loading={Number(loading)}
+        onClick={e => {
+          e.preventDefault();
+          window.open('https://soundcloud.com/user-237574876');
+        }}
+        onKeyUp={e => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            window.open('https://soundcloud.com/user-237574876');
+          }
+        }}
+        tabIndex={0}
       />
       <ItemDetails theme={theme} data={Number(!_.isEmpty(data))}>
-        <ItemTitle theme={theme} data={Number(!_.isEmpty(data))}>
-          {_.get(data, 'name', '')}
-        </ItemTitle>
+        <ItemLink href='https://soundcloud.com/user-237574876' target='_blank'>
+          <ItemTitle theme={theme} data={Number(!_.isEmpty(data))}>
+            {_.get(data, 'name', '')}
+          </ItemTitle>
+        </ItemLink>
         <ItemSubtitle theme={theme}>
           {datetime && moment.unix(_.get(datetime, 'seconds')).year()}
         </ItemSubtitle>
