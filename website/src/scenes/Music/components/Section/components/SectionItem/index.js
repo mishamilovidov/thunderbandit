@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { AppContext } from '../../../../../../contexts';
 
 const Item = styled.div`
-  margin-right: 24px;
+  margin-right: 1em;
   padding: 4px;
 
   @keyframes pulse {

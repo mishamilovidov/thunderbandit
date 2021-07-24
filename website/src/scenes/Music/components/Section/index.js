@@ -1,4 +1,4 @@
-import _, { curry } from 'lodash';
+import _ from 'lodash';
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -24,9 +24,19 @@ const SectionWrapper = styled.div`
   }
 `;
 
-const SectionHeader = styled.h3`
-  color: ${({ theme }) => theme.color};
+const SectionHeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+  padding 0 0 0 4px;
 `;
+
+const SectionHeader = styled.h3`
+  margin: unset;
+`;
+
+const SectionDetailLink = styled.a``;
 
 const SectionContent = styled.div`
   display: flex;
@@ -91,7 +101,15 @@ const Section = ({ title, type }) => {
 
   return (
     <SectionWrapper theme={theme}>
-      <SectionHeader>{title}</SectionHeader>
+      <SectionHeaderWrapper>
+        <SectionHeader>{title}</SectionHeader>
+        <SectionDetailLink
+          href='https://soundcloud.com/user-237574876'
+          target='_blank'
+        >
+          See All
+        </SectionDetailLink>
+      </SectionHeaderWrapper>
       <SectionContent>
         {items
           ? items.map(item => <SectionItem key={item.id} item={item} />)

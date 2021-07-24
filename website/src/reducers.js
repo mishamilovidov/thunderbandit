@@ -50,7 +50,8 @@ export const AppInit = {
     colors: {
       backgroundColor: '#21181d',
       border: '#664d5c',
-      text: '#f4f0f3'
+      text: '#f4f0f3',
+      secondary: '#fdc138'
     },
     fontFamily: "'Lato', sans-serif",
     scale: 'medium',
