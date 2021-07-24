@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { curry } from 'lodash';
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -59,7 +59,11 @@ const Section = ({ title, type }) => {
         const releases = snapshot.docs
           .map(doc => doc.data())
           .reduce((acc, cur, idx) => {
-            acc.push({ index: idx, id: cur.item.id });
+            acc.push({
+              index: idx,
+              id: cur.item.id,
+              datetime: cur.datetime
+            });
             return acc;
           }, []);
         const promises = releases.reduce((acc, cur) => {
@@ -76,6 +80,7 @@ const Section = ({ title, type }) => {
           const itemIndex = _.findIndex(releases, o => o.id === doc.id);
           releases[itemIndex].data = doc.data();
         });
+        console.log(releases);
         setItems(_.orderBy(releases, 'index'));
       } catch (err) {
         console.error(err);
