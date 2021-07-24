@@ -1,17 +1,20 @@
 import _ from 'lodash';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { AppContext } from '../../../../../../contexts';
 
-const PlaceholderWrapper = styled.div`
+const Item = styled.div`
+  margin-right: 24px;
+`;
+
+const CoverArt = styled.div`
+  background-image: url(${({ img }) => img});
   height: ${({ theme }) => theme.scenes.music.coverart.height};
   min-width: ${({ theme }) => theme.scenes.music.coverart.width};
   background-color: ${({ theme }) =>
     theme.scenes.music.coverart.placeholderColor};
-  animation: ${({ pulse }) =>
-    pulse ? 'pulse 1s infinite ease-in-out' : 'unset'};
-  margin-right: 18px;
+  animation: pulse 1s infinite ease-in-out;
   border-radius: 6px;
 
   @keyframes pulse {
@@ -29,13 +32,30 @@ const PlaceholderWrapper = styled.div`
 
 const SectionItem = ({ item }) => {
   const {
-    state: { theme }
+    state: { firebase, theme }
   } = useContext(AppContext);
+  const [imgUrl, setImgUrl] = useState(null);
+  const { data } = item;
+  useEffect(() => {
+    const getUrl = async () => {
+      try {
+        const url = await firebase.storage
+          .ref()
+          .child(`images/coverart/${data.coverArt}`)
+          .getDownloadURL();
+        return setImgUrl(url);
+      } catch (err) {
+        console.error(err);
+        return setImgUrl('https://via.placeholder.com/150');
+      }
+    };
+    if (data) getUrl();
+  }, [firebase, data]);
 
-  return _.isString(item) ? (
-    <PlaceholderWrapper theme={theme} pulse />
-  ) : (
-    <PlaceholderWrapper theme={theme} pulse={false} />
+  return (
+    <Item>
+      <CoverArt theme={theme} img={imgUrl} title={_.get(data, 'name', '')} />
+    </Item>
   );
 };
 
@@ -46,9 +66,10 @@ SectionItem.propTypes = {
   ]).isRequired
 };
 
-PlaceholderWrapper.propTypes = {
-  pulse: PropTypes.bool.isRequired,
-  theme: PropTypes.objectOf(PropTypes.any).isRequired
+CoverArt.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired,
+  img: PropTypes.string,
+  title: PropTypes.string.isRequired
 };
 
 export default SectionItem;

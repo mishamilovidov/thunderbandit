@@ -53,6 +53,8 @@ const Section = ({ title, type }) => {
         const snapshot = await firebase.firestore
           .collection('releases')
           .where('type', '==', type)
+          .orderBy('datetime', 'desc')
+          .limit(7)
           .get();
         const releases = snapshot.docs
           .map(doc => doc.data())
