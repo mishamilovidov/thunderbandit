@@ -10,11 +10,14 @@ const Item = styled.div`
 
 const CoverArt = styled.div`
   background-image: url(${({ img }) => img});
+  background-size: cover;
+  background-repeat: no-repeat;
   height: ${({ theme }) => theme.scenes.music.coverart.height};
   min-width: ${({ theme }) => theme.scenes.music.coverart.width};
   background-color: ${({ theme }) =>
     theme.scenes.music.coverart.placeholderColor};
-  animation: pulse 1s infinite ease-in-out;
+  animation: ${({ loading }) =>
+    loading === 1 ? `pulse 1s infinite ease-in-out` : 'unset'};
   border-radius: 6px;
 
   @keyframes pulse {
@@ -35,18 +38,20 @@ const SectionItem = ({ item }) => {
     state: { firebase, theme }
   } = useContext(AppContext);
   const [imgUrl, setImgUrl] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { data } = item;
   useEffect(() => {
     const getUrl = async () => {
       try {
         const url = await firebase.storage
-          .ref()
-          .child(`images/coverart/${data.coverArt}`)
+          .ref('images/coverart')
+          .child(`${data.slug}_150x150.png`)
           .getDownloadURL();
-        return setImgUrl(url);
+        setImgUrl(url);
+        return setLoading(false);
       } catch (err) {
         console.error(err);
-        return setImgUrl('https://via.placeholder.com/150');
+        return setLoading(false);
       }
     };
     if (data) getUrl();
@@ -54,7 +59,12 @@ const SectionItem = ({ item }) => {
 
   return (
     <Item>
-      <CoverArt theme={theme} img={imgUrl} title={_.get(data, 'name', '')} />
+      <CoverArt
+        theme={theme}
+        img={imgUrl}
+        title={_.get(data, 'name', '')}
+        loading={Number(loading)}
+      />
     </Item>
   );
 };
@@ -69,7 +79,8 @@ SectionItem.propTypes = {
 CoverArt.propTypes = {
   theme: PropTypes.objectOf(PropTypes.any).isRequired,
   img: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  loading: PropTypes.number
 };
 
 export default SectionItem;
