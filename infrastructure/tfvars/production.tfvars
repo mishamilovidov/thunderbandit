@@ -120,4 +120,14 @@ dns_record_sets = {
       "151.101.65.195"
     ]
   }
+  "com-thunderbandit-www" : {
+    value = "www"
+    zone  = "com-thunderbandit"
+    type  = "A"
+    ttl   = 0
+    rrdatas = [
+      "151.101.1.195",
+      "151.101.65.195"
+    ]
+  }
 }
