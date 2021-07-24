@@ -7,7 +7,7 @@ import GAListener from './components/GAListener';
 import { AppContext } from './contexts';
 import { AppInit, AppReducer, types } from './reducers';
 
-const isNotLocal = window.location.hostname !== 'localhost';
+const isNotLocal = false; // window.location.hostname !== 'localhost';
 
 if (isNotLocal) {
   ReactGA.initialize(process.env.REACT_APP_GA_TACKING_ID);

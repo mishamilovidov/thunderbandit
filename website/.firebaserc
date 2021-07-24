@@ -1,12 +1,12 @@
 {
   "projects": {
-    "tdbprd-website": "tdbprd-website"
+    "tbprd-website": "tbprd-website"
   },
   "targets": {
-    "tdbprd-website": {
+    "tbprd-website": {
       "hosting": {
-        "thunderbandit.com": [
-          "tdbprd-website"
+        "tbprd-website": [
+          "tbprd-website"
         ]
       }
     }
