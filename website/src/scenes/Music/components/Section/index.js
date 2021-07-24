@@ -90,7 +90,6 @@ const Section = ({ title, type }) => {
           const itemIndex = _.findIndex(releases, o => o.id === doc.id);
           releases[itemIndex].data = doc.data();
         });
-        console.log(releases);
         setItems(_.orderBy(releases, 'index'));
       } catch (err) {
         console.error(err);

@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment-timezone';
 import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 import { AppContext } from '../../../../../../contexts';
 
 const Item = styled.div`
@@ -76,7 +77,7 @@ const ItemSubtitle = styled.p`
     data === 1 ? theme.scenes.music.coverart.width : '55%'};
 `;
 
-const SectionItem = ({ item }) => {
+const SectionItem = ({ history, item }) => {
   const {
     state: { firebase, theme }
   } = useContext(AppContext);
@@ -109,6 +110,7 @@ const SectionItem = ({ item }) => {
         loading={Number(loading)}
         onClick={e => {
           e.preventDefault();
+          // history.push(`/music${`/${_.get(data, 'slug', '')}`}`);
           window.open('https://soundcloud.com/user-237574876');
         }}
         onKeyUp={e => {
@@ -134,6 +136,7 @@ const SectionItem = ({ item }) => {
 };
 
 SectionItem.propTypes = {
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
   item: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.objectOf(PropTypes.any)
@@ -147,4 +150,4 @@ CoverArt.propTypes = {
   loading: PropTypes.number
 };
 
-export default SectionItem;
+export default withRouter(SectionItem);
