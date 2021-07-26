@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
+import { withRouter } from 'react-router-dom';
 import SectionItem from './components/SectionItem';
 import { AppContext } from '../../../../contexts';
 
@@ -49,7 +50,7 @@ const SectionContent = styled.div`
   }
 `;
 
-const Section = ({ title, type }) => {
+const Section = ({ history, title, type }) => {
   const {
     state: { firebase, theme }
   } = useContext(AppContext);
@@ -104,8 +105,17 @@ const Section = ({ title, type }) => {
       <SectionHeaderWrapper>
         <SectionHeader>{title}</SectionHeader>
         <SectionDetailLink
-          href='https://soundcloud.com/user-237574876'
-          target='_blank'
+          onClick={e => {
+            e.preventDefault();
+            history.push(`/music/${type}s`);
+          }}
+          onKeyUp={e => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              history.push(`/music/${type}s`);
+            }
+          }}
+          tabIndex={0}
         >
           See All
         </SectionDetailLink>
@@ -120,6 +130,7 @@ const Section = ({ title, type }) => {
 };
 
 Section.propTypes = {
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired
 };
@@ -128,4 +139,4 @@ SectionWrapper.propTypes = {
   theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
-export default Section;
+export default withRouter(Section);
