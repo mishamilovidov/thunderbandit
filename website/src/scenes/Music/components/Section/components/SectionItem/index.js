@@ -83,7 +83,8 @@ const SectionItem = ({ history, item }) => {
   } = useContext(AppContext);
   const [imgUrl, setImgUrl] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { data, datetime } = item;
+  const { data, datetime, type } = item;
+  const slug = _.get(data, 'slug', '');
   useEffect(() => {
     const getUrl = async () => {
       try {
@@ -110,13 +111,14 @@ const SectionItem = ({ history, item }) => {
         loading={Number(loading)}
         onClick={e => {
           e.preventDefault();
-          // history.push(`/music${`/${_.get(data, 'slug', '')}`}`);
-          window.open('https://soundcloud.com/user-237574876');
+          history.push(`/music/${type}/${slug}`);
+          // window.open('https://soundcloud.com/user-237574876');
         }}
         onKeyUp={e => {
           if (e.key === 'Enter') {
             e.preventDefault();
-            window.open('https://soundcloud.com/user-237574876');
+            history.push(`/music/${type}/${slug}`);
+            // window.open('https://soundcloud.com/user-237574876');
           }
         }}
         tabIndex={0}

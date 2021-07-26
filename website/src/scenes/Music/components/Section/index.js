@@ -72,7 +72,8 @@ const Section = ({ title, type }) => {
             acc.push({
               index: idx,
               id: cur.item.id,
-              datetime: cur.datetime
+              datetime: cur.datetime,
+              type: `${type}s`
             });
             return acc;
           }, []);
