@@ -113,7 +113,7 @@
   .Header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     width: unset;
     margin: unset;
     padding: unset;
@@ -121,6 +121,7 @@
 
   .Header .mobile-title {
     display: block;
+    margin-left: 20px;
   }
 
   .Header .content {
