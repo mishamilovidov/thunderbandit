@@ -40,8 +40,6 @@ const ItemDetail = props => {
   //   fetchData();
   // }, [])
 
-  console.log(match);
-
   return <ItemDetailWrapper theme={theme}>HelloWorld</ItemDetailWrapper>;
 };
 

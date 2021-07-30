@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
@@ -72,25 +72,68 @@ const TypeDetailContent = styled.div`
 
 const TypeDetail = props => {
   const {
-    state: { theme }
+    state: { firebase, theme }
   } = useContext(AppContext);
   const placeholders = Array(25)
     .fill()
     .map(() => uuidv4());
-  const { match } = props;
+  const {
+    match: {
+      params: { type }
+    }
+  } = props;
+  const [items, setItems] = useState(null);
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const snapshot = await firebase.firestore
+          .collection('releases')
+          .where('type', '==', type.slice(0, -1))
+          .orderBy('datetime', 'desc')
+          .get();
+        const releases = snapshot.docs
+          .map(doc => doc.data())
+          .reduce((acc, cur, idx) => {
+            acc.push({
+              index: idx,
+              id: cur.item.id,
+              datetime: cur.datetime,
+              type
+            });
+            return acc;
+          }, []);
+        const promises = releases.reduce((acc, cur) => {
+          acc.push(
+            firebase.firestore
+              .collection(type)
+              .doc(cur.id)
+              .get()
+          );
+          return acc;
+        }, []);
+        const documents = await Promise.all(promises);
+        documents.forEach(doc => {
+          const itemIndex = _.findIndex(releases, o => o.id === doc.id);
+          releases[itemIndex].data = doc.data();
+        });
+        setItems(_.orderBy(releases, 'index'));
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
     window.scrollTo(0, 0);
-  }, []);
+  }, [type]);
 
   return (
     <TypeDetailWrapper theme={theme}>
       <Title theme={theme}>
-        <TitleText theme={theme}>{match.params.type}</TitleText>
+        <TitleText theme={theme}>{type}</TitleText>
       </Title>
       <TypeDetailContent theme={theme}>
-        {placeholders.map(p => (
-          <MusicItem key={p} item={p} />
-        ))}
+        {items
+          ? items.map(item => <MusicItem key={item.id} item={item} />)
+          : placeholders.map(item => <MusicItem key={item} item={item} />)}
       </TypeDetailContent>
     </TypeDetailWrapper>
   );

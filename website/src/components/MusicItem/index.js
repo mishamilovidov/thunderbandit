@@ -142,7 +142,6 @@ const MusicItem = ({ history, item }) => {
         <ItemLink
           onClick={e => itemOnClick(e)}
           onKeyUp={e => itemKeyUp(e)}
-          tabIndex={loading ? null : 0}
           target='_blank'
         >
           <ItemTitle theme={theme} data={Number(!_.isEmpty(data))}>
