@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
@@ -26,6 +26,9 @@ const ItemDetail = props => {
     state: { theme }
   } = useContext(AppContext);
   const { match } = props;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {

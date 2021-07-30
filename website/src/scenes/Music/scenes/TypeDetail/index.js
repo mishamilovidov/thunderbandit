@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
@@ -78,7 +78,9 @@ const TypeDetail = props => {
     .fill()
     .map(() => uuidv4());
   const { match } = props;
-  console.log(placeholders);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <TypeDetailWrapper theme={theme}>

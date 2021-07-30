@@ -37,7 +37,9 @@ const SectionHeader = styled.h3`
   margin: unset;
 `;
 
-const SectionDetailLink = styled.a``;
+const SectionDetailLink = styled.a`
+  cursor: pointer;
+`;
 
 const SectionContent = styled.div`
   display: flex;
@@ -98,6 +100,7 @@ const Section = ({ history, title, type }) => {
       }
     };
     fetchData();
+    window.scrollTo(0, 0);
   }, [type]);
 
   return (
