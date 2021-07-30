@@ -46,4 +46,8 @@ ItemDetail.propTypes = {
   match: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
+ItemDetailWrapper.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
 export default withRouter(ItemDetail);

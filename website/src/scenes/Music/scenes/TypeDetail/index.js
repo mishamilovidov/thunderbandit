@@ -2,7 +2,9 @@ import _ from 'lodash';
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 import { withRouter } from 'react-router-dom';
+import MusicItem from '../../../../components/MusicItem';
 import { AppContext } from '../../../../contexts';
 
 const TypeDetailWrapper = styled.div`
@@ -43,10 +45,6 @@ const TitleText = styled.div`
   color: #ffffff;
   text-transform: uppercase;
 
-  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xl}) {
-    width: ${({ theme }) => theme.widths.content.md};
-  }
-
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: 40px;
   }
@@ -60,23 +58,60 @@ const TitleText = styled.div`
   }
 `;
 
+const TypeDetailContent = styled.div`
+  display: grid;
+  grid-template-columns: ${({ theme }) =>
+    `repeat(auto-fill, minmax(${theme.scenes.music.coverart.height}, 1fr))`};
+  grid-gap: 1rem;
+  margin-bottom: ${({ theme }) => theme.scenes.music.coverart.height};
+
+  > div {
+    display: grid;
+  }
+`;
+
 const TypeDetail = props => {
   const {
     state: { theme }
   } = useContext(AppContext);
+  const placeholders = Array(25)
+    .fill()
+    .map(() => uuidv4());
   const { match } = props;
+  console.log(placeholders);
 
   return (
     <TypeDetailWrapper theme={theme}>
       <Title theme={theme}>
         <TitleText theme={theme}>{match.params.type}</TitleText>
       </Title>
+      <TypeDetailContent theme={theme}>
+        {placeholders.map(p => (
+          <MusicItem key={p} item={p} />
+        ))}
+      </TypeDetailContent>
     </TypeDetailWrapper>
   );
 };
 
 TypeDetail.propTypes = {
   match: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+TypeDetailWrapper.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+Title.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+TitleText.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+TypeDetailContent.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
 export default withRouter(TypeDetail);

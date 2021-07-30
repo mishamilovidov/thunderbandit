@@ -58,8 +58,8 @@ export const AppInit = {
     scenes: {
       music: {
         coverart: {
-          height: '225px',
-          width: '225px',
+          height: '200px',
+          width: '200px',
           placeholderColor: '#a5a5a5'
         }
       }
