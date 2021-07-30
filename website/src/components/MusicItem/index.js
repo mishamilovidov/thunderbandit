@@ -44,7 +44,7 @@ const CoverArt = styled.div`
   border-radius: 6px;
 
   :hover {
-    cursor: pointer;
+    cursor: ${({ data }) => (data === 1 ? `pointer` : `unset`)};
   }
 `;
 
@@ -72,7 +72,7 @@ const ItemTitle = styled.p`
     data === 1 ? theme.scenes.music.coverart.width : '75%'};
 
   :hover {
-    cursor: pointer;
+    cursor: ${({ data }) => (data === 1 ? `pointer` : `unset`)};
   }
 `;
 
@@ -93,6 +93,20 @@ const MusicItem = ({ history, item }) => {
   const [loading, setLoading] = useState(true);
   const { data, datetime, type } = item;
   const slug = _.get(data, 'slug', '');
+  const itemOnClick = e => {
+    if (!loading) {
+      e.preventDefault();
+      history.push(`/music/${type}/${slug}`);
+      // window.open('https://soundcloud.com/user-237574876');
+    }
+  };
+  const itemKeyUp = e => {
+    if (e.key === 'Enter' && !loading) {
+      e.preventDefault();
+      history.push(`/music/${type}/${slug}`);
+      // window.open('https://soundcloud.com/user-237574876');
+    }
+  };
   useEffect(() => {
     const getUrl = async () => {
       try {
@@ -114,27 +128,23 @@ const MusicItem = ({ history, item }) => {
     <Item>
       <CoverArtWrapper>
         <CoverArt
+          data={Number(!_.isEmpty(data))}
           theme={theme}
           img={imgUrl}
           title={_.get(data, 'name', '')}
           loading={Number(loading)}
-          onClick={e => {
-            e.preventDefault();
-            history.push(`/music/${type}/${slug}`);
-            // window.open('https://soundcloud.com/user-237574876');
-          }}
-          onKeyUp={e => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              history.push(`/music/${type}/${slug}`);
-              // window.open('https://soundcloud.com/user-237574876');
-            }
-          }}
-          tabIndex={0}
+          onClick={e => itemOnClick(e)}
+          onKeyUp={e => itemKeyUp(e)}
+          tabIndex={loading ? null : 0}
         />
       </CoverArtWrapper>
       <ItemDetails theme={theme} data={Number(!_.isEmpty(data))}>
-        <ItemLink href='https://soundcloud.com/user-237574876' target='_blank'>
+        <ItemLink
+          onClick={e => itemOnClick(e)}
+          onKeyUp={e => itemKeyUp(e)}
+          tabIndex={loading ? null : 0}
+          target='_blank'
+        >
           <ItemTitle theme={theme} data={Number(!_.isEmpty(data))}>
             {_.get(data, 'name', '')}
           </ItemTitle>
@@ -156,6 +166,7 @@ MusicItem.propTypes = {
 };
 
 CoverArt.propTypes = {
+  data: PropTypes.number.isRequired,
   theme: PropTypes.objectOf(PropTypes.any).isRequired,
   img: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -167,6 +178,7 @@ ItemDetails.propTypes = {
 };
 
 ItemTitle.propTypes = {
+  data: PropTypes.number.isRequired,
   theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
