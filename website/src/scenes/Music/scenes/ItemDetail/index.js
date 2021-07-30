@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
@@ -90,22 +90,31 @@ const ItemTracksWrapper = styled.div`
 
 const ItemDetail = props => {
   const {
-    state: { theme }
+    state: { firebase, theme }
   } = useContext(AppContext);
-  const { match } = props;
+  const [item, setItem] = useState(null);
+  const {
+    match: {
+      params: { type, slug }
+    }
+  } = props;
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const snapshot = await firebase.firestore
+          .collection(type)
+          .where('slug', '==', slug)
+          .get();
+        const items = snapshot.docs.map(doc => doc.data());
+        setItem(items[0]);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
     window.scrollTo(0, 0);
-  }, []);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const data = await firebase.firestore.collection('')
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-  //   fetchData();
-  // }, [])
+  }, [type, slug]);
+  console.debug(item);
 
   return (
     <ItemDetailWrapper theme={theme}>
