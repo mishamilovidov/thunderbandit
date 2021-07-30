@@ -6,7 +6,7 @@ import { AppContext } from '../../../../contexts';
 
 const ItemDetailWrapper = styled.div`
   width: ${({ theme }) => theme.widths.content.xl};
-  margin: 0px auto;
+  margin: 26px auto 0px auto;
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xl}) {
     width: ${({ theme }) => theme.widths.content.lg};
@@ -20,6 +20,26 @@ const ItemDetailWrapper = styled.div`
     width: ${({ theme }) => theme.widths.content.sm};
   }
 `;
+
+const ItemHeaderWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    display: block;
+  }
+`;
+
+const ItemCoverArtWrapper = styled.div`
+  flex: 1;
+`;
+
+const ItemDetailsWrapper = styled.div`
+  flex: 2;
+`;
+
+const ItemTracksWrapper = styled.div``;
 
 const ItemDetail = props => {
   const {
@@ -40,7 +60,15 @@ const ItemDetail = props => {
   //   fetchData();
   // }, [])
 
-  return <ItemDetailWrapper theme={theme}>HelloWorld</ItemDetailWrapper>;
+  return (
+    <ItemDetailWrapper theme={theme}>
+      <ItemHeaderWrapper theme={theme}>
+        <ItemCoverArtWrapper>ItemCoverArtWrapper</ItemCoverArtWrapper>
+        <ItemDetailsWrapper>ItemDetailsWrapper</ItemDetailsWrapper>
+      </ItemHeaderWrapper>
+      <ItemTracksWrapper>ItemTracksWrapper</ItemTracksWrapper>
+    </ItemDetailWrapper>
+  );
 };
 
 ItemDetail.propTypes = {
@@ -48,6 +76,10 @@ ItemDetail.propTypes = {
 };
 
 ItemDetailWrapper.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+ItemHeaderWrapper.propTypes = {
   theme: PropTypes.objectOf(PropTypes.any).isRequired
 };
 
