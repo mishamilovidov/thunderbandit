@@ -133,7 +133,7 @@ const ItemDetailSubtitle = styled.h3`
 `;
 
 const ItemTracksWrapper = styled.div`
-  margin: 40px 0px;
+  margin: 40px 0px 80px 0px;
 `;
 
 const ItemDetail = props => {
