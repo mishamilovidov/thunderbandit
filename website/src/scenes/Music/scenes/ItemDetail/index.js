@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment-timezone';
 import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
 import { withRouter } from 'react-router-dom';
+import Track from './components/Track';
 import { AppContext } from '../../../../contexts';
 
 const ItemDetailWrapper = styled.div`
@@ -45,7 +48,11 @@ const ItemHeaderWrapper = styled.div`
 `;
 
 const ItemCoverArtWrapper = styled.div`
-  flex: 4;
+  flex: 3;
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex: 4;
+  }
 `;
 
 const CoverArtWrapper = styled.div`
@@ -65,27 +72,68 @@ const CoverArt = styled.div`
   background-repeat: no-repeat;
   background-color: ${({ theme }) =>
     theme.scenes.music.coverart.placeholderColor};
-  animation: ${({ loading }) =>
-    loading === 1 ? `pulse 1s infinite ease-in-out` : 'unset'};
+  animation: ${({ item }) =>
+    item === 0 ? `pulse 1s infinite ease-in-out` : 'unset'};
   border-radius: 6px;
 `;
 
 const ItemDetailsWrapper = styled.div`
   flex: 10;
   margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    margin: 0.2em 0;
+  }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
     margin-left: 24px;
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    margin: 40px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
+const ItemDetailTitleWrapper = styled.div`
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: ${({ item, theme }) =>
+    item === 0 ? theme.scenes.music.coverart.placeholderColor : 'unset'};
+  animation: ${({ item }) =>
+    item === 0 ? `pulse 1s infinite ease-in-out` : 'unset'};
+  border-radius: 6px;
+  width: ${({ item }) => (item === 0 ? '16em' : 'unset')};
+  height: ${({ item }) => (item === 0 ? '2em' : 'unset')};
+`;
+
+const ItemDetailTitle = styled.h2`
+  margin: unset;
+`;
+
+const ItemDetailSubtitleWrapper = styled.div`
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: ${({ item, theme }) =>
+    item === 0 ? theme.scenes.music.coverart.placeholderColor : 'unset'};
+  animation: ${({ item }) =>
+    item === 0 ? `pulse 1s infinite ease-in-out` : 'unset'};
+  border-radius: 6px;
+  width: ${({ item }) => (item === 0 ? '10em' : 'unset')};
+  height: ${({ item }) => (item === 0 ? '1.5em' : 'unset')};
+`;
+
+const ItemDetailSubtitle = styled.h3`
+  margin: unset;
+`;
+
 const ItemTracksWrapper = styled.div`
-  margin-top: 40px;
+  margin: 40px 0px;
 `;
 
 const ItemDetail = props => {
@@ -98,6 +146,10 @@ const ItemDetail = props => {
       params: { type, slug }
     }
   } = props;
+  const trackPlaceholders = Array(20)
+    .fill()
+    .map(() => ({}));
+  const tracks = item ? item.tracks : trackPlaceholders;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -105,8 +157,21 @@ const ItemDetail = props => {
           .collection(type)
           .where('slug', '==', slug)
           .get();
-        const items = snapshot.docs.map(doc => doc.data());
-        setItem(items[0]);
+        const items = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        const itemRef = await firebase.firestore.doc(`${type}/${items[0].id}`);
+        const releasesSnapshot = await firebase.firestore
+          .collection('releases')
+          .where('item', '==', itemRef)
+          .get();
+        const releases = releasesSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        const imgUrl = await firebase.storage
+          .ref('images/coverart')
+          .child(`${items[0].slug}_150x150.png`)
+          .getDownloadURL();
+        setItem({ ...items[0], ...releases[0], ...{ imgUrl } });
       } catch (err) {
         console.error(err);
       }
@@ -119,16 +184,36 @@ const ItemDetail = props => {
   return (
     <ItemDetailWrapper theme={theme}>
       <ItemHeaderWrapper theme={theme}>
-        <ItemCoverArtWrapper>
+        <ItemCoverArtWrapper theme={theme}>
           <CoverArtWrapper>
-            <CoverArt theme={theme} img={null} loading={Number(true)} />
+            <CoverArt
+              theme={theme}
+              img={item && item.imgUrl}
+              item={Number(item)}
+            />
           </CoverArtWrapper>
         </ItemCoverArtWrapper>
         <ItemDetailsWrapper theme={theme}>
-          ItemDetailsWrapper
+          <ItemDetailTitleWrapper theme={theme} item={Number(item)}>
+            <ItemDetailTitle>{item && item.name}</ItemDetailTitle>
+          </ItemDetailTitleWrapper>
+          <ItemDetailSubtitleWrapper theme={theme} item={Number(item)}>
+            <ItemDetailSubtitle>
+              {item && moment.unix(item.datetime.seconds).year()}
+            </ItemDetailSubtitle>
+          </ItemDetailSubtitleWrapper>
         </ItemDetailsWrapper>
       </ItemHeaderWrapper>
-      <ItemTracksWrapper>ItemTracksWrapper</ItemTracksWrapper>
+      <ItemTracksWrapper>
+        {tracks.map((track, idx) => (
+          <Track
+            key={uuidv4()}
+            number={idx + 1}
+            showBackground={idx % 2}
+            track={track}
+          />
+        ))}
+      </ItemTracksWrapper>
     </ItemDetailWrapper>
   );
 };
