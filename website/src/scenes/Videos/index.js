@@ -3,27 +3,22 @@ import DocumentMeta from 'react-document-meta';
 import styles from '../styles';
 import { AppContext } from '../../contexts';
 import { meta } from '../../services/analytics';
-import Section from './components/Section';
 
-const Music = () => {
+const Vidoes = () => {
   const {
     state: { theme }
   } = useContext(AppContext);
   const { ContentWrapper, Title, TitleText } = styles;
 
   return (
-    <DocumentMeta {...meta.Music}>
+    <DocumentMeta {...meta.Videos}>
       <ContentWrapper theme={theme}>
         <Title theme={theme}>
-          <TitleText theme={theme}>Music</TitleText>
+          <TitleText theme={theme}>Videos</TitleText>
         </Title>
-        <Section title='Albums' type='album' />
-        <Section title='EPs' type='ep' />
-        <Section title='Singles' type='single' />
-        <Section title='Setlists' type='setlist' />
       </ContentWrapper>
     </DocumentMeta>
   );
 };
 
-export default Music;
+export default Vidoes;

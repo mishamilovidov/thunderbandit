@@ -24,6 +24,18 @@ export const meta = {
           'thunderbandit music,@thunderbandit music,thunder bandit music,THUNDER BANDIT music,Thunder Bandit music,thunder,bandit,tarmac,sex,ep,released,Ascended single,bodement,story of uriel,111,73 37 89 44 34,legend of metatron'
       }
     }
+  },
+  Videos: {
+    title: 'Videos | THUNDER BANDIT',
+    description: 'All of the videos produced and created by Thunder Bandit.',
+    canonical: 'https://thunderbandit.com/videos',
+    meta: {
+      charset: 'utf-8',
+      name: {
+        keywords:
+          'thunderbandit videos,@thunderbandit videos,thunder bandit videos,THUNDER BANDIT videos,Thunder Bandit videos,thunder,bandit'
+      }
+    }
   }
 };
 
