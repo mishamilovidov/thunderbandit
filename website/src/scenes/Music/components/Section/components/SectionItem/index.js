@@ -70,7 +70,8 @@ const ItemTitle = styled.p`
 
 const ItemSubtitle = styled.p`
   margin: unset;
-  margin-top: 0.25rem;
+  margin-top: ${({ datetime, loading }) =>
+    loading === 0 || datetime ? '0.25rem' : '0.65rem'};
   min-height: 0.9rem;
   font-size: 0.9rem;
   width: ${({ data, theme }) =>
@@ -129,7 +130,11 @@ const SectionItem = ({ history, item }) => {
             {_.get(data, 'name', '')}
           </ItemTitle>
         </ItemLink>
-        <ItemSubtitle theme={theme}>
+        <ItemSubtitle
+          theme={theme}
+          loading={Number(loading)}
+          datetime={datetime}
+        >
           {datetime && moment.unix(_.get(datetime, 'seconds')).year()}
         </ItemSubtitle>
       </ItemDetails>
