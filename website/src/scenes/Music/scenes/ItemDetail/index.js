@@ -110,6 +110,20 @@ const ItemDetailTitleWrapper = styled.div`
   border-radius: 6px;
   width: ${({ item }) => (item === 0 ? '16em' : 'unset')};
   height: ${({ item }) => (item === 0 ? '2em' : 'unset')};
+
+  :hover {
+    cursor: pointer;
+
+    h2 {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
+
+  :focus {
+    h2 {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
 `;
 
 const ItemDetailTitle = styled.h2`
@@ -150,6 +164,12 @@ const ItemDetail = props => {
     .fill()
     .map(() => ({}));
   const tracks = item ? item.tracks : trackPlaceholders;
+  const handleClickOrKey = e => {
+    e.preventDefault();
+    const itemLink = _.filter(item.links, o => o.platform === 'soundcloud')[0]
+      .url;
+    window.open(itemLink);
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -179,7 +199,6 @@ const ItemDetail = props => {
     fetchData();
     window.scrollTo(0, 0);
   }, [type, slug]);
-  console.debug(item);
 
   return (
     <ItemDetailWrapper theme={theme}>
@@ -194,7 +213,13 @@ const ItemDetail = props => {
           </CoverArtWrapper>
         </ItemCoverArtWrapper>
         <ItemDetailsWrapper theme={theme}>
-          <ItemDetailTitleWrapper theme={theme} item={Number(item)}>
+          <ItemDetailTitleWrapper
+            theme={theme}
+            item={Number(item)}
+            tabIndex={0}
+            onClick={e => handleClickOrKey(e)}
+            onKeyUp={e => e.key === 'Enter' && handleClickOrKey(e)}
+          >
             <ItemDetailTitle>{item && item.name}</ItemDetailTitle>
           </ItemDetailTitleWrapper>
           <ItemDetailSubtitleWrapper theme={theme} item={Number(item)}>

@@ -168,6 +168,9 @@ const Header = () => {
       <NavLink to='/music' onClick={handleClick}>
         Music
       </NavLink>
+      {/* <NavLink to='/videos' onClick={handleClick}>
+        Videos
+      </NavLink> */}
       <ReactGA.OutboundLink
         eventLabel='instagramAccountUrl'
         to={instagramAccountUrl}

@@ -57,7 +57,15 @@ const App = () => {
   } = useContext(AppContext);
 
   return (
-    <AppWrapper theme={theme}>
+    <AppWrapper
+      theme={theme}
+      onKeyUp={e => {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          document.activeElement.blur();
+        }
+      }}
+    >
       <GlobalStyle theme={theme} />
       <Header />
       <Main />
