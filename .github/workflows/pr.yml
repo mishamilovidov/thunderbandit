@@ -21,9 +21,6 @@ jobs:
         check: 
           - fmt -check -diff
           - validate
-        resource:
-          - networking/dns
-          - tools/artifacts
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
@@ -36,11 +33,11 @@ jobs:
           terraform_version: 0.15.0
 
       - name: initialize terraform for artifacts
-        working-directory: ./infrastructure/${{ matrix.resource }}
+        working-directory: ./infrastructure
         run: terraform init -backend=false
 
       - name: run terraform check
-        working-directory: ./infrastructure/${{ matrix.resource }}
+        working-directory: ./infrastructure
         run: terraform ${{ matrix.check }}
 
   check_yarn:
