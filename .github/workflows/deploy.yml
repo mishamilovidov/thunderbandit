@@ -96,7 +96,6 @@ jobs:
 
       - name: download build artifacts
         uses: actions/download-artifact@v1
-        working-directory: ./website
         with:
           name: build
 
