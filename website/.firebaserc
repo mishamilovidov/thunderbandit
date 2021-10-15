@@ -1,12 +1,12 @@
 {
   "projects": {
-    "tbprd-website": "tbprd-website"
+    "default": "osito-oto"
   },
   "targets": {
-    "tbprd-website": {
+    "osito-oto": {
       "hosting": {
-        "tbprd-website": [
-          "tbprd-website"
+        "thunderbandit": [
+          "thunderbandit"
         ]
       }
     }

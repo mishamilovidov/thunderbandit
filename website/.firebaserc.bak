@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "tbprd-website": "tbprd-website"
+  },
+  "targets": {
+    "tbprd-website": {
+      "hosting": {
+        "tbprd-website": [
+          "tbprd-website"
+        ]
+      }
+    }
+  }
+}

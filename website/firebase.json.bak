@@ -15,7 +15,7 @@
   },
   "hosting": [
     {
-      "target": "thunderbandit",
+      "target": "tbprd-website",
       "public": "build",
       "ignore": [
         "README.md",
