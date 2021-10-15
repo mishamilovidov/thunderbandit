@@ -26,6 +26,20 @@ const TrackWrapper = styled.div`
     color: rgb(255, 255, 255, 0.8);
     height: ${({ item }) => (item === 0 ? '1em' : 'unset')};
   }
+
+  :hover {
+    cursor: pointer;
+
+    p {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
+
+  :focus {
+    p {
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
 `;
 
 const TrackNumberWrapper = styled.div`
@@ -48,7 +62,6 @@ const TrackNameWrapper = styled.div`
 `;
 
 const TrackName = styled.p`
-  color: #ffffff !important;
   width: ${({ item }) => (item === 0 ? '45%' : 'unset')};
 `;
 
@@ -80,6 +93,12 @@ const Track = ({ number, showBackground, track }) => {
 
     return `${h !== 0 ? `${hrs}:` : ''}${mins}:${secs}`;
   };
+  const handleClickOrKey = e => {
+    e.preventDefault();
+    const itemLink = _.filter(item.links, o => o.platform === 'soundcloud')[0]
+      .url;
+    window.open(itemLink);
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -102,6 +121,8 @@ const Track = ({ number, showBackground, track }) => {
       showBackground={showBackground}
       tabIndex={0}
       theme={theme}
+      onClick={e => handleClickOrKey(e)}
+      onKeyUp={e => e.key === 'Enter' && handleClickOrKey(e)}
     >
       <TrackNumberWrapper>
         <TrackNumber item={Number(item)}>{item && number}</TrackNumber>
