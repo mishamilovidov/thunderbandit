@@ -62,6 +62,13 @@ export const AppInit = {
           width: '200px',
           placeholderColor: '#a5a5a5'
         }
+      },
+      videos: {
+        coverart: {
+          height: '200px',
+          width: '356px',
+          placeholderColor: '#a5a5a5'
+        }
       }
     },
     widths: {

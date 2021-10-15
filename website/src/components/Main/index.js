@@ -12,7 +12,7 @@ const Main = () => (
       <Route path='/music/:type/:slug' component={ItemDetail} />
       <Route path='/music/:type' component={TypeDetail} />
       <Route path='/music' component={Music} />
-      <Route path='/videos' component={Videos} />
+      {/* <Route path='/videos' component={Videos} /> */}
       <Route path='/' component={Home} />
     </Switch>
   </main>
