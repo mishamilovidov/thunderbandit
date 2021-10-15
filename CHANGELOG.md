@@ -1,4 +1,55 @@
 # Changelog
+## [2.2.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.1.0...v2.2.0) (2021-10-15)
+
+
+### Features
+
+* add item detail scene cont ([4fedeb5](https://github.com/mishamilovidov/thunderbandit/commits/4fedeb5f686a0d82d9dac875349b7440a8bee9b4))
+* add music type and item detail scenes ([ce9df44](https://github.com/mishamilovidov/thunderbandit/commits/ce9df44d464523571a880dfe59223daabda7ba1c))
+* add videos scene ([f747ad0](https://github.com/mishamilovidov/thunderbandit/commits/f747ad0353ae3305ea1969b5af79d257f70e773f))
+* **infra:** add www dns a record ([433ddd1](https://github.com/mishamilovidov/thunderbandit/commits/433ddd10c441ad2826719afadc089d15b1bd4312))
+* load type detail data ([7d3e6d9](https://github.com/mishamilovidov/thunderbandit/commits/7d3e6d9b5ee1dfca8f618bc92d8b3afda4b58590))
+
+
+### Fixes
+
+* rm clickable when loading ([a1f9b93](https://github.com/mishamilovidov/thunderbandit/commits/a1f9b931fa46fcec73d39ef2055046bd1eb6c7b6))
+
+
+### Maintenance
+
+* add layout for type detail scene ([52d21e7](https://github.com/mishamilovidov/thunderbandit/commits/52d21e76461c8696472a00c18dd8a2e3c4cce945))
+* add margin below tracks ([63420e5](https://github.com/mishamilovidov/thunderbandit/commits/63420e5cadfa6fe84c02b3bc25374bc32810f5ec))
+* add placeholders for item detail scene ([db505fb](https://github.com/mishamilovidov/thunderbandit/commits/db505fbcd23173550de4c720d530bb90d5adac71))
+* **deps:** bump axios from 0.21.1 to 0.21.4 ([ab24528](https://github.com/mishamilovidov/thunderbandit/commits/ab24528bb0cef8c3c57b60a922f8fdbbd058b74d))
+* **deps:** bump path-parse from 1.0.6 to 1.0.7 in /website ([4787c04](https://github.com/mishamilovidov/thunderbandit/commits/4787c04800451cf0ad2003df000293cbc17c6719))
+* **deps:** bump semver-regex from 3.1.2 to 3.1.3 ([0233b90](https://github.com/mishamilovidov/thunderbandit/commits/0233b90df0779422dd1cd1ed8985a0535662cde6))
+* **deps:** bump tar from 4.4.13 to 4.4.19 ([5fd584d](https://github.com/mishamilovidov/thunderbandit/commits/5fd584d7fbfbbebe8e6f627d7b1adea4f55e398b))
+* **deps:** bump tar from 6.1.0 to 6.1.11 in /website ([549f3f2](https://github.com/mishamilovidov/thunderbandit/commits/549f3f295ffe68b9819ceaa2858cc8a5faa3588b))
+* **deps:** bump tmpl from 1.0.4 to 1.0.5 in /website ([9c5c8c1](https://github.com/mishamilovidov/thunderbandit/commits/9c5c8c1e74ef2392d4b573712687f2117a122b8c))
+* **deps:** bump url-parse from 1.5.1 to 1.5.3 in /website ([824c614](https://github.com/mishamilovidov/thunderbandit/commits/824c614ae864aed686ba10928be5812c8c551e98))
+* fetch data on item detail scene ([f1521e8](https://github.com/mishamilovidov/thunderbandit/commits/f1521e86a177ce9573122af08eb48ae48d91f5f7))
+* fix loading subtitle margin ([5996540](https://github.com/mishamilovidov/thunderbandit/commits/5996540381f310a166d996c44a3b914c92bafc8e))
+* fix matrix in pr workflow ([b93138a](https://github.com/mishamilovidov/thunderbandit/commits/b93138a9f70a63ada4d22dae13573b87244f4e4c))
+* item detail scene styling cont ([4c33b08](https://github.com/mishamilovidov/thunderbandit/commits/4c33b0829b85cf7fb6e5da47e9dcecda307bf288))
+* link to music type detail scene ([8e9be8b](https://github.com/mishamilovidov/thunderbandit/commits/8e9be8b575a2973efbeafe48269cbda85080d8c0))
+* make changes for hosting ([9212cde](https://github.com/mishamilovidov/thunderbandit/commits/9212cde19b0ed0e0daef26af11c1cd936beb2d04))
+* make items clickable ([6e3c719](https://github.com/mishamilovidov/thunderbandit/commits/6e3c7191702c6a1a0df7413e792f68be4920e8b2))
+* merge pull request [#48](https://github.com/mishamilovidov/thunderbandit/issues/48) from mishamilovidov/dependabot/npm_and_yarn/website/path-parse-1.0.7 ([c238eb6](https://github.com/mishamilovidov/thunderbandit/commits/c238eb68e4971ff734ff78d27808dbb06a4af13e))
+* merge pull request [#49](https://github.com/mishamilovidov/thunderbandit/issues/49) from mishamilovidov/dependabot/npm_and_yarn/website/tar-6.1.11 ([3b05133](https://github.com/mishamilovidov/thunderbandit/commits/3b051336f0e08a6cc536760b6f89c209d0642522))
+* merge pull request [#50](https://github.com/mishamilovidov/thunderbandit/issues/50) from mishamilovidov/dependabot/npm_and_yarn/tar-4.4.19 ([743f2de](https://github.com/mishamilovidov/thunderbandit/commits/743f2dea76d76ed14e8168ccaa39213591bbe7b6))
+* merge pull request [#51](https://github.com/mishamilovidov/thunderbandit/issues/51) from mishamilovidov/dependabot/npm_and_yarn/semver-regex-3.1.3 ([d31d486](https://github.com/mishamilovidov/thunderbandit/commits/d31d4865fbc8a05536b839418c2de97935f58ba3))
+* merge pull request [#52](https://github.com/mishamilovidov/thunderbandit/issues/52) from mishamilovidov/dependabot/npm_and_yarn/website/tmpl-1.0.5 ([8314bfd](https://github.com/mishamilovidov/thunderbandit/commits/8314bfdcb4a67f900d4e929d1d6bf045c39f0894))
+* merge pull request [#53](https://github.com/mishamilovidov/thunderbandit/issues/53) from mishamilovidov/dependabot/npm_and_yarn/website/url-parse-1.5.3 ([2b2f519](https://github.com/mishamilovidov/thunderbandit/commits/2b2f51971d262074daf50f5a528d53fc63e4527a))
+* merge pull request [#54](https://github.com/mishamilovidov/thunderbandit/issues/54) from mishamilovidov/mishamilovidov/feat/videos ([3289835](https://github.com/mishamilovidov/thunderbandit/commits/32898359dc69d84d99e854350e6085be3fe49866))
+* merge pull request [#55](https://github.com/mishamilovidov/thunderbandit/issues/55) from mishamilovidov/dependabot/npm_and_yarn/axios-0.21.4 ([22235d8](https://github.com/mishamilovidov/thunderbandit/commits/22235d86b6790227485cca99f4dcbaed112daf89))
+* rm css from header ([4bcd3b1](https://github.com/mishamilovidov/thunderbandit/commits/4bcd3b1782d4fc1dd974bce5cb25e12216f1f658))
+* rm css from music scene ([590be7c](https://github.com/mishamilovidov/thunderbandit/commits/590be7c6506083539d48c367128c910bbf32306a))
+* scroll to top on render ([7a698d0](https://github.com/mishamilovidov/thunderbandit/commits/7a698d081c9260e5748cb7f78003e21b477f9194))
+* shadow implement videos scene ([47c930e](https://github.com/mishamilovidov/thunderbandit/commits/47c930e678f23cc47889752b12dd66a72bd174ce))
+* update title text on music type detail ([2df7995](https://github.com/mishamilovidov/thunderbandit/commits/2df79953a52c17c490fbe23c923bd3089648e7fa))
+* update version in readme to v2.2.0 ([d8fd133](https://github.com/mishamilovidov/thunderbandit/commits/d8fd133a0af41b518a939373d249575d0fad2298))
+
 ## [2.1.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.0.0...v2.1.0) (2021-07-24)
 
 
