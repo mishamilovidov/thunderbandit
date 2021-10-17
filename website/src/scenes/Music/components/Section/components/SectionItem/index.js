@@ -86,6 +86,18 @@ const SectionItem = ({ history, item }) => {
   const [loading, setLoading] = useState(true);
   const { data, datetime, type } = item;
   const slug = _.get(data, 'slug', '');
+  const onItemClick = e => {
+    e.preventDefault();
+    history.push(`/music/${type}/${slug}`);
+    // window.open('https://soundcloud.com/user-237574876');
+  };
+  const onItemKeyUp = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      history.push(`/music/${type}/${slug}`);
+      // window.open('https://soundcloud.com/user-237574876');
+    }
+  };
   useEffect(() => {
     const getUrl = async () => {
       try {
@@ -110,22 +122,16 @@ const SectionItem = ({ history, item }) => {
         img={imgUrl}
         title={_.get(data, 'name', '')}
         loading={Number(loading)}
-        onClick={e => {
-          e.preventDefault();
-          history.push(`/music/${type}/${slug}`);
-          // window.open('https://soundcloud.com/user-237574876');
-        }}
-        onKeyUp={e => {
-          if (e.key === 'Enter') {
-            e.preventDefault();
-            history.push(`/music/${type}/${slug}`);
-            // window.open('https://soundcloud.com/user-237574876');
-          }
-        }}
+        onClick={e => onItemClick(e)}
+        onKeyUp={e => onItemKeyUp(e)}
         tabIndex={0}
       />
       <ItemDetails theme={theme} data={Number(!_.isEmpty(data))}>
-        <ItemLink href='https://soundcloud.com/user-237574876' target='_blank'>
+        <ItemLink
+          onClick={e => onItemClick(e)}
+          onKeyUp={e => onItemKeyUp(e)}
+          tabIndex={0}
+        >
           <ItemTitle theme={theme} data={Number(!_.isEmpty(data))}>
             {_.get(data, 'name', '')}
           </ItemTitle>
