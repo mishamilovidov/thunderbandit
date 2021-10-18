@@ -4,6 +4,7 @@ import styles from '../styles';
 import { AppContext } from '../../contexts';
 import { meta } from '../../services/analytics';
 import Section from './components/Section';
+import SectionVideos from '../Videos/components/Section';
 
 const Music = () => {
   const {
@@ -20,6 +21,7 @@ const Music = () => {
         <Section title='Albums' type='album' />
         <Section title='EPs' type='ep' />
         <Section title='Singles' type='single' />
+        <Section title='Videos' type='video' />
         <Section title='Setlists' type='setlist' />
       </ContentWrapper>
     </DocumentMeta>

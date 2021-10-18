@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import { withRouter } from 'react-router-dom';
 import MusicItem from '../../../../components/MusicItem';
+import VideoItem from '../../../../components/VideoItem';
 import { AppContext } from '../../../../contexts';
 
 const TypeDetailWrapper = styled.div`
@@ -60,13 +61,27 @@ const TitleText = styled.div`
 
 const TypeDetailContent = styled.div`
   display: grid;
-  grid-template-columns: ${({ theme }) =>
-    `repeat(auto-fill, minmax(${theme.scenes.music.coverart.height}, 1fr))`};
+  grid-template-columns: ${({ theme, type }) =>
+    type === 'videos'
+      ? 'auto auto'
+      : `repeat(auto-fill, minmax(${theme.scenes.music.coverart.height.default}, 1fr))`};
   grid-gap: 1rem;
-  margin-bottom: ${({ theme }) => theme.scenes.music.coverart.height};
+  margin-bottom: ${({ theme, heightKey }) =>
+    theme.scenes.music.coverart.height[heightKey]};
 
   > div {
     display: grid;
+    ${({ type }) => (type === 'videos' ? 'grid-template-columns: auto;' : '')}
+    ${({ type }) => (type === 'videos' ? 'padding: 0px;' : '')}
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    ${({ type }) => (type === 'videos' ? 'display: block;' : '')}
+
+    > div {
+      ${({ type }) => (type === 'videos' ? 'display: block;' : '')}
+      ${({ type }) => (type === 'videos' ? 'margin-bottom: 1rem;' : '')};
+    }
   }
 `;
 
@@ -83,6 +98,12 @@ const TypeDetail = props => {
     }
   } = props;
   const [items, setItems] = useState(null);
+  const renderItem = (item, key) =>
+    type === 'videos' ? (
+      <VideoItem key={key} item={item} />
+    ) : (
+      <MusicItem key={key} item={item} />
+    );
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -130,10 +151,14 @@ const TypeDetail = props => {
       <Title theme={theme}>
         <TitleText theme={theme}>{type}</TitleText>
       </Title>
-      <TypeDetailContent theme={theme}>
+      <TypeDetailContent
+        theme={theme}
+        type={type}
+        heightKey={type === 'videos' ? 'video' : 'default'}
+      >
         {items
-          ? items.map(item => <MusicItem key={item.id} item={item} />)
-          : placeholders.map(item => <MusicItem key={item} item={item} />)}
+          ? items.map(item => renderItem(item, item.key))
+          : placeholders.map(item => renderItem(item, item))}
       </TypeDetailContent>
     </TypeDetailWrapper>
   );

@@ -1,14 +1,13 @@
 import _ from 'lodash';
+import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import moment from 'moment-timezone';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import { AppContext } from '../../../../../../contexts';
+import { AppContext } from '../../contexts';
 
 const Item = styled.div`
-  margin-right: 1em;
   padding: 4px;
 
   @keyframes pulse {
@@ -24,19 +23,22 @@ const Item = styled.div`
   }
 `;
 
-const CoverArt = styled.div`
+const ThumbnailWrapper = styled.div`
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+`;
+
+const Thumbnail = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background-image: url(${({ img }) => img});
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: ${({ theme, type }) =>
-    type === 'video'
-      ? theme.scenes.music.coverart.height.video
-      : theme.scenes.music.coverart.height.default};
-  width: ${({ theme, type }) =>
-    type === 'video'
-      ? theme.scenes.music.coverart.width.video
-      : theme.scenes.music.coverart.width.default};
   background-color: ${({ theme }) =>
     theme.scenes.music.coverart.placeholderColor};
   animation: ${({ loading }) =>
@@ -44,7 +46,7 @@ const CoverArt = styled.div`
   border-radius: 6px;
 
   :hover {
-    cursor: pointer;
+    cursor: ${({ data }) => (data === 1 ? `pointer` : `unset`)};
   }
 `;
 
@@ -68,11 +70,15 @@ const ItemTitle = styled.p`
   margin-top: 0.75rem;
   min-height: 1.1rem;
   font-size: 1.1rem;
-  width: ${({ data, theme, widthKey }) =>
-    data === 1 ? theme.scenes.music.coverart.width[widthKey] : '75%'};
+  width: ${({ data, theme }) =>
+    data === 1 ? theme.scenes.music.coverart.width.video : '75%'};
 
   :hover {
-    cursor: pointer;
+    cursor: ${({ data }) => (data === 1 ? `pointer` : `unset`)};
+  }
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: ${({ data }) => (data === 1 ? '100%' : '75%')};
   }
 `;
 
@@ -82,28 +88,35 @@ const ItemSubtitle = styled.p`
     loading === 0 || datetime ? '0.25rem' : '0.65rem'};
   min-height: 0.9rem;
   font-size: 0.9rem;
-  width: ${({ data, theme, widthKey }) =>
-    data === 1 ? theme.scenes.music.coverart.width[widthKey] : '55%'};
+  width: ${({ data, theme }) =>
+    data === 1 ? theme.scenes.music.coverart.width.video : '55%'};
+
+  @media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    width: ${({ data }) => (data === 1 ? '100%' : '55%')};
+  }
 `;
 
-const SectionItem = ({ history, item, itemType }) => {
+const VideoItem = ({ history, item }) => {
   const {
-    state: { firebase, theme }
+    state: { theme }
   } = useContext(AppContext);
-  const [imgUrl, setImgUrl] = useState(null);
   const [itemData, setItemData] = useState(null);
+  const [imgUrl, setImgUrl] = useState(null);
   const [loading, setLoading] = useState(true);
   const { data, datetime, type } = item;
-  const slug =
-    itemType === 'video' ? _.get(itemData, 'id', '') : _.get(data, 'slug', '');
-  const onItemClick = e => {
-    e.preventDefault();
-    history.push(`/music/${type}/${slug}`);
-  };
-  const onItemKeyUp = e => {
-    if (e.key === 'Enter') {
+  const slug = _.get(data, 'slug', '');
+  const itemOnClick = e => {
+    if (!loading) {
       e.preventDefault();
-      history.push(`/music/${type}/${slug}`);
+      history.push(`/videos/${type}/${slug}`);
+      // window.open('https://soundcloud.com/user-237574876');
+    }
+  };
+  const itemKeyUp = e => {
+    if (e.key === 'Enter' && !loading) {
+      e.preventDefault();
+      history.push(`/videos/${type}/${slug}`);
+      // window.open('https://soundcloud.com/user-237574876');
     }
   };
   useEffect(() => {
@@ -122,71 +135,41 @@ const SectionItem = ({ history, item, itemType }) => {
         return setLoading(false);
       }
     };
-    const getUrl = async () => {
-      try {
-        const url = await firebase.storage
-          .ref('images/coverart')
-          .child(`${data.slug}_150x150.png`)
-          .getDownloadURL();
-        setImgUrl(url);
-        return setLoading(false);
-      } catch (err) {
-        console.error(err);
-        return setLoading(false);
-      }
-    };
-    if (data) {
-      if (itemType === 'video') {
-        getData();
-      } else {
-        getUrl();
-      }
-    }
-  }, [firebase, data, itemType]);
+
+    if (data) getData();
+  }, [data]);
 
   return (
     <Item>
-      <CoverArt
-        theme={theme}
-        type={itemType}
-        img={imgUrl}
-        title={
-          itemType === 'video'
-            ? _.get(itemData, 'title', '')
-            : _.get(data, 'name', '')
-        }
-        loading={Number(loading)}
-        onClick={e => onItemClick(e)}
-        onKeyUp={e => onItemKeyUp(e)}
-        tabIndex={0}
-      />
-      <ItemDetails
-        theme={theme}
-        data={Number(!_.isEmpty(itemType === 'video' ? itemData : data))}
-      >
+      <ThumbnailWrapper>
+        <Thumbnail
+          data={Number(!_.isEmpty(data))}
+          theme={theme}
+          img={imgUrl}
+          title={_.get(itemData, 'title', '')}
+          loading={Number(loading)}
+          onClick={e => itemOnClick(e)}
+          onKeyUp={e => itemKeyUp(e)}
+          tabIndex={loading ? null : 0}
+        />
+      </ThumbnailWrapper>
+      <ItemDetails theme={theme} data={Number(!_.isEmpty(data))}>
         <ItemLink
-          onClick={e => onItemClick(e)}
-          onKeyUp={e => onItemKeyUp(e)}
-          tabIndex={0}
+          onClick={e => itemOnClick(e)}
+          onKeyUp={e => itemKeyUp(e)}
+          target='_blank'
         >
-          <ItemTitle
-            theme={theme}
-            widthKey={itemType === 'video' ? 'video' : 'default'}
-            data={Number(!_.isEmpty(itemType === 'video' ? itemData : data))}
-          >
-            {itemType === 'video'
-              ? _.get(itemData, 'title', '')
-              : _.get(data, 'name', '')}
+          <ItemTitle theme={theme} data={Number(!_.isEmpty(data))}>
+            {_.get(itemData, 'title', '')}
           </ItemTitle>
         </ItemLink>
         <ItemSubtitle
           theme={theme}
-          widthKey={itemType === 'video' ? 'video' : 'default'}
           loading={Number(loading)}
           datetime={datetime}
         >
           {datetime &&
-            (itemType === 'video' ? itemData : true) &&
+            itemData &&
             moment.unix(_.get(datetime, 'seconds')).year()}
         </ItemSubtitle>
       </ItemDetails>
@@ -194,21 +177,33 @@ const SectionItem = ({ history, item, itemType }) => {
   );
 };
 
-SectionItem.propTypes = {
+VideoItem.propTypes = {
   history: PropTypes.objectOf(PropTypes.any).isRequired,
   item: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.objectOf(PropTypes.any)
-  ]).isRequired,
-  itemType: PropTypes.string.isRequired
+  ]).isRequired
 };
 
-CoverArt.propTypes = {
+Thumbnail.propTypes = {
+  data: PropTypes.number.isRequired,
   theme: PropTypes.objectOf(PropTypes.any).isRequired,
   img: PropTypes.string,
   title: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   loading: PropTypes.number
 };
 
-export default withRouter(SectionItem);
+ItemDetails.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+ItemTitle.propTypes = {
+  data: PropTypes.number.isRequired,
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+ItemSubtitle.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.any).isRequired
+};
+
+export default withRouter(VideoItem);
