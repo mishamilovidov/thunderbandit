@@ -18,9 +18,9 @@ const Music = () => {
           <TitleText theme={theme}>Music</TitleText>
         </Title>
         <Section title='Albums' type='album' />
+        <Section title='Videos' type='video' />
         <Section title='EPs' type='ep' />
         <Section title='Singles' type='single' />
-        <Section title='Videos' type='video' />
         <Section title='Setlists' type='setlist' />
       </ContentWrapper>
     </DocumentMeta>
