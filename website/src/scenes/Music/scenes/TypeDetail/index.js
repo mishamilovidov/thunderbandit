@@ -64,13 +64,12 @@ const TypeDetailContent = styled.div`
   grid-template-columns: ${({ theme, type }) =>
     type === 'videos'
       ? 'auto auto'
-      : `repeat(auto-fill, minmax(${theme.scenes.music.coverart.height.default}, 1fr))`};
-  grid-gap: 1rem;
+      : `repeat(auto-fit, minmax(${theme.scenes.music.coverart.width.default}, 1fr))`};
+  gap: 1rem;
   margin-bottom: ${({ theme, heightKey }) =>
     theme.scenes.music.coverart.height[heightKey]};
 
   > div {
-    display: grid;
     ${({ type }) => (type === 'videos' ? 'grid-template-columns: auto;' : '')}
     ${({ type }) => (type === 'videos' ? 'padding: 0px;' : '')}
   }
