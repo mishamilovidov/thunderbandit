@@ -1,4 +1,32 @@
 # Changelog
+## [2.3.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.2.0...v2.3.0) (2021-11-09)
+
+
+### Features
+
+* add links to videos ([b67f220](https://github.com/mishamilovidov/thunderbandit/commits/b67f2204c0964782401acc95a831472bf1dda583))
+* add videos section to music scene ([6e6f2ae](https://github.com/mishamilovidov/thunderbandit/commits/6e6f2ae064ccb7c0061a9d80244033541233aa05))
+
+
+### Fixes
+
+* music section item links ([d7f0747](https://github.com/mishamilovidov/thunderbandit/commits/d7f0747386d4d765c26e5f110d8942665aca913c))
+* type detail grid ([89ec113](https://github.com/mishamilovidov/thunderbandit/commits/89ec1135027539dd93b93d847d1352ed62c20c33))
+
+
+### Maintenance
+
+* add axios ([3576f05](https://github.com/mishamilovidov/thunderbandit/commits/3576f05ef1a456189d114c3301a96bf2ec6fca4b))
+* fix build archive step ([978a0f3](https://github.com/mishamilovidov/thunderbandit/commits/978a0f335055a22c72d4cb0b75ce2c571ffc5e5a))
+* fix download artifact step in deploy wf ([5a8d855](https://github.com/mishamilovidov/thunderbandit/commits/5a8d85575656ce8523b158743859f68d35ea18fb))
+* fix firebase steps in deploy wf ([736ff8e](https://github.com/mishamilovidov/thunderbandit/commits/736ff8ea8ff7640c695bd641cada54f646513457))
+* merge pull request [#56](https://github.com/mishamilovidov/thunderbandit/issues/56) from mishamilovidov/mishamilovidov/feat/videos ([0893212](https://github.com/mishamilovidov/thunderbandit/commits/089321289408a1948d4b48cd7eb83778ec22d91b))
+* mv videos section ([ce464c0](https://github.com/mishamilovidov/thunderbandit/commits/ce464c0a4a78a5e9449b558f48e9bd2858ef2dc0))
+* update deploy wf ([5cc32ba](https://github.com/mishamilovidov/thunderbandit/commits/5cc32bace0ff2b765f74ef83545c6500e77ecb67))
+* update firebase config ([a8a7fe3](https://github.com/mishamilovidov/thunderbandit/commits/a8a7fe314ef831c45fa369ea8742ad5c56c29e0d))
+* update home content ([f52ebee](https://github.com/mishamilovidov/thunderbandit/commits/f52ebeef3a32211b9dddb4629df621c786c4be43))
+* update version in readme to v2.3.0 ([d4ab793](https://github.com/mishamilovidov/thunderbandit/commits/d4ab793c54cc2ae1cd02517a8e650ad0633b1e79))
+
 ## [2.2.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.1.0...v2.2.0) (2021-10-15)
 
 
