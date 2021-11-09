@@ -104,19 +104,19 @@ const VideoItem = ({ history, item }) => {
   const [imgUrl, setImgUrl] = useState(null);
   const [loading, setLoading] = useState(true);
   const { data, datetime, type } = item;
-  const slug = _.get(data, 'slug', '');
+  // const slug = _.get(data, 'slug', '');
   const itemOnClick = e => {
     if (!loading) {
-      e.preventDefault();
-      history.push(`/videos/${type}/${slug}`);
-      // window.open('https://soundcloud.com/user-237574876');
+      // e.preventDefault();
+      // history.push(`/videos/${type}/${slug}`);
+      window.open(`https://www.youtube.com/watch?v=${data.id}`);
     }
   };
   const itemKeyUp = e => {
     if (e.key === 'Enter' && !loading) {
-      e.preventDefault();
-      history.push(`/videos/${type}/${slug}`);
-      // window.open('https://soundcloud.com/user-237574876');
+      // e.preventDefault();
+      // history.push(`/videos/${type}/${slug}`);
+      window.open(`https://www.youtube.com/watch?v=${data.id}`);
     }
   };
   useEffect(() => {

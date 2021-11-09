@@ -4,7 +4,6 @@ import styles from '../styles';
 import { AppContext } from '../../contexts';
 import { meta } from '../../services/analytics';
 import Section from './components/Section';
-import SectionVideos from '../Videos/components/Section';
 
 const Music = () => {
   const {
