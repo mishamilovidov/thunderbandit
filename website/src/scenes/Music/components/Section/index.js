@@ -125,8 +125,12 @@ const Section = ({ history, title, type }) => {
       </SectionHeaderWrapper>
       <SectionContent>
         {items
-          ? items.map(item => <SectionItem key={item.id} item={item} />)
-          : placeholders.map(item => <SectionItem key={item} item={item} />)}
+          ? items.map(item => (
+              <SectionItem key={item.id} item={item} itemType={type} />
+            ))
+          : placeholders.map(item => (
+              <SectionItem key={item} item={item} itemType={type} />
+            ))}
       </SectionContent>
     </SectionWrapper>
   );

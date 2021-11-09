@@ -58,15 +58,14 @@ export const AppInit = {
     scenes: {
       music: {
         coverart: {
-          height: '200px',
-          width: '200px',
-          placeholderColor: '#a5a5a5'
-        }
-      },
-      videos: {
-        coverart: {
-          height: '200px',
-          width: '356px',
+          height: {
+            default: '200px',
+            video: '200px'
+          },
+          width: {
+            default: '200px',
+            video: '365px'
+          },
           placeholderColor: '#a5a5a5'
         }
       }
