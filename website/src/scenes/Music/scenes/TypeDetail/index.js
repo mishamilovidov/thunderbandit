@@ -99,9 +99,9 @@ const TypeDetail = props => {
   const [items, setItems] = useState(null);
   const renderItem = (item, key) =>
     type === 'videos' ? (
-      <VideoItem key={key} item={item} />
+      <VideoItem key={JSON.stringify(item)} item={item} />
     ) : (
-      <MusicItem key={key} item={item} />
+      <MusicItem key={JSON.stringify(item)} item={item} />
     );
   useEffect(() => {
     const fetchData = async () => {

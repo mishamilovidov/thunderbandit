@@ -98,12 +98,19 @@ const SectionItem = ({ history, item, itemType }) => {
     itemType === 'video' ? _.get(itemData, 'id', '') : _.get(data, 'slug', '');
   const onItemClick = e => {
     e.preventDefault();
-    history.push(`/music/${type}/${slug}`);
+    if (itemType === 'video') {
+      window.open(`https://www.youtube.com/watch?v=${data.id}`);
+    } else {
+      history.push(`/music/${type}/${slug}`);
+    }
   };
   const onItemKeyUp = e => {
     if (e.key === 'Enter') {
-      e.preventDefault();
-      history.push(`/music/${type}/${slug}`);
+      if (itemType === 'video') {
+        window.open(`https://www.youtube.com/watch?v=${data.id}`);
+      } else {
+        history.push(`/music/${type}/${slug}`);
+      }
     }
   };
   useEffect(() => {

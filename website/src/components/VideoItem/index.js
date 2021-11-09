@@ -107,14 +107,14 @@ const VideoItem = ({ history, item }) => {
   // const slug = _.get(data, 'slug', '');
   const itemOnClick = e => {
     if (!loading) {
-      // e.preventDefault();
+      e.preventDefault();
       // history.push(`/videos/${type}/${slug}`);
       window.open(`https://www.youtube.com/watch?v=${data.id}`);
     }
   };
   const itemKeyUp = e => {
     if (e.key === 'Enter' && !loading) {
-      // e.preventDefault();
+      e.preventDefault();
       // history.push(`/videos/${type}/${slug}`);
       window.open(`https://www.youtube.com/watch?v=${data.id}`);
     }
