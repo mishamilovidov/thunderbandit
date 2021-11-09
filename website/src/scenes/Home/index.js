@@ -4,7 +4,6 @@ import React from 'react';
 import DocumentMeta from 'react-document-meta';
 import styled from 'styled-components';
 import homeImg from './god-is-love.png';
-import soundcloud from '../../services/soundcloud';
 import { meta } from '../../services/analytics';
 
 const HomeWrapper = styled.div``;
@@ -94,14 +93,12 @@ const Home = () => {
         <HomeLayer />
         <HomeImg />
         <HomeText>
-          <HomeTextSubtitle>
-            {soundcloud.home.songs.length > 1 ? 'EP' : 'Setlist'} out now
-          </HomeTextSubtitle>
-          <HomeTextTitle>{soundcloud.home.name}</HomeTextTitle>
+          <HomeTextSubtitle>Album out now</HomeTextSubtitle>
+          <HomeTextTitle>1</HomeTextTitle>
           <HomeTextAction>
             <ReactGA.OutboundLink
-              eventLabel={`soundCloud${_.camelCase(soundcloud.home.name)}`}
-              to={soundcloud.home.link}
+              eventLabel='soundCloud1'
+              to='https://soundcloud.com/user-237574876/sets/1a-1'
             >
               Listen on SoundCloud
             </ReactGA.OutboundLink>
