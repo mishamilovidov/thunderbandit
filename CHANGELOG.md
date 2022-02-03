@@ -1,4 +1,17 @@
 # Changelog
+### [2.3.1](https://github.com/mishamilovidov/thunderbandit/compare/v2.3.0...v2.3.1) (2022-02-03)
+
+
+### Fixes
+
+* issues with videos release ([36e4a20](https://github.com/mishamilovidov/thunderbandit/commits/36e4a200b7aa4e3f4f1b7a8ade7d5f21e192c986))
+
+
+### Maintenance
+
+* add the provenient gloaming as home ([#60](https://github.com/mishamilovidov/thunderbandit/issues/60)) ([8f4f4a9](https://github.com/mishamilovidov/thunderbandit/commits/8f4f4a96eed8745f83448987aa6aec5ede544d7a))
+* update version in readme to v2.3.1 ([f238853](https://github.com/mishamilovidov/thunderbandit/commits/f238853d37efc39aa0525a17f28348bed322d328))
+
 ## [2.3.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.2.0...v2.3.0) (2021-11-09)
 
 
