@@ -1,4 +1,20 @@
 # Changelog
+### [2.3.2](https://github.com/mishamilovidov/thunderbandit/compare/v2.3.1...v2.3.2) (2022-05-02)
+
+
+### Maintenance
+
+* **deps:** bump async from 2.6.3 to 2.6.4 in /website ([#68](https://github.com/mishamilovidov/thunderbandit/issues/68)) ([6de0508](https://github.com/mishamilovidov/thunderbandit/commits/6de0508efef65eff8bba5a3cfa65cb2542b2cc87))
+* **deps:** bump follow-redirects from 1.13.3 to 1.14.8 in /website ([#63](https://github.com/mishamilovidov/thunderbandit/issues/63)) ([351196d](https://github.com/mishamilovidov/thunderbandit/commits/351196d7497415032f9ea9fbc229dbef588d77bc))
+* **deps:** bump follow-redirects from 1.14.4 to 1.14.8 ([#62](https://github.com/mishamilovidov/thunderbandit/issues/62)) ([d21b43c](https://github.com/mishamilovidov/thunderbandit/commits/d21b43c9a6162ac828aa46d66c02ecca067935b8))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([#66](https://github.com/mishamilovidov/thunderbandit/issues/66)) ([dee7470](https://github.com/mishamilovidov/thunderbandit/commits/dee74708e007d223e821060362547ace3cd81d74))
+* **deps:** bump minimist from 1.2.5 to 1.2.6 in /website ([#67](https://github.com/mishamilovidov/thunderbandit/issues/67)) ([e4712e6](https://github.com/mishamilovidov/thunderbandit/commits/e4712e62031654ab03bcf45d96f5b0ea9ca5c1a9))
+* **deps:** bump nanoid from 3.1.22 to 3.2.0 in /website ([#59](https://github.com/mishamilovidov/thunderbandit/issues/59)) ([aa62853](https://github.com/mishamilovidov/thunderbandit/commits/aa62853323639a133b554c9adce1b8c4c6cc98e7))
+* **deps:** bump trim-off-newlines from 1.0.1 to 1.0.3 ([#61](https://github.com/mishamilovidov/thunderbandit/issues/61)) ([8024eb9](https://github.com/mishamilovidov/thunderbandit/commits/8024eb96516553810e4c6162992c1279a1cc4b93))
+* **deps:** bump url-parse from 1.5.3 to 1.5.10 in /website ([#65](https://github.com/mishamilovidov/thunderbandit/issues/65)) ([9ba6e57](https://github.com/mishamilovidov/thunderbandit/commits/9ba6e57515aed2dd9e7762acf8e29f52f31a2395))
+* update homepage with thunder bandit album ([#69](https://github.com/mishamilovidov/thunderbandit/issues/69)) ([4011b05](https://github.com/mishamilovidov/thunderbandit/commits/4011b052d23b34b455490960128457db48f2b92a))
+* update version in readme to v2.3.2 ([00f1564](https://github.com/mishamilovidov/thunderbandit/commits/00f1564855664ae598e87c8b949877cb17b110cc))
+
 ### [2.3.1](https://github.com/mishamilovidov/thunderbandit/compare/v2.3.0...v2.3.1) (2022-02-03)
 
 
