@@ -94,11 +94,11 @@ const Home = () => {
         <HomeImg />
         <HomeText>
           <HomeTextSubtitle>Album out now</HomeTextSubtitle>
-          <HomeTextTitle>The Provenient Gloaming</HomeTextTitle>
+          <HomeTextTitle>Thunder Bandit</HomeTextTitle>
           <HomeTextAction>
             <ReactGA.OutboundLink
               eventLabel='soundCloud1'
-              to='https://soundcloud.com/user-237574876/sets/the-provenient-gloaming'
+              to='https://soundcloud.com/user-237574876/sets/thunder-bandit'
             >
               Listen on SoundCloud
             </ReactGA.OutboundLink>
