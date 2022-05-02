@@ -2,7 +2,7 @@ export const meta = {
   Home: {
     title: 'THUNDER BANDIT',
     description:
-      '"The Provenient Gloaming" Album out now via SoundCloud. Listen to the new album released February 2, 2022.',
+      '"Thunder Bandit" Album out now via SoundCloud. Listen to the new album released May 1, 2022.',
     canonical: 'https://thunderbandit.com/',
     meta: {
       charset: 'utf-8',
