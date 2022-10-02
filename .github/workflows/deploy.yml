@@ -98,6 +98,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: build
+          path: ./website
 
       - name: set firebase project
         uses: w9jds/firebase-action@master
