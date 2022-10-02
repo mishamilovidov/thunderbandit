@@ -76,7 +76,7 @@ jobs:
             GCP_SA_FIREBASE_KEY:osito-oto/GCP_SA_FIREBASE_KEY
 
       - name: setup gcloud for firebase
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@main
         with:
           project_id: osito-oto
           service_account_email: ${{ steps.secrets.outputs.GCP_SA_FIREBASE_EMAIL }}
