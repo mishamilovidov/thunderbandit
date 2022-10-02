@@ -1,6 +1,4 @@
 {
-  "bootstrap-sha": "5e9b4e32a9bf353bef0f2420c6d37c04e7752b2f",
-  "last-release-sha": "5e9b4e32a9bf353bef0f2420c6d37c04e7752b2f",
   "changelog-path": "CHANGELOG.md",
   "bump-minor-pre-major": false,
   "bump-patch-for-minor-pre-major": false,
