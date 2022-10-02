@@ -1,4 +1,11 @@
 # Changelog
+## [2.5.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.4.0...v2.5.0) (2022-10-02)
+
+
+### Features
+
+* add new home background cover ([3f817f2](https://github.com/mishamilovidov/thunderbandit/commit/3f817f2a050180a7990733a80251ec7f242f8762))
+
 ## [2.4.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.3.2...v2.4.0) (2022-10-02)
 
 
