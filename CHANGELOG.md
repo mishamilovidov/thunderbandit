@@ -1,4 +1,12 @@
 # Changelog
+## [2.4.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.3.2...v2.4.0) (2022-10-02)
+
+
+### Features
+
+* change order of music ([a713f26](https://github.com/mishamilovidov/thunderbandit/commit/a713f26e1e3525f9005323b51dd716b779d4160d))
+* update text and secondary colors ([36ed12a](https://github.com/mishamilovidov/thunderbandit/commit/36ed12a252707372da73d7ea47cd4c2cf7ebfd82))
+
 ### [2.3.2](https://github.com/mishamilovidov/thunderbandit/compare/v2.3.1...v2.3.2) (2022-05-02)
 
 
