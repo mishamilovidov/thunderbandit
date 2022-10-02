@@ -4,30 +4,11 @@
   "private": true,
   "scripts": {
     "lint": "yarn --cwd ./website lint",
-    "lint:commits": "commitlint --from=HEAD~1 --verbose",
     "postinstall": "yarn --cwd ./website install",
-    "release": "chmod +x ./.github/bin/release.sh && ./.github/bin/release.sh",
     "test": "yarn --cwd ./website test",
     "test:ci": " CI=true yarn test"
   },
   "engines": {
     "node": ">=12"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
-    "github-release-notes": "0.17.1",
-    "husky": "4.3.8",
-    "standard-version": "^9.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   }
 }
