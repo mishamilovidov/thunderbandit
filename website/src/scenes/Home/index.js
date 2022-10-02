@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import ReactGA from 'react-ga';
-import React from 'react';
+import React, { useContext } from 'react';
 import DocumentMeta from 'react-document-meta';
 import styled from 'styled-components';
 import homeImg from './god-is-love.png';
+import { AppContext } from '../../contexts';
 import { meta } from '../../services/analytics';
 
 const HomeWrapper = styled.div``;
@@ -48,7 +49,7 @@ const HomeTextTitle = styled.div`
   text-align: right;
   margin-top: 0px;
   font-weight: bold;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
 `;
 
@@ -60,7 +61,7 @@ const HomeTextSubtitle = styled.div`
   margin-top: 60px;
   font-size: 14px;
   font-weight: bold;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
 `;
 
@@ -72,30 +73,34 @@ const HomeTextAction = styled.div`
   margin-top: 15px;
 
   > a {
-    border: 1px solid #ffffff;
+    border: 1px solid ${({ theme }) => theme.colors.text};
     background-color: #21181d;
     padding: 6px 12px;
-    color: #ffffff !important;
+    color: ${({ theme }) => theme.colors.text} !important;
     text-transform: uppercase;
   }
 
   > a:hover {
-    background-color: #ffffff;
-    color: #fdc138 !important;
+    background-color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.secondary} !important;
     cursor: pointer;
   }
 `;
 
 const Home = () => {
+  const {
+    state: { theme }
+  } = useContext(AppContext);
+
   return (
     <DocumentMeta {...meta.Home}>
       <HomeWrapper>
         <HomeLayer />
         <HomeImg />
         <HomeText>
-          <HomeTextSubtitle>Album out now</HomeTextSubtitle>
-          <HomeTextTitle>Thunder Bandit</HomeTextTitle>
-          <HomeTextAction>
+          <HomeTextSubtitle theme={theme}>Album out now</HomeTextSubtitle>
+          <HomeTextTitle theme={theme}>Thunder Bandit</HomeTextTitle>
+          <HomeTextAction theme={theme}>
             <ReactGA.OutboundLink
               eventLabel='soundCloud1'
               to='https://soundcloud.com/user-237574876/sets/thunder-bandit'

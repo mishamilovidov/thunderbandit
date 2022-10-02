@@ -44,7 +44,7 @@ const TitleText = styled.div`
   margin: 0 auto;
   margin-top: 0px;
   font-weight: bold;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
 
   @media only screen and (max-width: ${({ theme }) => theme.breakpoints.xl}) {
