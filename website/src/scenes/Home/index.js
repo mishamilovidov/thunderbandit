@@ -2,10 +2,21 @@ import _ from 'lodash';
 import ReactGA from 'react-ga';
 import React, { useContext } from 'react';
 import DocumentMeta from 'react-document-meta';
-import styled from 'styled-components';
-import homeImg from './god-is-love.png';
+import styled, { createGlobalStyle } from 'styled-components';
+import homeImg from './backcover.png';
 import { AppContext } from '../../contexts';
 import { meta } from '../../services/analytics';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-image: url(${homeImg});
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+  }
+`;
 
 const HomeWrapper = styled.div``;
 
@@ -19,13 +30,6 @@ const HomeLayer = styled.div`
 `;
 
 const HomeImg = styled.div`
-  background-image: url(${homeImg});
-  background-repeat: no-repeat;
-  background-position: 50% bottom;
-  background-size: cover;
-  position: relative;
-  height: 100vh;
-
   > img {
     width: 100%;
   }
@@ -94,6 +98,7 @@ const Home = () => {
 
   return (
     <DocumentMeta {...meta.Home}>
+      <GlobalStyle />
       <HomeWrapper>
         <HomeLayer />
         <HomeImg />

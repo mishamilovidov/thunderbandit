@@ -48,7 +48,6 @@ const GlobalStyle = createGlobalStyle`
 
 const AppWrapper = styled.div`
   font-family: ${({ theme }) => theme.fontFamily};
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
 `;
 
 const App = () => {

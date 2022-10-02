@@ -24,7 +24,6 @@ const NavigationWrapper = styled.nav`
 `;
 
 const HeaderWrapper = styled.header`
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
   color: #ffffff;
   font-weight: bold;
   font-size: 18px;
