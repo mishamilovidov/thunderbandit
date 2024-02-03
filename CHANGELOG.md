@@ -1,4 +1,11 @@
 # Changelog
+## [2.6.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.5.0...v2.6.0) (2024-02-03)
+
+
+### Features
+
+* update site backcover ([#90](https://github.com/mishamilovidov/thunderbandit/issues/90)) ([a6b4553](https://github.com/mishamilovidov/thunderbandit/commit/a6b45538821b7054a1168bcdf741780d2a306d54))
+
 ## [2.5.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.4.0...v2.5.0) (2022-10-02)
 
 
