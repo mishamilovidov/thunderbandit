@@ -3,18 +3,23 @@ import ReactGA from 'react-ga';
 import React, { useContext } from 'react';
 import DocumentMeta from 'react-document-meta';
 import styled, { createGlobalStyle } from 'styled-components';
-import homeImg from './backcover.png';
+import homeImgLg from './backcover-star-lg.png';
+import homeImgSm from './backcover-star-sm.png';
 import { AppContext } from '../../contexts';
 import { meta } from '../../services/analytics';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-image: url(${homeImg});
+    background-image: url(${homeImgLg});
     background-repeat: no-repeat;
     background-position: 50% bottom;
     background-size: cover;
     position: relative;
     height: 100vh;
+    
+    @media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
+      background-image: url(${homeImgSm});
+    }
   }
 `;
 
@@ -98,7 +103,7 @@ const Home = () => {
 
   return (
     <DocumentMeta {...meta.Home}>
-      <GlobalStyle />
+      <GlobalStyle theme={theme} />
       <HomeWrapper>
         <HomeLayer />
         <HomeImg />
