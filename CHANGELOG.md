@@ -1,4 +1,11 @@
 # Changelog
+## [2.7.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.6.0...v2.7.0) (2024-03-21)
+
+
+### Features
+
+* update home text to new ep ([cf1e5c5](https://github.com/mishamilovidov/thunderbandit/commit/cf1e5c5159fe24feb4d7c303f627593aa822d2ec))
+
 ## [2.6.0](https://github.com/mishamilovidov/thunderbandit/compare/v2.5.0...v2.6.0) (2024-02-03)
 
 
